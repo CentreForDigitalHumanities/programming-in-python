@@ -4,4 +4,4 @@ The entry level course 'Programming in Python', by the [Utrecht Centre for Digit
 
 The course was first taught 15-16 November, 2021. 
 
-This repository contains all teaching materials, exercises, solutions and extra resources relevant to the course. Where possible, all files are provided as Python Notebooks. 
+This repository contains all teaching materials, exercises, solutions and extra resources relevant to the course. All files are provided as IPython Notebooks. 
