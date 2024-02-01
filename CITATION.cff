@@ -15,7 +15,7 @@ authors:
       https://cdh.uu.nl/centre-for-digital-humanities/research-software-lab/
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.8064133
+    value: 10.5281/zenodo.10604608
 repository-code: >-
   https://github.com/UUDigitalHumanitieslab/programming-in-python
 abstract: >-
@@ -25,5 +25,5 @@ abstract: >-
   attention is given to best practices in coding, e.g.:
   writing clean code and documentation.
 license: BSD-3-Clause
-version: 3.0.1
+version: 3.0.2
 date-released: '2024-02-01'
