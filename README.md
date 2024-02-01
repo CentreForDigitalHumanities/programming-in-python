@@ -1,4 +1,6 @@
 # Programming in Python
+[![DOI](https://zenodo.org/badge/429098563.svg)](https://zenodo.org/doi/10.5281/zenodo.10604607)
+
 
 The entry level course 'Programming in Python', by the [Utrecht Centre for Digital Humanities](https://cdh.uu.nl/) aims to teach the basics of the Python programming language. Special attention is given to best practices in coding, e.g.: writing clean code and documentation.
 
