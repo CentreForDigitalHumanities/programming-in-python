@@ -65,7 +65,7 @@ ord('a')
 # %% [markdown] id="hBgqVL7sSyFx"
 # The list of arguments may be empty. For example, if you pass no arguments to `list`, it returns an empty list:
 
-# %% id="wb98z1kBS9tm" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1715765148268, "user_tz": -120, "elapsed": 5, "user": {"displayName": "Sheean Spoel", "userId": "10710218289228113472"}} outputId="1570596d-607d-483b-cad3-44a490cab0ee"
+# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1715765148268, "user": {"displayName": "Sheean Spoel", "userId": "10710218289228113472"}, "user_tz": -120} id="wb98z1kBS9tm" outputId="1570596d-607d-483b-cad3-44a490cab0ee"
 result = list()
 print(result)
 

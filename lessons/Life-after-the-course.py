@@ -393,7 +393,7 @@ def cheer(name):
 # %% [markdown] id="pdYC4dG8qbi1"
 # Now, our program will still work if used as intended, but if somebody passes a number, the program will fail with an `AssertionError`:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 402} id="c1H0veEyqxlr" executionInfo={"status": "error", "timestamp": 1638205958138, "user_tz": -60, "elapsed": 313, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}} outputId="b9d7d157-e102-41cb-d64e-679ae19f2fa5"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 402} executionInfo={"elapsed": 313, "status": "error", "timestamp": 1638205958138, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="c1H0veEyqxlr" outputId="b9d7d157-e102-41cb-d64e-679ae19f2fa5"
 print(cheer('Kermit'))
 print(cheer(100))
 
@@ -401,7 +401,7 @@ print(cheer(100))
 # %% [markdown] id="5TGC07rTr_mb"
 # We can make the error more informative by adding a comma and a string that will appear when the assertion fails:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 317} id="9TUQ7gVzsdyS" executionInfo={"status": "error", "timestamp": 1638206188361, "user_tz": -60, "elapsed": 317, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}} outputId="87ddce03-0a2b-4fdc-c877-e0c045b3ff33"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 317} executionInfo={"elapsed": 317, "status": "error", "timestamp": 1638206188361, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="9TUQ7gVzsdyS" outputId="87ddce03-0a2b-4fdc-c877-e0c045b3ff33"
 def cheer(name):
     assert isinstance(name, str), 'name must be a string'
     letters = '\n'.join(map(announce, name))

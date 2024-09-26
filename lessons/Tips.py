@@ -692,7 +692,7 @@ print('sum:', sum(numbers))
 # [statistics.linear_regression]: https://docs.python.org/3/library/statistics.html#statistics.linear_regression
 # [python-numeric]: https://docs.python.org/3/library/numeric.html
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="xoBLhOpvmu2P" outputId="9d9aff55-cc93-437f-ae06-12cf1241f94a" executionInfo={"status": "ok", "timestamp": 1715884348191, "user_tz": -120, "elapsed": 5, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1715884348191, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="xoBLhOpvmu2P" outputId="9d9aff55-cc93-437f-ae06-12cf1241f94a"
 # !python --version
 
 # %% [markdown] id="rKxMNbMMuMCw"
@@ -896,7 +896,7 @@ sorted(list_of_dates, key=attrgetter('month'))
 # [pandas.DataFrame]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
 # [pandas.read_csv]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv-table
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 143} id="1m-b-UVLF_rM" outputId="8c25103d-0063-4cbf-c824-8ad8bd177d05" executionInfo={"status": "ok", "timestamp": 1715689944930, "user_tz": -120, "elapsed": 921, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %% colab={"base_uri": "https://localhost:8080/", "height": 143} executionInfo={"elapsed": 921, "status": "ok", "timestamp": 1715689944930, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="1m-b-UVLF_rM" outputId="8c25103d-0063-4cbf-c824-8ad8bd177d05"
 #requires pandas
 
 import os.path as op
@@ -934,7 +934,7 @@ data.loc[:, ['households', 'population']].iloc[0:3]
 #
 # [`matplotlib`](https://matplotlib.org) is a comprehensive and easy to use package for creating data graphics. It is preinstalled on Google Colab, so you can use it right away. Here is a quick example:
 
-# %% id="ZBxC0c32NN7v" colab={"base_uri": "https://localhost:8080/", "height": 430} executionInfo={"status": "ok", "timestamp": 1715692800081, "user_tz": -120, "elapsed": 761, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="d42f13a0-b117-4255-d854-d06998f98a81"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 430} executionInfo={"elapsed": 761, "status": "ok", "timestamp": 1715692800081, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="ZBxC0c32NN7v" outputId="d42f13a0-b117-4255-d854-d06998f98a81"
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
