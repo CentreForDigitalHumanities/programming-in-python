@@ -25,5 +25,5 @@ abstract: >-
   attention is given to best practices in coding, e.g.:
   writing clean code and documentation.
 license: BSD-3-Clause
-version: 3.0.2
-date-released: '2024-02-01'
+version: 2024-11
+date-released: '2024-09-26'
