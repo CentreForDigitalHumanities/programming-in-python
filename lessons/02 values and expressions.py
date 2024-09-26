@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [1. Introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)
+# Previous module: [1. Introduction](https://colab.research.google.com/drive/1W8DqryKuOwPKflPnObv4bJtNKknRsvav)
 #
 # ### This module
 #
@@ -531,11 +531,17 @@ name = 'Sheean'
 height = 2
 
 name * height == 'Sheean Sheean'
+
 height < 2
+
 2 <= height
+
 1 < height <= 2
+
 2 <= height < 1
+
 name <= 'Julian'
+
 height * 3 + 1 >= height
 
 # %% [markdown] id="zJiaGIlZBN_P"
@@ -549,8 +555,11 @@ height * 3 + 1 >= height
 
 # %% id="qDQ9Ob5Zkrqm"
 1 > height
+
 height == 0
+
 'Julian' > name * 2
+
 name < 1 * name
 
 # %% [markdown] id="YbdV7SQVmDVV"
@@ -558,7 +567,9 @@ name < 1 * name
 
 # %% id="hzjXIwkAmChv"
 5 < 4
+
 2 + 1 == 1
+
 3 + 3 == 3 + 2
 
 # %% [markdown] id="SwyAMDzDn2_X"
@@ -572,4 +583,4 @@ word = 'archaïsch'
 # %% [markdown] id="jXSxbjf4q6q5"
 # ## Next module
 #
-# [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR)
+# [3. Conditionals](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox)

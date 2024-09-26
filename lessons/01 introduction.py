@@ -15,14 +15,14 @@
 # # Module 1: Introduction
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
 # ## Welcome!
 #
 # ## Who are we?
 #
-# - Julian Gonggrijp, Sheean Spoel
-# - Developers at the Digital Humanities Lab
+# - Julian Gonggrijp, Sheean Spoel, Edo Storm
+# - Developers at the Centre for Digital Humanities (CDH)
 #
 # ## Who are you?
 #
@@ -143,14 +143,6 @@ print('Hello')
 # I prefer something a little bit more British.
 print('How do you do?')
 
-# %% [markdown] id="ZhgCPUNTLIZX"
-# ### `pass`
-#
-# You can write `pass` to do nothing. It behaves almost like a comment, but isn't. It is sometimes useful as a placeholder, as we will see later on in the course.
-
-# %% id="oS7kfP3OLtJn"
-pass
-
 # %% [markdown] id="pKIEfocbMaIR"
 # ## Exercise 1.1: Try it out
 #
@@ -194,14 +186,6 @@ print('apricot')
 'banana'
 print('cherry')
 
-# %% id="rbjHe9KbOzFb"
-print('apricot')
-'banana'
-pass
-
-# %% id="V1GiIP_ZNK8H"
-print(pass)
-
 # %% id="sNNoSfndOSiw"
 print(#oops)
 
@@ -221,4 +205,4 @@ print('apricot', 'banana')
 # %% [markdown] id="zI0ohEpPUwpC"
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)
+# [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)

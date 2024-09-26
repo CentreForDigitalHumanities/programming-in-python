@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj)
+# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3)
 #
 # ### This module
 #
@@ -41,6 +41,7 @@
 # %% id="kup_j23UeW71"
 # Make sure the path is available to Python
 # In notebooks, this means we need to upload the file
+# (You can download this file from the Teams channel)
 PATH = 'countries.csv'
 
 file = open(PATH)
@@ -205,3 +206,8 @@ print(data[10]['name'])
 #         - The first row. If this is a header row, try if you can come up with a way to separate it from the data rows.
 #         - Calculate the *harmonic mean* of a column containing numbers. Search the [standard library](https://docs.python.org/3.7/library/index.html) for a a relevant module containing the code to do so.
 #     3. Add an extra column to the data (think of something that makes sense). Write the whole dataset to a new csv file.
+
+# %% [markdown] id="y5FcFvgypMfE"
+# ## Next module
+#
+# [12 - Functions, bis](https://colab.research.google.com/drive/1LHPo4gEzyKTPlVAkGifdzh9ahG2mJq6K)

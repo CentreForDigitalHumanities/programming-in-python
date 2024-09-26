@@ -112,8 +112,8 @@ def split_sentences(text):
 
 
 text = 'The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school. Confused and disillusioned, Holden searches for truth and rails against the “phoniness” of the adult world.'
-expected = [['The', 'novel', 'details', 'two', 'days', 'in', 'the', 'life', 'of', '16-year-old', 'Holden', 'Caulfield', 'after', 'he', 'has', 'been', 'expelled', 'from', 'prep', 'school'], 
-            ['Confused', 'and', 'disillusioned', 'Holden', 'searches', 'for', 'truth', 'and', 'rails', 'against', 'the', '“phoniness”', 'of', 'the', 'adult', 'world'], 
+expected = [['The', 'novel', 'details', 'two', 'days', 'in', 'the', 'life', 'of', '16-year-old', 'Holden', 'Caulfield', 'after', 'he', 'has', 'been', 'expelled', 'from', 'prep', 'school'],
+            ['Confused', 'and', 'disillusioned', 'Holden', 'searches', 'for', 'truth', 'and', 'rails', 'against', 'the', '“phoniness”', 'of', 'the', 'adult', 'world'],
     ]
 
 # If no errors occur, you solved it correctly!
@@ -126,7 +126,7 @@ assert split_text == expected
 
 # %% [markdown] id="YNbDTnBrheRq"
 # ### The data
-# In the `class materials` section of the [Teams channel](https://teams.microsoft.com/l/channel/19%3aAlr7pcE2v9p1eaKT1BtNxJAB9mgCFT1olZvAMswJlEc1%40thread.tacv2/Algemeen?groupId=7fd15384-6748-4852-8646-d96963fb3524&tenantId=d72758a0-a446-4e0f-a0aa-4bf95a4a10e7) you will find three `.txt`files:
+# In the `class materials` section of the [Teams channel](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fteams.microsoft.com%2Fl%2Fteam%2F19%253a7fUy9HLO6LExOYQiz81CKmKv3wN7FI7cXyOgyPSz6Xo1%2540thread.tacv2%2Fconversations%3FgroupId%3D5d0856b8-3287-4585-8d42-6b65e5eee6e6%26tenantId%3Dd72758a0-a446-4e0f-a0aa-4bf95a4a10e7) you will find three `.txt`files:
 #
 #
 # - `catcher_chapter1.txt`, containing the first chapter of The Catcher in the Rye by J.D. Salinger

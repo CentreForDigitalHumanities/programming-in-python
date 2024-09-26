@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR)
+# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox)
 #
 # ### This module
 #
@@ -133,6 +133,7 @@ print(big_list[-1])
 print(type(big_list[-1]))
 
 # Access the last element of the small_list inside big_list:
+print(big_list[-1][-1])
 
 # %% [markdown] id="1HDqXMbWwmbk"
 # ### Accessing multiple elements
@@ -266,7 +267,7 @@ print(veggies)
 #
 # Below we introduce another parameter in the list slice. Try to explain what it does.
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 627, "status": "ok", "timestamp": 1681202305255, "user": {"displayName": "Mees van Stiphout", "userId": "10520931415894572279"}, "user_tz": -120} id="Y9oxyQb7TIPI" outputId="158288d5-94e0-4068-d13e-af2a5c85177f"
+# %% id="Y9oxyQb7TIPI"
 countries = ['japan', 'hungary', 'maldives', 'gabon', 'bhutan']
 
 print(countries[0:5:1])
@@ -298,4 +299,4 @@ else:
 # %% [markdown] id="HiEWGB1V1W4U"
 # ## Next module
 #
-# [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH)
+# [5. Assertions](https://colab.research.google.com/drive/1OBdYVZCMXGzb3fCM_FPAqY_IfeDR1kub)

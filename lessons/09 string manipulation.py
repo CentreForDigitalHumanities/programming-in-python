@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [8. Debugging](https://colab.research.google.com/drive/1r6wuOuEHabI0vmBg15HVFBLiNKRb-jnS)
+# Previous module: [8. Debugging](https://colab.research.google.com/drive/1Rj6qEuT3BFcQwexAxKg3zbAAD6t1cc8p)
 #
 # ### This module
 #
@@ -105,7 +105,7 @@ print(list_string.split('e'))
 
 # %% [markdown] id="UM5FtDPBlBGx"
 # ### Join an iterable into a string
-# The reverse of splitting is ofcourse also possible: take each element of an *iterable* (such as a list), and glue them together into a string. You can choose which character to put between each element:
+# The reverse of splitting is of course also possible: take each element of an *iterable* (such as a list), and glue them together into a string. You can choose which character to put between each element:
 #
 # `string.join(iterable)`
 
@@ -127,7 +127,8 @@ assert join_title == title
 
 # %% [markdown] id="5hIj-tbVleEq"
 # ## Exercise 9.1: String utilities
-# In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
+#
+# 1. In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
 
 # %% id="02q-FgvVlxEj"
 print(len('two'))
@@ -166,6 +167,48 @@ list_of_words = ['I', 'ate', 'a', 'banana']
 sentence = 'I ate a banana'
 
 assert ''.join(list_of_words) == sentence
+
+# %% [markdown] id="Y34UdLQVQY_B"
+# 2. In each of the code blocks below, replace each occurrence of `None` by an expression so that the assertions pass.
+
+# %% id="CMOb-BiRQkVd"
+name = 'Julian'
+other_name = name.replace('Juli', None)
+assert other_name == 'Sheean'
+
+# %% id="gmAD4po2RIAo"
+sentence1 = 'Edo won an argument about function parameters.'
+sentence2 = 'To be or not to be, that is the question.'
+
+def sentence_length(sentence):
+    return None
+
+assert sentence_length(sentence1) == 7
+assert sentence_length(sentence2) == 10
+
+# %% id="VXHa1AIMSZW-"
+book_title = 'iteration, or how I did the loop thing'
+
+words = []
+for title_word in None: # use book_title
+    # on the next line, use title_word twice
+    capitalized_word = None + title_word[1:]
+    words.append(capitalized_word)
+
+capitalized_title = None # use words
+
+assert capitalized_title == 'Iteration, Or How I Did The Loop Thing'
+
+# %% [markdown] id="4dXMIBAUUk5T"
+# 3. **BONUS** Write a function `bwian_speech`. Its parameter is any sentence. It should return the same sentence, but with selective replacements: the first occurrence of the character `r` after every comma should be replaced by `w`. If you succeed, challenge yourself to replace `R` by `W` as well.
+
+# %% id="kT34vyPcVwNQ"
+original = 'Do we have a prisoner by that name, "Brian"?'
+bwianized = 'Do we have a prisoner by that name, "Bwian"?'
+
+# your definition of bwian_speech here
+
+assert bwian_speech(original) == bwianized
 
 # %% [markdown] id="mRATbQdclrcX"
 # ## Exercise 9.2: Additional utilities
@@ -247,7 +290,8 @@ print(text)
 
 # %% [markdown] id="avcqgDAAoq-w"
 # ## Exercise 9.3: String formatting
-# In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
+#
+# 1. In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
 
 # %% id="BIa0VOX_owF4"
 print('hey {}')
@@ -264,7 +308,21 @@ print('hey {Julian}'.format('Julian'))
 # %% id="wA18AIPKpFAH"
 print('hey {name}'.format('Julian'))
 
+# %% [markdown] id="PkBMT-kYiIqd"
+# 2. Change each of the code blocks above so that it outputs `hey Edo`. You are **not** allowed to change the contents of the strings that start with `'hey`!
+
+# %% [markdown] id="ArVJo3y0jJ8T"
+# 3. What do you think the following piece of code will do? Try it out. Can you explain the result?
+
+# %% id="iAkugK6wjqfl"
+name = 'Jill'
+welcome = 'welcome, {}'.format
+goodbye = 'farewell, {}'.format
+connect = '; '.join
+
+print(connect((welcome(name), goodbye(name))))
+
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [10 - Dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj)
+# [10 - Dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3)
