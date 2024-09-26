@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [8. Debugging](https://colab.research.google.com/drive/1yQskT6SyKvXtXewx5kCla2NOmasgP8Vi)
+# Previous module: [8. Debugging](https://colab.research.google.com/drive/1r6wuOuEHabI0vmBg15HVFBLiNKRb-jnS)
 #
 # ### This module
 #
@@ -181,6 +181,8 @@ assert ''.join(list_of_words) == sentence
 #
 #
 
+# %% id="NyrzV4VGUJWK"
+
 # %% [markdown] id="8YAcMdHpnuKw"
 # ## String formatting
 # We have seen a (not very convenient) way of building strings:
@@ -232,11 +234,11 @@ print(shoutout_template.format(name=julian, followup=question))
 print(shoutout_template.format(followup=question, name=julian))
 print(shoutout_template.format(followup=julian, name=question))
 
-# %% [markdown]
+# %% [markdown] id="lxJqWxlRfIxd"
 # ### F-strings
-# Similar to placeholders, expressions an also be directly combined within a string by putting `f` in front of a string:
+# Similar to placeholders, expressions can also be directly combined within a string by putting `f` in front of a string:
 
-# %%
+# %% id="ThZE6YnXfIxd"
 name = 'Sheean'
 weeks = 2
 text = f'Hi {name}, your next appointment is in {weeks * 7} days.'
@@ -265,4 +267,4 @@ print('hey {name}'.format('Julian'))
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [10 - Dictionaries](https://colab.research.google.com/drive/16mecEPkVGUBIFoHIALO7dE8qv7PynHL9)
+# [10 - Dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj)

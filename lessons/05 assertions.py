@@ -18,9 +18,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [4. Datastructures](https://colab.research.google.com/drive/1JxzmIzwcipnwFBntv0WZOlT-d2fUjoRF)
+# Previous module: [4. Datastructures](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt)
 #
 # ### This module
 #
@@ -74,7 +74,7 @@ assert 0
 
 # %% [markdown] id="xgqh3r7Bcj_F"
 # ## Exercise 5.2: Bonus - Test-driven development
-# [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is a proccess where you **first** write some test conditions, and then write the code that should satisfy these conditions. 
+# [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is a proccess where you **first** write some test conditions, and then write the code that should satisfy these conditions.
 # Implement the following programs in these steps:
 # 1. Create multiple test conditions using `assert`
 # 2. Run the cell, the tests should fail (output `AssertionError`)
@@ -89,12 +89,14 @@ assert 0
 
 # %% id="Q_yIUKSRdVjF"
 a = 12
+
+# Change the value for b
 b = 0
 
 # Write an expression for c using a and b
 c = 0
 
-assert a < b, 'a should be smaller than b'
+assert a < b, 'a should be less than b'
 assert a != b, 'a and b should not be equal'
 assert c == 18, 'c should be 18'
 
@@ -110,4 +112,4 @@ assert students[0] < students[1] < students[2]
 # %% [markdown] id="JaaguG-D3k_i"
 # ## Next module
 #
-# [6. Loops](https://colab.research.google.com/drive/1AZY4ESmsKKMvbalBDLlMrezAM5NzXXxV)
+# [6. Loops](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ)

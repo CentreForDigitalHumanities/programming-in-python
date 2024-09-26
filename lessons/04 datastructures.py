@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1KkZ2fS75o7giccQJakRhyvYBV7JdFnVw)
+# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR)
 #
 # ### This module
 #
@@ -41,7 +41,7 @@ student3 = 'john'
 # ## Lists
 #
 # - `list`: an ordered collection of values
-# - One type of *iterable*, a collection you that allows iteration over its elements
+# - One type of *iterable*, a collection that allows iteration over its elements
 # - Syntax: `[element1, element2, ...]`
 # - Empty list also exists: `[]`
 
@@ -117,7 +117,7 @@ print(students)
 
 students.remove('john')
 # or by index:
-# del students[2]
+del students[2]
 print(students)
 
 # %% [markdown] id="kUUwwkDVtXOC"
@@ -236,7 +236,7 @@ countries.append(['mexico', 'haiti'])
 print(countries)
 
 # %% [markdown] id="TyebsOIpU6hv"
-# 2. Transform the list below into `['jasmin', 'john', 'ravi']` in one line of code. 
+# 2. Transform the list below into `['jasmin', 'john', 'ravi']` in one line of code.
 #
 #
 
@@ -298,4 +298,4 @@ else:
 # %% [markdown] id="HiEWGB1V1W4U"
 # ## Next module
 #
-# [5. Assertions](https://colab.research.google.com/drive/1Nv6vgkH2zjJes7LXUCVhsDwFOGCtTbHM)
+# [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH)

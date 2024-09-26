@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 4](https://colab.research.google.com/drive/1JxzmIzwcipnwFBntv0WZOlT-d2fUjoRF)
+# [Module 4](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1KkZ2fS75o7giccQJakRhyvYBV7JdFnVw) - [solutions](https://colab.research.google.com/drive/1Nvvjc3fGnMg2tWvfw2W1gVn2oKKbWzGI)
+# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR) - [solutions](https://colab.research.google.com/drive/1-vBxja7MWudomSKEg1NU5D3JO0SEQc3J)
 
 # %% [markdown] id="70aMsClGPRy9"
 # ## Exercise 4.1: Lists
@@ -59,7 +59,7 @@ print(countries)
 # a nested single element of the latter.
 
 # %% [markdown] id="TyebsOIpU6hv"
-# 2. Transform the list below into `['jasmin', 'john', 'ravi']` in one line of code. 
+# 2. Transform the list below into `['jasmin', 'john', 'ravi']` in one line of code.
 #
 #
 
@@ -142,7 +142,7 @@ print(countries[-1::-2])
 # defaults to 1. If you give Python a slice [BEGIN:END:STEP], it
 # visits the indices as follows:
 # 1. Set the index to BEGIN.
-# 2. If (STEP < 0 and index not after END) 
+# 2. If (STEP < 0 and index not after END)
 #    or (STEP >= 0 and index not before END): stop.
 # 3. Visit the index in the given list or other iterable.
 # 4. Set the index to index + STEP.
@@ -188,4 +188,4 @@ else:
 # %% [markdown] id="HiEWGB1V1W4U"
 # ## Next module
 #
-# [5. Assertions](https://colab.research.google.com/drive/1Nv6vgkH2zjJes7LXUCVhsDwFOGCtTbHM) - [solutions](https://colab.research.google.com/drive/1tqjXsHnnJeEAivrxqRoOSW9eNESCwLIK)
+# [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH) - [solutions](https://colab.research.google.com/drive/1yrrB0EYglFKJ0_zhb91xY7FGgJosSUFw)

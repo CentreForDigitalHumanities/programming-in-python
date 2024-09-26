@@ -15,13 +15,13 @@
 # # Module 1: Introduction
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
 # ## Welcome!
 #
 # ## Who are we?
 #
-# - Julian Gonggrijp, Sheean Spoel, Jelte van Boheemen, Luka van der Plas, Mees van Stiphout
+# - Julian Gonggrijp, Sheean Spoel
 # - Developers at the Digital Humanities Lab
 #
 # ## Who are you?
@@ -221,4 +221,4 @@ print('apricot', 'banana')
 # %% [markdown] id="zI0ohEpPUwpC"
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/17K6C_EZoeGtRxoTbYQvygFEdpWgQ2QFp)
+# [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)

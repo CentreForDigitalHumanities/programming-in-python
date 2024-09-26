@@ -15,13 +15,14 @@
 # # CDH course "Programming in Python"
 #
 # ### Exercise Solutions
-# [Solutions](https://colab.research.google.com/drive/1vy2gKHtBUMk60u2bmCYlcqmhIFpI2PI-#scrollTo=fqMJHzNk5yXQ)
+#
+# [Module 6](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [5. Assertions](https://colab.research.google.com/drive/1Nv6vgkH2zjJes7LXUCVhsDwFOGCtTbHM?usp=share_link) - [solutions](https://colab.research.google.com/drive/1tqjXsHnnJeEAivrxqRoOSW9eNESCwLIK)
+# Previous module: [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH) - [solutions](https://colab.research.google.com/drive/1yrrB0EYglFKJ0_zhb91xY7FGgJosSUFw)
 
 # %% [markdown] id="0Gun_3cX1ey8"
 # ## Exercise 1: basic `for` loops
@@ -34,7 +35,7 @@ full_text = ''
 
 for word in words:
     full_text = full_text + word + ' '
-    # print(word)
+    print(word)
 print(full_text)
 
 # %% [markdown] id="8zB10pLC2ZaT"
@@ -52,7 +53,7 @@ for fruit in fruits[-1::-1]:
     reverse_fruits.append(fruit)
 print(reverse_fruits)
 
-#solution 2:
+#solution 2 (best):
 reverse_fruits = []
 for fruit in fruits:
     reverse_fruits = [fruit] + reverse_fruits
@@ -89,16 +90,16 @@ print(reverse_fruits)
 
 # %% [markdown] id="otBq-xEi-SiC"
 # > Things that you might notice:
-# > 
+# >
 # > - It is possible to call `range` with one, two or three arguments.
 # > - `enumerate` is always called with only one argument.
 # > - Some noticed that you can write the string `'pirate'` and pass it directly to `enumerate`, without storing the string in a variable first. This is a good observation, and it is possible with all values and functions in general!
 # > - The program is counting iterations. The variable `iteration_count` is initially set to `0`, incremented at every loop iteration and finally printed at the end.
 # > - When the `iteration_count` is greater than `2`, the loop does not print the current `value`. In other words, the program only prints the first two values in each iterable.
 # > - The program prints the type of the first value in the iterable only.
-# > 
+# >
 # > Reasons:
-# > 
+# >
 # > - All the various versions of `miracle` are there to illustrate the behavior of `range` and `enumerate`.
 # > - We print the type of the iterable as a whole at the start, so you can see what kind of value comes out of the call to `range` or `enumerate`.
 # > - We keep track of the number of iterations so you can see how many values are produced by the iterable. We could have used `enumerate` for this, but this would be confusing, since the behavior of `enumerate` itself is the topic of this exercise. Therefore, we use custom logic with the `iteration_count` variable instead.
@@ -112,16 +113,16 @@ print(reverse_fruits)
 
 # %% [markdown] id="ZyllJHKCBtoy"
 # > Possible elements of a good answer for `range`:
-# > 
+# >
 # > - If you pass only one value, this sets the exclusive end. It generates whole numbers from `0` (zero) up to but not including the end.
 # > - If you pass two values, the first sets the inclusive start and the second sets the exclusive end.
 # > - If you pass three values, the first sets the inclusive start, the second the exclusive end and the third a step size.
 # > - If you omit the step size (so you pass only one or two arguments), it defaults to `1`.
 # > - A negative step size causes the range to count "backwards" (from high numbers to low numbers).
 # > - You are not allowed to pass floats; the function only supports integers.
-# > 
+# >
 # > Possible elements of a good answer for `enumerate`:
-# > 
+# >
 # > - It requires another iterable as argument (we see a list, a string and a range in the examples).
 # > - The same values from the input iterable also appear in the output iterable, but wrapped in a tuple.
 # > - In the output iterable, every tuple has a numerical index in addition to the corresponding value from the input iterable.
@@ -212,4 +213,4 @@ for number in numbers:
 # %% [markdown] id="0eGibfk04LI0"
 # ## Next module
 #
-# [7. Functions](https://colab.research.google.com/drive/1APhegD_KpLRFn5bC6Ater2wFpT8_Opfr)
+# [7. Functions](https://colab.research.google.com/drive/146De3ZjgWYldNBmKkDyu8-m_jkzUTrGg) - [solution](https://colab.research.google.com/drive/1BdBQeTKBvEPn1CTIJC5sDDY6VBMs32Sq)

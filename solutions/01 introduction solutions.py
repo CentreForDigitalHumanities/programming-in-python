@@ -16,11 +16,11 @@
 #
 # ## Exercise solutions
 #
-# [Module 1](https://colab.research.google.com/drive/1i4wJpUIr77Fh1renWNjt00Bd51NbC1nB)
+# [Module 1](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)
 #
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 
 # %% [markdown] id="pKIEfocbMaIR"
 # ## Exercise 1.1: Try it out
@@ -55,7 +55,7 @@ print('cherry')
 # %% [markdown] id="snD4bhFA4VTx"
 # Normally, a bare value by itself is never shown. It is a special "service" of notebooks that the last value in a code block is shown. This is why we see only `'cherry'` and not `'apricot'` or `'banana'`.
 
-# %% id="-ZuiJ92yNqpi" executionInfo={"status": "ok", "timestamp": 1680706039219, "user_tz": -120, "elapsed": 223, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %% id="-ZuiJ92yNqpi"
 # apricot
 # banana
 # cherry
@@ -132,4 +132,4 @@ print('Hello, world!')
 # %% [markdown] id="zI0ohEpPUwpC"
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/17K6C_EZoeGtRxoTbYQvygFEdpWgQ2QFp) - [solutions](https://colab.research.google.com/drive/1JKeNehBZ9hhHXPdVunQ_r9cv-lLR9Byy)
+# [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA) - [solutions](https://colab.research.google.com/drive/1R0_DYzufN6PSKpot8iBmn1Gh6mNSOCy5)

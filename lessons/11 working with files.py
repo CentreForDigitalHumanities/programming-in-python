@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/16mecEPkVGUBIFoHIALO7dE8qv7PynHL9)
+# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj)
 #
 # ### This module
 #
@@ -57,12 +57,12 @@ print(lines)
 
 # %% [markdown] id="96NQljy2ez-E"
 # ### Sidenote: constants
-# Isn't the convention that variables are lowercased? 
+# Isn't the convention that variables are lowercased?
 # Not if they are *constants*:
 # - Variables that do not change during the progam
 # - Often represent some 'setting' or 'constant value'
 #     - `PATH = 'countries.csv'`
-#     - `PI = 3.14159265358979323846264338327950288419716939937510582097` 
+#     - `PI = 3.14159265358979323846264338327950288419716939937510582097`
 #
 
 # %% [markdown] id="ZlbuEqiKftk-"

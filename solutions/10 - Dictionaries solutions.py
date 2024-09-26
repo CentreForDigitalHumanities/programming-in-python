@@ -14,11 +14,15 @@
 # %% [markdown] id="kjdcNtg3k8Aa"
 # # Dictionaries
 #
+# ### Exercise solutions
+#
+# [Module 10](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj)
+#
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [9. String manipulation](https://colab.research.google.com/drive/1Z7NNMxqHTSMoUadH3pVL6Bg6oii4qUoQ)
+# Previous module: [9. String manipulation](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm) - [solutions](https://colab.research.google.com/drive/1wOUWUUP4KdYUFzp5-fALi5t_k_4ovow1)
 #
 # ### This module
 #
@@ -74,7 +78,7 @@ for fruit in fruit_colors:
 # %% [markdown] id="Gtp5V9dE0LxK"
 # 2 . Here is a longer lists of fruit colours. Write a function `count_fruits` which gets gets a colour as input and returns the number of fruits that have that colour (according to `lots_of_fruit`).
 
-# %% id="S7gCNyLCxdrO" executionInfo={"status": "ok", "timestamp": 1681894473607, "user_tz": -120, "elapsed": 227, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="S7gCNyLCxdrO"
 lots_of_fruit = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange',
                  'cucumber': 'green', 'kiwi': 'green', 'strawberry': 'red',
                  'pineapple': 'yellow','blackberry': 'black', 'cherry': 'red',
@@ -82,7 +86,7 @@ lots_of_fruit = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange',
                  'lemon': 'yellow', 'lime': 'green'}
 
 
-# %% id="nScDQipK35qN" executionInfo={"status": "ok", "timestamp": 1681894484122, "user_tz": -120, "elapsed": 259, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="nScDQipK35qN"
 def count_fruits(color):
     '''Count the number of fruits in `lots_of_fruit` that match this colour.'''
     count = 0
@@ -98,14 +102,14 @@ assert count_fruits('lavender') == 0
 # %% [markdown] id="-Qp6R3Kp3GId"
 # 3 . The list `fruit_basket` contains a bunch of fruits. Can you make a dictionary `fruit_counts` which gives the amount for each fruit in `fruit_basket`? (Do not count the fruits by hand!)
 
-# %% id="awf-lLQO3N1U" executionInfo={"status": "ok", "timestamp": 1681894489366, "user_tz": -120, "elapsed": 217, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="awf-lLQO3N1U"
 fruit_basket = ['apple', 'banana', 'banana', 'banana', 'apple', 'orange',
                 'orange', 'grape', 'grape', 'grape', 'grape', 'grape', 'grape',
                 'grape', 'grape', 'grape', 'pear', 'apple', 'strawberry',
                 'strawberry', 'strawberry', 'orange']
 
 
-# %% id="MDpIZpbm3-BG" executionInfo={"status": "ok", "timestamp": 1681894585893, "user_tz": -120, "elapsed": 281, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="MDpIZpbm3-BG"
 def count_items(items):
     '''
     Count the items in a list.
@@ -122,7 +126,7 @@ def count_items(items):
         current_count = counts.get(item, 0)
         new_count = current_count + 1
         counts[item] = new_count
-    
+
     return counts
 
 fruit_counts = count_items(fruit_basket)
@@ -136,19 +140,19 @@ assert fruit_counts['apple'] == 3
 #
 # Write a function that takes a dictionary like `word_counts` tells us the most commonly occuring item and the count. Note that there can be multiple items that occurred the most.
 
-# %% id="mdNug4ct5645" executionInfo={"status": "ok", "timestamp": 1681894602379, "user_tz": -120, "elapsed": 241, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="mdNug4ct5645"
 # the variable sent0 contains the first sentence of The Catcher in the Rye
 # split into single words
-sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the', 
-         'first', 'thing', 'you’ll', 'probably', 'want', 'to', 'know', 'is', 
-         'where', 'I', 'was', 'born,', 'and', 'what', 'my', 'lousy', 'childhood', 
-         'was', 'like,', 'and', 'how', 'my', 'parents', 'were', 'occupied', 
-         'and', 'all', 'before', 'they', 'had', 'me,', 'and', 'all', 'that', 
-         'David', 'Copperfield', 'kind', 'of', 'crap,', 'but', 'I', 'don’t', 
-         'feel', 'like', 'going', 'into', 'it,', 'if', 'you', 'want', 
+sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the',
+         'first', 'thing', 'you’ll', 'probably', 'want', 'to', 'know', 'is',
+         'where', 'I', 'was', 'born,', 'and', 'what', 'my', 'lousy', 'childhood',
+         'was', 'like,', 'and', 'how', 'my', 'parents', 'were', 'occupied',
+         'and', 'all', 'before', 'they', 'had', 'me,', 'and', 'all', 'that',
+         'David', 'Copperfield', 'kind', 'of', 'crap,', 'but', 'I', 'don’t',
+         'feel', 'like', 'going', 'into', 'it,', 'if', 'you', 'want',
          'to', 'know', 'the', 'truth.']
 
-# %% id="XGY3qSEk6B9j" executionInfo={"status": "ok", "timestamp": 1681894603343, "user_tz": -120, "elapsed": 3, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}}
+# %% id="XGY3qSEk6B9j"
 word_counts = count_items(sent0) # we recycle our function from the last exercise
 
 
@@ -182,3 +186,8 @@ print(words, total)
 assert most_frequent(fruit_counts) == (['grape'], 9)
 assert most_frequent(word_counts) == (['and'], 4)
 assert most_frequent({}) == ([], 0)
+
+# %% [markdown] id="y5FcFvgypMfE"
+# ## Next module
+#
+# [11 - Working with files](https://colab.research.google.com/drive/1_mDpeRCHzrGJstcxEWZgq5YMhHujPdfe) - [solutions](https://colab.research.google.com/drive/1a5fHoa8eY_ABZereDQLcSnV5w3AUYSav)

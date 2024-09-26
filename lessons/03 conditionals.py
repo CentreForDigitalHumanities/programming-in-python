@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/17K6C_EZoeGtRxoTbYQvygFEdpWgQ2QFp)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)
 #
 # ### This module
 #
@@ -30,7 +30,7 @@
 # - Only evaluate part of the code if some condition is met
 # - Syntax: `if <condition>:`
 # - `<condition>` can be any expression that evaluates to `True` or `False`
-# - Introducing *indented blocks* 
+# - Introducing *indented blocks*
 
 # %% id="Va6X8kIz9ey0"
 a = 12
@@ -48,7 +48,7 @@ if a < 10:
 print('but not this!')
 
 # %% [markdown] id="5gqn2ac_sg7Y"
-# - Indented blocks are the reason we sometimes need `pass` as a placeholder (remember [1. introduction](https://colab.research.google.com/drive/1i4wJpUIr77Fh1renWNjt00Bd51NbC1nB)). It lets us create an indented block, without defining any behavior for it yet.
+# - Indented blocks are the reason we sometimes need `pass` as a placeholder (remember [1. introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)). It lets us create an indented block, without defining any behavior for it yet.
 
 # %% id="ZdH7HnL6tDpS"
 earth = 'round'
@@ -68,7 +68,7 @@ letter = 'b'
 if letter == 'a':
     print('we found the letter a')
 
-if letter == 'b': 
+if letter == 'b':
     print('this is not a')
 
 if letter == 'c':
@@ -112,7 +112,7 @@ number = 11
 if number > 2:
     if number < 10:
         print('between 2 and 10')
-    print('larger than 2, but not smaller than 10')
+    print('greater than 2, but not less than 10')
 
 # There is a mistake in the code above, can you find
 # and fix it?
@@ -218,7 +218,7 @@ if not (letter == 'a' or letter == 'b'):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/17K6C_EZoeGtRxoTbYQvygFEdpWgQ2QFp#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA#scrollTo=Exercise_2_4_Bonus)!
 
 # %% id="SZGeQtqEhiAK"
 value = 9
@@ -228,4 +228,4 @@ value = 9
 # %% [markdown] id="YBC4OfihzFho"
 # ## Next module
 #
-# [4. Datastructures](https://colab.research.google.com/drive/1JxzmIzwcipnwFBntv0WZOlT-d2fUjoRF)
+# [4. Datastructures](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt)
