@@ -11,6 +11,25 @@
 #     name: python3
 # ---
 
+# %% [markdown] id="aBR46fQqgyGt"
+# # Module 11: Working with files
+#
+# ### Exercise solutions
+#
+# [Module 11](https://colab.research.google.com/drive/1_mDpeRCHzrGJstcxEWZgq5YMhHujPdfe)
+#
+# ### CDH course "Programming in Python"
+#
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+#
+# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj) - [solutions](https://colab.research.google.com/drive/1j1hikQCS3Px0_q4hguuIqWSXSmyKcAiN)
+#
+# ### This module
+#
+# - Reading files
+# - Writing files
+# - Use existing code
+
 # %% [markdown] id="YC0q3Z4HiM5Z"
 # ## Exercise 11.1 - Files
 # In the code block below, try to predict what will be printed, then run the code.
@@ -63,7 +82,7 @@ print(type(columns[0]))
 # %% [markdown] id="EuCKWl9z7zUf"
 # The row is split into columns. They still contain strings, not numbers. And the last value includes the newline character `\n`
 
-# %% id="BnpSq28I766w" executionInfo={"status": "ok", "timestamp": 1681916502255, "user_tz": -120, "elapsed": 226, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}}
+# %% id="BnpSq28I766w"
 def clean_value(value):
     '''
     Clean a single value. Assumes value is a string representation
@@ -110,7 +129,7 @@ assert clean_values(columns) == [-122.05, 37.37, 27, 3885, 661, 1537, 606, 6.608
 # %% [markdown] id="nqZZLHi4-HyR"
 # #### 11.2.1
 
-# %% id="3UI9XbgN-Ffb" executionInfo={"status": "ok", "timestamp": 1681915598793, "user_tz": -120, "elapsed": 194, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}}
+# %% id="3UI9XbgN-Ffb"
 import csv
 PATH = 'sample_data/california_housing_test.csv'
 
@@ -118,7 +137,7 @@ def read_data():
     with open(PATH) as csv_file:
         reader = csv.reader(csv_file, delimiter=',')
         return list(reader)
-        
+
 assert len(read_data()) == 3001
 
 
@@ -230,6 +249,3 @@ new_data = add_column(data, 'total_income', total_income)
 # finally, write to a new file
 write_table_to_csv(new_data, 'sample_data/california_housing_test_expanded.csv')
 
-
-# %% [markdown] id="UuvUPP01_uUL"
-#

@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [1. Introduction](https://colab.research.google.com/drive/1i4wJpUIr77Fh1renWNjt00Bd51NbC1nB)
+# Previous module: [1. Introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)
 #
 # ### This module
 #
@@ -37,7 +37,7 @@
 # - floating point - `float`
 # - string - `str`
 # - boolean - `bool`
-# - none - `None`
+# - none - `NoneType`
 #
 
 # %% [markdown] id="8sSOrG7FdMT5"
@@ -73,7 +73,7 @@
 
 "I don't want to do this"
 
-# escaping difficult characters with \ 
+# escaping difficult characters with \
 "I won't say \"banana\"\\"
 
 # line breaks are preserved
@@ -233,7 +233,7 @@ print(number)
 #
 # - must start with a letter or underscore (`_`)
 # - can only contain letters (`a-z`, `A-Z`), numbers (`0-9`), and underscore (`_`)
-# - variable names are case sensitive. `name` is a different variable from `Name` 
+# - variable names are case sensitive. `name` is a different variable from `Name`
 #
 # #### Conventions
 #
@@ -331,7 +331,7 @@ print(anthem)
 # %% [markdown] id="ZXd6jCn90CA_"
 # ## Expressions
 #
-# - An expression is a combination between *operands* and *operators*. 
+# - An expression is a combination between *operands* and *operators*.
 # - Think of arithmetic: `1 + 2`
 #
 #
@@ -434,8 +434,8 @@ net_income
 # 2. In the code block below, change the values of `character` and `multiplier` so that the output becomes `'Goooood!'`.
 
 # %% id="pYZUkeDJenob"
-character = 'o'
-multiplier = 5
+character = 'x'
+multiplier = 0
 
 begin = 'G'
 middle = character * multiplier
@@ -572,4 +572,4 @@ word = 'archaïsch'
 # %% [markdown] id="jXSxbjf4q6q5"
 # ## Next module
 #
-# [3. Conditionals](https://colab.research.google.com/drive/1KkZ2fS75o7giccQJakRhyvYBV7JdFnVw)
+# [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR)

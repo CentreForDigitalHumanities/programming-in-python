@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [6. Loops](https://colab.research.google.com/drive/1AZY4ESmsKKMvbalBDLlMrezAM5NzXXxV)
+# Previous module: [6. Loops](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ)
 #
 # ### This module
 #
@@ -88,7 +88,7 @@ print('two')
 #
 # In our example of `max(3, 4, 5)` above, `3`, `4`, and `5` are positional arguments. In this case, the order of the numbers does not actually matter (the maximum is the same, no matter what).
 #
-# However, for most functions, this is not the case! An example you have already seen is `range`: the first argument is the _start_ and the second argument is the _stop_.
+# However, for most functions, order does matter! An example you have already seen is `range`: the first argument is the _start_ and the second argument is the _stop_.
 
 # %% id="yCyPbsvAd5PB"
 assert max(3, 4, 5) is max(4, 3, 5)
@@ -542,7 +542,7 @@ print(tax_rate(income=40000, True))
 # %% [markdown] id="1jWzKu5omWUV"
 # ## Functions as first-class citizens
 #
-# As mentioned previously, a function is just a variable. That means you can do the same things with it as with other values. For example, you can pass a function as an argument to another function:
+# As mentioned previously, a function is just a value. That means you can do the same things with it as with other values. For example, you can pass a function as an argument to another function:
 
 # %% id="ukVglqcwsAdT"
 def exclaim(text):
@@ -685,26 +685,26 @@ assert echo('holiday') == 'holiday'
 # 3. In the following code block, write a function `month`, which returns a string name for given numeric month. Month `1` is `'January'` and month `12` is `December`. When no argument is passed, it should default to the current month. **Tip:** you can avoid writing a big `if`/`elif`/`else` tree by using a list of month names and using the month number as a list index.
 
 # %% id="TnuU_I0Tq9wQ"
-# You may pretend that it is forever April
-current_month = 4
+# You may pretend that it is forever November
+current_month = 11
 
 # Your definition of month here
 
 assert month(3) == 'March'
 assert month(4) == 'April'
 assert month(11) == 'November'
-assert month() == 'April'
+assert month() == 'November'
 
 # %% [markdown] id="WuRrElhUsD40"
 # 4. In the following code block, write a function `weekday`, which is analogous to `month` in the previous exercise. Day `1` is `'Monday'` while day `0` and day `7` are both `'Sunday'`. Can you avoid writing the string `'Sunday'` twice in your code?
 
 # %% id="WUGQqmJysrqS"
-# You may pretend it is forever Tuesday
-current_weekday = 2
+# You may pretend it is forever Wednesday
+current_weekday = 3
 
 # Your definition of weekday here
 
-assert weekday() == 'Tuesday'
+assert weekday() == 'Wednesday'
 assert weekday(0) == 'Sunday'
 assert weekday(7) == 'Sunday'
 assert weekday(4) == 'Thursday'
@@ -799,7 +799,7 @@ for number in [5, 10, 15, 20, 25, 30, 35, 40]:
 
 # %% [markdown] id="BXzFYNGmPeO6"
 # 5. In exercise 7.1.3, you documented the function `join_commas`. We did not actually need to write that function, because it is built into Python, although it goes by the name `', '.join`. That notation also works with other strings, as we demonstrate below. We also remind you of `map`, which appeared in the lecture.<br><br>
-# Using these functions, as well as your own `fizzbuzz` from step 2 and your own `chunk10` from step 3, try to recreate (roughly) the same `FizzBuzz` output for the numbers 1 through 100 as in [exercise 6.2.4](https://colab.research.google.com/drive/1AZY4ESmsKKMvbalBDLlMrezAM5NzXXxV#scrollTo=uyqbuhKsUlhG), in as little code as you can.
+# Using these functions, as well as your own `fizzbuzz` from step 2 and your own `chunk10` from step 3, try to recreate (roughly) the same `FizzBuzz` output for the numbers 1 through 100 as in [exercise 6.2.4](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ#scrollTo=uyqbuhKsUlhG), in as little code as you can.
 
 # %% id="nDGUS26IMApD"
 # The following code is just for illustration.
@@ -815,4 +815,4 @@ print(list(strings))
 # %% [markdown] id="Dntbbioh29xm"
 # ## Next module
 #
-# [8. Debugging](https://colab.research.google.com/drive/1yQskT6SyKvXtXewx5kCla2NOmasgP8Vi)
+# [8. Debugging](https://colab.research.google.com/drive/1r6wuOuEHabI0vmBg15HVFBLiNKRb-jnS)

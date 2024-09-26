@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 2](https://colab.research.google.com/drive/17K6C_EZoeGtRxoTbYQvygFEdpWgQ2QFp)
+# [Module 2](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [1. Introduction](https://colab.research.google.com/drive/1i4wJpUIr77Fh1renWNjt00Bd51NbC1nB) - [solutions](https://colab.research.google.com/drive/1RIwG7hA-Ymjcm1dmSW6wA_hu1clDNrAd)
+# Previous module: [1. Introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B) - [solutions](https://colab.research.google.com/drive/13q9wUC6QRT3hDuvLOuctuph9yZYeEvVu)
 
 # %% [markdown] id="pDU1uK2Igmki"
 # ## Exercise 2.1: Variables and state
@@ -383,4 +383,4 @@ word < 'r'
 # %% [markdown] id="jXSxbjf4q6q5"
 # ## Next module
 #
-# [3. Conditionals](https://colab.research.google.com/drive/1KkZ2fS75o7giccQJakRhyvYBV7JdFnVw) - [solutions](https://colab.research.google.com/drive/1Nvvjc3fGnMg2tWvfw2W1gVn2oKKbWzGI)
+# [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR) - [solutions](https://colab.research.google.com/drive/1-vBxja7MWudomSKEg1NU5D3JO0SEQc3J)

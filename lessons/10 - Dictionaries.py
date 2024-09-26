@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [9. String manipulation](https://colab.research.google.com/drive/1Z7NNMxqHTSMoUadH3pVL6Bg6oii4qUoQ)
+# Previous module: [9. String manipulation](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm)
 #
 # ### This module
 #
@@ -60,7 +60,7 @@ dictionaries_by_topic = {
 
 # %% id="JgfCNNoHn3uR"
 # this will be rejected
-shared_interests = {['Julian', 'Jelte']: ['cats', 'programming'], 
+shared_interests = {['Julian', 'Jelte']: ['cats', 'programming'],
                     ['Jelte', 'Berit']: 'music'}
 
 # %% [markdown] id="1tYs_3xBqx2e"
@@ -210,7 +210,7 @@ fruit_prices = {'apple': 2.50, 'banana': 2.10, 'orange': 1.50}
 # your code here...
 
 # %% [markdown] id="Gtp5V9dE0LxK"
-# 2 . Here is a longer lists of fruit colours. Write a function `count_fruits` which gets gets a colour as input and returns the number of fruits that have that colour (according to `lots_of_fruit`).
+# 2 . Here is a longer lists of fruit colours. Write a function `count_fruits` which gets a colour as input and returns the number of fruits that have that colour (according to `lots_of_fruit`).
 
 # %% id="S7gCNyLCxdrO"
 lots_of_fruit = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange',
@@ -252,14 +252,19 @@ assert fruit_counts['apple'] == 3
 # %% id="mdNug4ct5645"
 # the variable sent0 contains the first sentence of The Catcher in the Rye
 # split into single words
-sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the', 
-         'first', 'thing', 'you’ll', 'probably', 'want', 'to', 'know', 'is', 
-         'where', 'I', 'was', 'born,', 'and', 'what', 'my', 'lousy', 'childhood', 
-         'was', 'like,', 'and', 'how', 'my', 'parents', 'were', 'occupied', 
-         'and', 'all', 'before', 'they', 'had', 'me,', 'and', 'all', 'that', 
-         'David', 'Copperfield', 'kind', 'of', 'crap,', 'but', 'I', 'don’t', 
-         'feel', 'like', 'going', 'into', 'it,', 'if', 'you', 'want', 
+sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the',
+         'first', 'thing', 'you’ll', 'probably', 'want', 'to', 'know', 'is',
+         'where', 'I', 'was', 'born,', 'and', 'what', 'my', 'lousy', 'childhood',
+         'was', 'like,', 'and', 'how', 'my', 'parents', 'were', 'occupied',
+         'and', 'all', 'before', 'they', 'had', 'me,', 'and', 'all', 'that',
+         'David', 'Copperfield', 'kind', 'of', 'crap,', 'but', 'I', 'don’t',
+         'feel', 'like', 'going', 'into', 'it,', 'if', 'you', 'want',
          'to', 'know', 'the', 'truth.']
 
 # %% id="XGY3qSEk6B9j"
 # your code here...
+
+# %% [markdown] id="y5FcFvgypMfE"
+# ## Next module
+#
+# [11 - Working with files](https://colab.research.google.com/drive/1_mDpeRCHzrGJstcxEWZgq5YMhHujPdfe)

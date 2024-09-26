@@ -11,6 +11,24 @@
 #     name: python3
 # ---
 
+# %% [markdown] id="fqMJHzNk5yXQ"
+# # Module 9: String manipulation
+#
+# ### Exercise solutions
+#
+# [Module 9](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm)
+#
+# ### CDH course "Programming in Python"
+#
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+#
+# Previous module: [8. Debugging](https://colab.research.google.com/drive/1r6wuOuEHabI0vmBg15HVFBLiNKRb-jnS)
+#
+# ### This module
+#
+# - Storing code in a variable so you can reuse it.
+# - Being explicit about the purpose of your code.
+
 # %% [markdown] id="5hIj-tbVleEq"
 # ## Exercise 9.1: String Utilities
 # In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
@@ -33,13 +51,13 @@ assert 'A' in 'Matilda'
 # %% [markdown] id="K_daSu19liik"
 # Python is case sensitive. The capitalized `A` is not in the string.
 
-# %% executionInfo={"elapsed": 356, "status": "ok", "timestamp": 1681825113419, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="Ui3gmvCNmHfB"
+# %% id="Ui3gmvCNmHfB"
 assert 'A' in 'Matilda'.upper()
 
 # %% [markdown] id="i2bI-L6glqzO"
 # After capitalization of the whole string, `A` is in there.
 
-# %% executionInfo={"elapsed": 244, "status": "ok", "timestamp": 1681825107244, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="1tDEnzrumNdO"
+# %% id="1tDEnzrumNdO"
 name = 'Matilda'
 assert name.upper() == 'MATILDA'
 
@@ -51,7 +69,7 @@ name = 'Matilda'
 assert name.upper().lower() == 'Matilda'
 
 # %% [markdown] id="Rq3LXgkMlywN"
-# This does not work. `Matilda.upper()` equals `'MATILDA'`. 
+# This does not work. `Matilda.upper()` equals `'MATILDA'`.
 #
 # `'MATILDA'.lower()` equals `'matilda'`. The first captilal is lost in translation.
 
@@ -67,7 +85,7 @@ print('Matilda'.replace('a', 4))
 # %% [markdown] id="qsPQT5VGlNZ2"
 # We can only replace strings with other strings. `'Matilda'.replace('a', '4')` would work
 
-# %% executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1681824924342, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="BVKc0bQAnGYq"
+# %% id="BVKc0bQAnGYq"
 list_of_words = ['I', 'ate', 'a', 'banana']
 sentence = 'I ate a banana'
 
@@ -83,7 +101,7 @@ sentence = 'I ate a banana'
 assert ''.join(list_of_words) == sentence
 
 # %% [markdown] id="ZpepgX5Lk0Mk"
-# We join the words on the empty string, and not on a space. Thus, the resulting sentence contains all the words concatenated. 
+# We join the words on the empty string, and not on a space. Thus, the resulting sentence contains all the words concatenated.
 
 # %% [markdown] id="Xbi4ATS0mQzp"
 # ## Exercise 9.2: Additional utilities
@@ -97,7 +115,7 @@ assert ''.join(list_of_words) == sentence
 # - `string.find()`
 # - `string.split(',', x)` (describe what 'x' does. It should be a number)
 
-# %% executionInfo={"elapsed": 231, "status": "ok", "timestamp": 1681825855742, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="ZYHALHE7mU4-"
+# %% id="ZYHALHE7mU4-"
 # string.startswith(substring) checks if a string starts with a substring
 assert 'matilda'.startswith('mat')
 
@@ -160,3 +178,8 @@ print('hey {name}'.format('Julian'))
 
 # %% [markdown] id="LI43JmY2pcIg"
 # Same as above
+
+# %% [markdown] id="Dntbbioh29xm"
+# ## Next module
+#
+# [10. Dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj) - [solutions](https://colab.research.google.com/drive/1j1hikQCS3Px0_q4hguuIqWSXSmyKcAiN)

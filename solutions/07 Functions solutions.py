@@ -14,11 +14,15 @@
 # %% [markdown] id="fqMJHzNk5yXQ"
 # # Module 7: Functions
 #
+# ### Exercise solutions
+#
+# [Module 7](https://colab.research.google.com/drive/146De3ZjgWYldNBmKkDyu8-m_jkzUTrGg)
+#
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1s05aR4wn2dU1C3se1oXfqKz2EY5ilrno)
+# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
 #
-# Previous module: [6. Loops](https://colab.research.google.com/drive/1AZY4ESmsKKMvbalBDLlMrezAM5NzXXxV)
+# Previous module: [6. Loops](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ) - [solutions](https://colab.research.google.com/drive/19mQnQILY7oRREvwUsAD2SmqQHiOffgx_)
 #
 # ### This module
 #
@@ -46,7 +50,7 @@ def greet(name):
 
 print(greet('Berit'))
 
-# %% executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1681905000500, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="vdTIwoGxM_JV"
+# %% id="vdTIwoGxM_JV"
 name = 'Luka'
 
 def exclaim(name):
@@ -108,10 +112,10 @@ print(name) # 1st print
 # make a function. the code in the body will not be executed until we call the function below.
 def example(name):
     print(name) # 5th print: we are printing the *parameter* `name` that we
-    # passed on to the function when we called it, which is 'Jelte'. There is a 
+    # passed on to the function when we called it, which is 'Jelte'. There is a
     # global parameter which is also called `name` (with value 'Julian'), but
     # the parameter takes precedence.
- 
+
     name = 'Berit' # update the value of the *parameter*
 
     print(name) # 6th print: print the new value of the parameter
@@ -141,7 +145,7 @@ print(age) # 9th print
 # %% [markdown] id="Rwvwlpp0-Hrt"
 # 3. In each of the following code blocks, write a docstring for the function, then add assertions and run the block to check that your documentation is correct.
 
-# %% executionInfo={"elapsed": 366, "status": "ok", "timestamp": 1681906464925, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="ajcRnvzQQ9c5"
+# %% id="ajcRnvzQQ9c5"
 def odd(number):
     '''
     Checks whether a number is odd
@@ -156,14 +160,14 @@ assert odd(6) == False
 assert odd(0) == False
 
 
-# %% executionInfo={"elapsed": 393, "status": "ok", "timestamp": 1681906766119, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="giU_bIKrRME4"
+# %% id="giU_bIKrRME4"
 def magic(word):
     '''
     Checks that the input is a nonempty string and starts with a capital letter.
 
     Input can be of any type: anything other than a string will return False.
     For strings, checks that the string is not empty and the first character
-    is an uppercase latin character.    
+    is an uppercase latin character.
     '''
     if not word or type(word) != str:
         return False
@@ -178,7 +182,7 @@ assert magic('🤔') == False
 assert magic('') == False
 
 
-# %% executionInfo={"elapsed": 8, "status": "ok", "timestamp": 1681907208099, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="pAChbRWn-SKS"
+# %% id="pAChbRWn-SKS"
 def join_commas(words):
     '''
     Joins a iterable of strings into a single string, with ', ' between each item.
@@ -199,7 +203,7 @@ assert join_commas(('a', 'b', 'c')) == 'a, b, c'
 # %% [markdown] id="mc9RtAeATiHw"
 # 4. Write a function `is_number` that takes one argument. If the argument is a number, it should return `True`; otherwise, it should return `False`. Make sure to include a docstring!
 
-# %% executionInfo={"elapsed": 399, "status": "ok", "timestamp": 1681907269669, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="Ap33-rF-UbsB"
+# %% id="Ap33-rF-UbsB"
 # Your definition of is_number here
 
 def is_number(value):
@@ -226,7 +230,7 @@ assert not is_number('123')
 # %% [markdown] id="nM43w3VlB3-O"
 # 1. Write a function `last_a_index` that, given a string, returns the **last** index of the letter `'a'` in the string. If there is no `'a'` in the string, the function should return `None`.
 
-# %% executionInfo={"elapsed": 10, "status": "ok", "timestamp": 1681907469796, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="I5s4_a53ENJC"
+# %% id="I5s4_a53ENJC"
 # Define last_a_index here
 
 def last_a_index(text):
@@ -241,7 +245,7 @@ def last_a_index(text):
     for (index, character) in enumerate(text):
         if character == 'a':
             a_index = index
-    
+
     return a_index
 
 assert last_a_index('banana') == 5
@@ -252,14 +256,14 @@ assert last_a_index('Once upon a time, there was a dragon') == 32
 # %% [markdown] id="z4z3-dOaVROx"
 # 2. Write a function `replace` with three string arguments: `text`, `query` and `replacement`. It should return a copy of `text` in which all occurrences of `query` are replaced by `replacement`. For example, `replace('small', 'a', 'e')` should return `'smell'`. You may assume that `query` is always a single character. For an additional challenge, you can try to also handle multi-character query strings. For ultimate challenge, try to think of a way to handle the empty string!
 
-# %% executionInfo={"elapsed": 2, "status": "ok", "timestamp": 1681907653952, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="kyQwfz-mYvfW"
+# %% id="kyQwfz-mYvfW"
 # Define replace here
 
 # solution one: does not work with multi-character strings
 def replace(text, query, replacement):
     '''
     Replace each occurence of a character in a string
-    
+
     Input:
     - text: a string in which you want to replace something
     - query: the character you wish to replace
@@ -273,7 +277,7 @@ def replace(text, query, replacement):
             replaced = replaced + replacement
         else:
             replaced = replaced + character
-    
+
     return replaced
 
 assert replace('small', 'a', 'e') == 'smell'
@@ -281,7 +285,7 @@ assert replace('banana', 'a', 'o') == 'bonono'
 assert replace('cherry', 'a', 'x') == 'cherry'
 
 
-# %% executionInfo={"elapsed": 350, "status": "ok", "timestamp": 1681908669621, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="2ajcWTx1gi2r"
+# %% id="2ajcWTx1gi2r"
 # solution 2: handle multi-character strings and empty strings
 
 # There no clear answer for what should happen in the case of empty strings!
@@ -294,7 +298,7 @@ assert replace('cherry', 'a', 'x') == 'cherry'
 def replace(text, query, replacement):
     '''
     Replace each occurence of a substring in a string
-    
+
     Input:
     - text: a string in which you want to replace something
     - query: the string you wish to replace
@@ -305,7 +309,7 @@ def replace(text, query, replacement):
 
     if not query:
         return None
-    
+
     size = len(query)
     new_text = '' # where we build our new text
     position = 0 # our position as we move through the text
@@ -319,16 +323,16 @@ def replace(text, query, replacement):
             # if it doesn't match, move ahead by one character
             new_text += text[position]
             position += 1
-    
+
     return new_text
-    
+
 
 assert replace('small', 'a', 'e') == 'smell'
 assert replace('banana', 'a', 'o') == 'bonono'
 assert replace('cherry', 'a', 'x') == 'cherry'
 assert replace('small', '', '?') == None
 assert replace('banana', 'an', 'ab') == 'bababa'
-assert replace('banana', 'banana', 'apple') == 'apple'  
+assert replace('banana', 'banana', 'apple') == 'apple'
 assert replace('banana', 'e', 'o') == 'banana'
 
 
@@ -405,7 +409,7 @@ print(fruits)
 # %% [markdown] id="CKma4p6Egkwb"
 # 2. In each of the following code blocks, something is missing in the function definition. Add the missing element.
 
-# %% executionInfo={"elapsed": 6, "status": "ok", "timestamp": 1681909191045, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="SaygnjMygwNF"
+# %% id="SaygnjMygwNF"
 def combine(left, right):
     """ Compute the sum and the product of the arguments. """
     sum = left + right
@@ -415,7 +419,7 @@ def combine(left, right):
 assert combine(2, 3) == (5, 6)
 
 
-# %% executionInfo={"elapsed": 6, "status": "ok", "timestamp": 1681909211878, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="GqIgTcG6hMuG"
+# %% id="GqIgTcG6hMuG"
 def announce_time(hour, minute=0): # minute should be optional, so we add a default value.
     """ Announce the time in a speaking clock manner. """
     if minute < 10:
@@ -436,9 +440,9 @@ assert echo('holiday') == 'holiday'
 # %% [markdown] id="YG5XrO1PoIJx"
 # 3. In the following code block, write a function `month`, which returns a string name for given numeric month. Month `1` is `'January'` and month `12` is `December`. When no argument is passed, it should default to the current month. **Tip:** you can avoid writing a big `if`/`elif`/`else` tree by using a list of month names and using the month number as a list index.
 
-# %% executionInfo={"elapsed": 662, "status": "ok", "timestamp": 1681911393494, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="TnuU_I0Tq9wQ"
-# You may pretend that it is forever April
-current_month = 4
+# %% id="TnuU_I0Tq9wQ"
+# You may pretend that it is forever November
+current_month = 11
 
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
@@ -447,7 +451,7 @@ def month(number=current_month):
     Return the name of a month based on an number.
 
     Input should be an integer between 1 and 12. Returns None if this is not the case.
-    If no month number is given, defaults to April.
+    If no month number is given, defaults to November.
 
     Returns a string with the name of the Month.
     '''
@@ -463,14 +467,14 @@ def month(number=current_month):
 assert month(3) == 'March'
 assert month(4) == 'April'
 assert month(11) == 'November'
-assert month() == 'April'
+assert month() == 'November'
 
 # %% [markdown] id="WuRrElhUsD40"
 # 4. In the following code block, write a function `weekday`, which is analogous to `month` in the previous exercise. Day `1` is `'Monday'` while day `0` and day `7` are both `'Sunday'`. Can you avoid writing the string `'Sunday'` twice in your code?
 
-# %% executionInfo={"elapsed": 8, "status": "ok", "timestamp": 1681911394923, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="WUGQqmJysrqS"
-# You may pretend it is forever Tuesday
-current_weekday = 2
+# %% id="WUGQqmJysrqS"
+# You may pretend it is forever Wednesday
+current_weekday = 3
 
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
@@ -479,20 +483,20 @@ def weekday(number=current_weekday):
     Return the name of a weekday based on an number.
 
     Input should be an integer between 0 and 7. Returns None if this is not the case.
-    If no weekday number is given, defaults to Tuesday.
+    If no weekday number is given, defaults to Wednesday.
 
     Returns a string with the name of the weekday. Day 1 is 'Monday' while day 0
     and day 7 are both 'Sunday'.
     '''
     if type(number) is not int or number < 0 or number > 7:
         return None
- 
+
     index = (number - 1) % 7
     return weekdays[index]
 
 # Your definition of weekday here
 
-assert weekday() == 'Tuesday'
+assert weekday() == 'Wednesday'
 assert weekday(0) == 'Sunday'
 assert weekday(7) == 'Sunday'
 assert weekday(4) == 'Thursday'
@@ -504,7 +508,7 @@ assert weekday(4) == 'Thursday'
 # %% [markdown] id="8au2fNRutw8i"
 # 1. In exercises 7.3.4 and 7.3.5, where you just implemented `month` and `weekday`, your code was likely very similar. How could you implement both functions without repeating yourself? Check your solution with assertions.
 
-# %% executionInfo={"elapsed": 444, "status": "ok", "timestamp": 1681911460720, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="JFhOX_Z5uVfC"
+# %% id="JFhOX_Z5uVfC"
 def make_namer(names, default):
     '''
     Make a function to give names (months, weekdays, etc) based on a number.
@@ -524,18 +528,18 @@ def make_namer(names, default):
         '''
         if type(number) is not int or number < 0 or number > size:
             return None
-    
+
         index = (number - 1) % size
         return names[index]
-    
+
     return name
 
 # now we can make our month and weekday functions based on make_namer
 
-current_month = 4
+current_month = 11
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-current_weekday = 2
+current_weekday = 3
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 month = make_namer(months, current_month)
@@ -546,9 +550,9 @@ weekday = make_namer(weekdays, current_weekday)
 assert month(3) == 'March'
 assert month(4) == 'April'
 assert month(11) == 'November'
-assert month() == 'April'
+assert month() == 'November'
 
-assert weekday() == 'Tuesday'
+assert weekday() == 'Wednesday'
 assert weekday(0) == 'Sunday'
 assert weekday(7) == 'Sunday'
 assert weekday(4) == 'Thursday'
@@ -557,7 +561,7 @@ assert weekday(4) == 'Thursday'
 # %% [markdown] id="Gx54DrgJuWKg"
 # 2. Write a function `create_date_format`, which takes two arguments that determine how a date should be displayed. The first argument is function that transforms a weekday number to a string suitable for display, the second argument is a function that transforms a month number. Both arguments default to just displaying the number as-is. `create_date_format` returns a new function. The latter function takes any date defined by a year, month, day and weekday, and returns a string suitable for displaying that date as a whole.
 
-# %% executionInfo={"elapsed": 9, "status": "ok", "timestamp": 1681912144802, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="0KyXFHEWwZ45"
+# %% id="0KyXFHEWwZ45"
 # For this code block, you need to have `month` and `weekday`
 # in your runtime from previous exercises.
 
@@ -585,7 +589,7 @@ def create_date_format(weekday_formatter=str, month_formatter=str):
 
         nice_string = day_string + ', ' + month_string + ' ' + str(day_of_month) + ', ' + str(year)
         return nice_string
-    
+
     return format_date
 
 # Your definition of create_date_format here
@@ -602,7 +606,7 @@ assert cryptic_format(2023, 4, 11, 2) == '2, 4 11, 2023'
 #
 # 1. Write two functions `fizz(number)` and `buzz(number)`. If `number` is divisible by 3, `fizz` should return the string `'Fizz'`; otherwise, it should return the empty string `''`. `buzz` should work like `fizz`, but for divisibility by 5 and the string `'Buzz'`.
 
-# %% executionInfo={"elapsed": 11, "status": "ok", "timestamp": 1681912282529, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="407dPPK966R9"
+# %% id="407dPPK966R9"
 # Your solution here
 
 def fizz(number):
@@ -642,7 +646,7 @@ for number in [5, 10, 15, 20, 25, 30, 35, 40]:
 #     - If the number is divisible by 5 but not by 3, return `'Buzz'`.
 #     - In all other cases, return the number itself **as a string**.
 
-# %% executionInfo={"elapsed": 3, "status": "ok", "timestamp": 1681912437888, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="NFADyIW3-7qt"
+# %% id="NFADyIW3-7qt"
 # Your solution here
 
 def fizzbuzz(number):
@@ -675,7 +679,7 @@ for number in [15, 30, 45, 60, 75]:
 # %% [markdown] id="o_3wq4agCCZH"
 # 3. Write a function `chunk10(sequence)` that takes an iterable `sequence` and returns a list of lists: the first sublist contains the first ten elements of `sequence`, the second sublist contains the next ten elements of `sequence`, and so on. You may assume that the number of values in `sequence` is an exact multiple of 10.
 
-# %% executionInfo={"elapsed": 8, "status": "ok", "timestamp": 1681912825413, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="4c0A4kMfDdvt"
+# %% id="4c0A4kMfDdvt"
 # Your solution here
 
 def chunk10(sequence):
@@ -689,7 +693,7 @@ def chunk10(sequence):
     for position in range(0, len(sequence), 10):
         chunk = items[position: position + 10]
         chunks.append(chunk)
-    
+
     return chunks
 
 assert chunk10('Jelte!!!!!') == [list('Jelte!!!!!')]
@@ -704,7 +708,7 @@ assert chunk10(range(20)) == [list(range(10)), list(range(10, 20))]
 # %% [markdown] id="HBA4z4yVIhsn"
 # 4. In step 1, you may have written definitions for `fizz` and `buzz` that look very similar to each other. Can you think of a way to avoid repeating the common elements?
 
-# %% executionInfo={"elapsed": 9, "status": "ok", "timestamp": 1681913046725, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="5g4BRdpLJLIc"
+# %% id="5g4BRdpLJLIc"
 # Your solution here
 
 def fizz_or_buzz(number, message='Fizz', denominator=3):
@@ -733,7 +737,7 @@ for number in [5, 10, 15, 20, 25, 30, 35, 40]:
 
 # %% [markdown] id="BXzFYNGmPeO6"
 # 5. In exercise 7.1.3, you documented the function `join_commas`. We did not actually need to write that function, because it is built into Python, although it goes by the name `', '.join`. That notation also works with other strings, as we demonstrate below. We also remind you of `map`, which appeared in the lecture.<br><br>
-# Using these functions, as well as your own `fizzbuzz` from step 2 and your own `chunk10` from step 3, try to recreate (roughly) the same `FizzBuzz` output for the numbers 1 through 100 as in [exercise 6.2.4](https://colab.research.google.com/drive/1AZY4ESmsKKMvbalBDLlMrezAM5NzXXxV#scrollTo=uyqbuhKsUlhG), in as little code as you can.
+# Using these functions, as well as your own `fizzbuzz` from step 2 and your own `chunk10` from step 3, try to recreate (roughly) the same `FizzBuzz` output for the numbers 1 through 100 as in [exercise 6.2.4](https://colab.research.google.com/drive/14qxBVO9t3w-pFFnMuS_yhggUmM5S0BnZ#scrollTo=uyqbuhKsUlhG), in as little code as you can.
 
 # %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 597, "status": "ok", "timestamp": 1681913126765, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="nDGUS26IMApD" outputId="a78e10b9-f6d3-433f-f06c-d78ee65f65e4"
 # The following code is just for illustration.
@@ -756,4 +760,4 @@ for chunk in chunks:
 # %% [markdown] id="Dntbbioh29xm"
 # ## Next module
 #
-# [8. Debugging](https://colab.research.google.com/drive/1yQskT6SyKvXtXewx5kCla2NOmasgP8Vi)
+# [8. Debugging](https://colab.research.google.com/drive/1r6wuOuEHabI0vmBg15HVFBLiNKRb-jnS)
