@@ -98,18 +98,8 @@ for word in ['magazine', 'kangaroo', 'rooster', 'broom']:
     if word.endswith('roo'):
         print('"' + word + '" ends with "roo"')
 
-# %% [markdown] id="FVyAad6OAtNX"
-# [`str.lower`](https://docs.python.org/3/library/stdtypes.html#str.lower) and [`str.upper`](https://docs.python.org/3/library/stdtypes.html#str.upper) return a copy of a string that is converted to all lowercase or all uppercase, respectively. These functions are useful when you don't want case to influence comparisons.
-
-# %% id="9sjgompVA_Qi"
-word1 = 'banana'
-word2 = 'Banana'
-
-print('case-sensitive:', word1 == word2)
-print('case-insensitive:', word1.lower() == word2.lower())
-
 # %% [markdown] id="TyjWFAWR_0Dp"
-# [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) can glue a sequence of strings together, as we have seen in [9. String manipulation](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm#scrollTo=Join_an_iterable_into_a_string).
+# [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) can glue a sequence of strings together, as we have seen in [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq#scrollTo=Join_an_iterable_into_a_string).
 
 # %% id="JlqAc5N8AQPu"
 print(' + '.join(['1', '2', '3', '4']))
@@ -194,6 +184,8 @@ print('kangaroo'.find('roo', 0, 4))
 'roo' in 'kangaroo'
 
 # %% [markdown] id="LhCDt6xTMq2i"
+# ### Regular expressions
+#
 # If you need pattern-based search, [regular expressions](https://docs.python.org/3/library/re.html) are the tool of choice. A regular expression lets you describe a set of similar strings with a single pattern. For example, the following notation will match all occurrences of the word "colour" in a text, even if it is capitalized or spelled "color":
 #
 # ```
@@ -302,170 +294,12 @@ crossplatform_path = op.join('My Drive', 'Colab Notebooks', 'Tips.ipynb')
 
 print(crossplatform_path)
 
-# %% [markdown] id="zHyB8HjpU9hv"
-# ## Tuples
-#
-# *This section was originally written when tuples were not yet included in the lectures. It is retained for consistency with the remainder of the notebook.*
-#
-# When you have two things, you can call them a pair. When you have three things, you can call them a triple. Four things, a quadruple. We continue with quintuple, sextuple, septuple, octuple. See where this is going? ;-)
-#
-# The general mathematical term for small groups like those is *N*-tuple, commonly abbreviated as "tuple". Python has a data type for tuples, which you almost never need to be aware of. It's a feature that [silently](https://docs.python.org/3/library/functions.html#func-tuple) makes things work, just like cleaners silently and inconspicuously prevent our society from collapsing.
-#
-# You don't need to create your own tuples for the final exercise (at least not consciously), but since the terminology is bound to come up, I will give a short explanation of what they are. A tuple is similar to a list, with two main differences:
-#
-# 1. Tuples are intended for small(ish) groups of values, while lists will happily store millions of values for you.
-# 2. Tuples are *immutable*: you cannot change their contents after creation.
-#
-# When you see values separated by commas, and they are not in a list, a parameter list or an argument list, you are probably looking at a tuple. I will mention it when they appear in other tips. Here, I will just mention two situations where tuples may appear all by themselves.
-#
-# Tuples are sometimes used to return two or more values from a function at the same time. For example, the built-in function [`divmod`](https://docs.python.org/3/library/functions.html#divmod) can tell you the quotient and remainder of two numbers in one call:
-
-# %% id="LrwtKmfpayq0"
-quotient, remainder = divmod(29, 11)
-
-print('quotient:', quotient, 'check:', quotient == 29 // 11)
-print('remainder:', remainder, 'check:', remainder == 29 % 11)
-
-# %% [markdown] id="Qm-KzHTdbtCq"
-# `divmod(29, 11)` was returning a tuple and we *unpacked* that tuple into the variables `quotient` and `remainder`. That's because their names where to the left of the assignment operator. On the other hand, when we put comma-separated values to the *right* of an assignment operator, it means that we *pack* those values into a new tuple. We can do a nice trick with this and swap two variables by packing them into a tuple and then immediately unpacking them again in reverse order:
-
-# %% id="ttECYgPLc6ra"
-winner = 'Bert'
-loser = 'Ernie'
-
-winner, loser = loser, winner
-
-print('winner:', winner)
-print('loser:', loser)
-
-# %% [markdown] id="hpnieEnwpmhK"
-# ## Dictionaries
-#
-# *This section was originally written when dictionaries were not yet included in the lectures. It is retained for consistency with the remainder of the notebook.*
-#
-# On the first day of the course, we have seen lists, which can hold an arbitrary number of values. The values are numbered sequentially, with the first having index `0`. You can create an empty list by calling `list()` or by writing an empty pair of square brackets, `[]`.
-#
-# A [dictionary][dict] is also a data structure that can hold an arbitrary number of values. The difference from a list is that the values are not numbered sequentially. Instead, every value has an arbitrary unique **key** which you need to set explicitly. An empty dictionary is created by calling `dict()` or by writing an empty pair of braces, `{}`.
-#
-# Dictionaries are useful when you want to associate values with each other. For example, your dataset might have a nominal column called `fruit`, with the possible levels being `apple`, `banana` and `cherry`, and you might want to count for each level in how many rows it occurs. In this case your will be associating fruits with frequencies, and a dictionary is the appropriate data structure for storing those associations. In the code below, we illustrate how dictionaries work and how you might use one to tally frequencies.
-#
-# [dict]: https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
-
-# %% id="7JVH7h_Bu6mS"
-# In the general case, we can create a dictionary and
-# immediately set key-value pairs with the brace notation:
-example_dict = {
-    'apple': 'juicy',
-    'banana': 'fragrant',
-    'cherry': 'sweet',
-}
-
-# Retrieving a value associated with a key can be done by
-# placing the key between square brackets, similar to
-# indexing a list:
-example_dict['cherry']
-
-# %% id="zhIMlt2TxoGC"
-# If you try to read a key that isn't present in the
-# dictionary, you will get a KeyError:
-example_dict['date']
-
-# %% id="vOk3VAnIyWgz"
-# If we want to know whether a key is present in a dict,
-# we can use the `in` operator:
-print('cherry' in example_dict)
-print('date' in example_dict)
-
-# %% id="yE8urPkiy-Iw"
-# If we want to retrieve the value for a key if it exists,
-# and fall back to a default value otherwise, we can use `get`:
-print(example_dict.get('cherry', 'oops'))
-print(example_dict.get('date', 'oops'))
-
-# %% id="BSXQQZfs0OfU"
-# You can update and add key-value pairs by assignment.
-example_dict['banana'] = 'yellow'
-example_dict['date'] = 'wrinkly'
-
-# You can remove keys with the `del` operator.
-del example_dict['apple']
-
-# Let's see what we have now.
-example_dict
-
-# %% [markdown] id="VisTnjOjxodE"
-# In the next two examples, we use [tuple unpacking](#scrollTo=Tuples).
-
-# %% id="XnZcOLDM1zM-"
-# We can iterate over the keys and values of dictionary.
-for key, value in example_dict.items():
-    print('A', key, 'is', value)
-
-# %% id="PdcV9FVm2X48"
-# Now let's see how we can use a dictionary to tally.
-# Suppose we have the following table of fruit orders:
-orders = [
-    ['2021-11-15', 'banana', 100],
-    ['2021-11-16', 'apple',  33],
-    ['2021-11-17', 'banana', 150],
-]
-
-# We will pretend we haven't already seen those data and
-# start with an empty dict.
-fruit_tally = {}
-
-# Now we iterate over the orders and fill our dict.
-for date, fruit, quantity in orders:
-    # First we retrieve how many times we have seen `fruit`
-    # before. If we haven't seen it before, the key isn't in the
-    # dict, so we provide 0 as a fallback value.
-    tally = fruit_tally.get(fruit, 0)
-    # Now we can add or update the tally for this `fruit`.
-    fruit_tally[fruit] = tally + 1
-
-# Did we count correctly?
-fruit_tally
-
-# %% [markdown] id="g_90Pk6j4Plm"
-# For exercise, you can try adapting the above code example to compute total ordered quantities per fruit, or a list of order dates per fruit.
 
 # %% [markdown] id="hhu9T00mFSHd"
 # ## Iterables
-#
-# *This section was originally written when iterables were not yet included in the lectures. It is retained for consistency with the remainder of the notebook.*
-#
-# In the FizzBuzz exercises, we saw the following notation for creating a list with the integers from `1` (inclusive) to `101` (exclusive):
-#
-# ```python
-# list(range(1, 101))
-# ```
-#
-# We also saw that you can pass only one argument, in which case it sets the end value and the start value is assumed to be `0`. On the other hand, if you pass *three* arguments, the third arguments sets a step value; this lets you skip every second element and/or make a decreasing series.
-#
-# It's clear what such a `list(range(begin, end))` expression does, but the curious might wonder what you get if you leave off the outer `list()`. What is a `range` just by itself? In any case, you can still loop over it:
-
-# %% id="XTmiVuEAGJlL"
-for number in range(0, 3):
-    print(number)
-
-# %% [markdown] id="axzQrGdBLWDF"
-# However, unlike with a list, we cannot add our own elements to it:
-
-# %% colab={"base_uri": "https://localhost:8080/", "height": 164} id="oHDOpj2GLevE" outputId="2d0ae6bd-61b2-497a-e8da-b1a45d1c3b97"
-range(0, 3).append(3)
-
-# %% [markdown] id="6q2Tt_4eKc_K"
-# If we try to print it, it remains mysterious:
-
-# %% colab={"base_uri": "https://localhost:8080/"} id="-MtW-ANdKn_d" outputId="39abd51e-e1bf-4ef9-997a-52d88f452448"
-print(range(0, 3))
 
 # %% [markdown] id="X6KSp6FbMPRP"
-# I will no longer keep you in suspense. The value returned by [`range`][range] is a *generator*. You can think of a generator as a function that returns multiple times, each time producing the next value in some kind of sequence. This means that a generator, unlike a list, does not store all elements of its sequence at the same time; rather, it produces the next one when you ask for it.
-#
-# > For the final exercise, you don't need to write generators yourself, so we will not spend any text on how to do that. It is however useful to know how to use them, so we discuss that below.
-#
-# Python's `for` loop knows how to take one value at a time out of a generator, just like it knows how to take one value at a time out of a list. We call the more general class of things that `for` can loop over *iterables*. There are many more types of iterables besides lists and generators (including [tuples](#scrollTo=Tuples) and [dictionaries](#scrollTo=Dictionaries)) and `for` is able to deal with all of them, because all iterables follow the same **iterator convention**.
+# Python's `for` loop knows how to take one value at a time out of a generator, just like it knows how to take one value at a time out of a list. We call the more general class of things that `for` can loop over *iterables*. There are many more types of iterables besides lists and generators (including tuples and dictionaries) and `for` is able to deal with all of them, because all iterables follow the same **iterator convention**.
 #
 # In fact, this convention is not restricted to `for`. Most functions in the Python standard library that work with sequences, accept not just lists but any iterable. We have already seen this in action when we did `list(range(0, 101))`: `list` accepted an iterable, `range(0, 101)`, took out its values one by one, stored all of them in a list, and finally returned that list to you.
 #
@@ -474,35 +308,6 @@ print(range(0, 3))
 # By combining functions that consume and return iterables, we can often replace loops by shorter expressions. In the next few subsections, we illustrate the most important functions on iterables.
 #
 # [range]: https://docs.python.org/3/library/functions.html#func-range
-
-# %% [markdown] id="RelVVKVzX9T7"
-# ### `enumerate`
-#
-# The built-in [`enumerate`][enumerate] accepts any iterable and returns a generator. As the name suggests, it numbers the values in the input sequence, while also echoing back the values themselves (in [pairs](#scrollTo=Tuples)):
-#
-# [enumerate]: https://docs.python.org/3/library/functions.html#enumerate
-
-# %% id="Zq8dHhH-Y-Cx"
-example_list = ['Colorless', 'green', 'ideas', 'sleep', 'furiously']
-
-list(enumerate(example_list))
-
-# %% [markdown] id="LMPR_En8Zhn7"
-# This can be useful when you are looping over a sequence, and you need not only the values but also their index in the sequence:
-
-# %% id="ADqR2KG2Zdkc"
-for index, value in enumerate(example_list):
-    print('Word number', index, 'is', value)
-
-# %% [markdown] id="cSdPo0RGbvre"
-# For comparison, this is what the above loop would look like without `enumerate`:
-
-# %% id="tEOM7Iwwbz9r"
-index = 0
-for value in example_list:
-    print('Word number', index, 'is', value)
-    index = index + 1
-
 
 # %% [markdown] id="vX59S1uDaBLI"
 # ### `filter`
@@ -665,7 +470,7 @@ list(map(add, first_list, second_list))
 # %% [markdown] id="0SMYES0-gyBX"
 # ### Bound methods
 #
-# In the `map` subsection, I used an [example](#scrollTo=5W6NwA8D2Kz3&line=1&uniqifier=1) with the notation `'{} {} {} {}.'.format`. I stored that in a variable and then passed that as a function to `map`. It turns out this is a general thing we can do in more situations, so let's briefly touch on how this works.
+# In the `map` subsection, I used an [example](#scrollTo=5W6NwA8D2Kz3&line=1&uniqifier=1) with the notation `'{} {} {} {}.'.format`. I stored that in a variable and then passed that as a function to `map`. We have seen something similar in [exercise 9.3.3](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq#scrollTo=ArVJo3y0jJ8T). It turns out this is a general thing we can do in more situations, so let's briefly touch on how this works.
 #
 # The essence is that
 
@@ -887,7 +692,7 @@ print('sum:', sum(numbers))
 # [statistics.linear_regression]: https://docs.python.org/3/library/statistics.html#statistics.linear_regression
 # [python-numeric]: https://docs.python.org/3/library/numeric.html
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="xoBLhOpvmu2P" outputId="5e3ccc4f-d8e3-4102-a3bf-517a8ccddfbc" executionInfo={"status": "ok", "timestamp": 1701791082060, "user_tz": -60, "elapsed": 322, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1715884348191, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="xoBLhOpvmu2P" outputId="9d9aff55-cc93-437f-ae06-12cf1241f94a"
 # !python --version
 
 # %% [markdown] id="rKxMNbMMuMCw"
@@ -1049,7 +854,7 @@ sorted(list_of_strings, key=str.lower)
 # %% [markdown] id="92yLh2OWvO-q"
 # The [`operator`][operator] standard module exports several useful functions that let you create instant simple functions for the purpose of sorting. Most importantly, [`itemgetter`][operator.itemgetter] lets you sort sequences by a different item than the first and [`attrgetter`][operator.attrgetter] lets you sort [objects](#scrollTo=Classes_and_objects) by a particular attribute. There is also [`methodcaller`][operator.methodcaller] which lets you sort by the result of a method call.
 #
-# Below, we use `itemgetter` to sort the key-value pairs of a [dictionary](#scrollTo=Dictionaries) by value instead of by key:
+# Below, we use `itemgetter` to sort the key-value pairs of a dictionary by value instead of by key:
 #
 # [operator]: https://docs.python.org/3/library/operator.html#module-operator
 # [operator.itemgetter]: https://docs.python.org/3/library/operator.html#operator.itemgetter
@@ -1091,7 +896,7 @@ sorted(list_of_dates, key=attrgetter('month'))
 # [pandas.DataFrame]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
 # [pandas.read_csv]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv-table
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 142} id="1m-b-UVLF_rM" outputId="0b542154-2e25-4f71-c445-856836f0a749"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 143} executionInfo={"elapsed": 921, "status": "ok", "timestamp": 1715689944930, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="1m-b-UVLF_rM" outputId="8c25103d-0063-4cbf-c824-8ad8bd177d05"
 #requires pandas
 
 import os.path as op
@@ -1129,7 +934,7 @@ data.loc[:, ['households', 'population']].iloc[0:3]
 #
 # [`matplotlib`](https://matplotlib.org) is a comprehensive and easy to use package for creating data graphics. It is preinstalled on Google Colab, so you can use it right away. Here is a quick example:
 
-# %% id="ZBxC0c32NN7v"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 430} executionInfo={"elapsed": 761, "status": "ok", "timestamp": 1715692800081, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="ZBxC0c32NN7v" outputId="d42f13a0-b117-4255-d854-d06998f98a81"
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
@@ -1140,10 +945,19 @@ ax.plot([1, 2, 3, 4], [1, 4, 2, 3]);  # Plot some data on the axes.
 # %% [markdown] id="RIGMSlw7NhnT"
 # The above example was shamelessly copied from `matplotlib`'s [Quick start guide](https://matplotlib.org/stable/tutorials/introductory/quick_start.html), which is the best place to start learning how to use the package yourself.
 
+# %% [markdown] id="584VEcMqI0Fm"
+# ## Statistical modeling with `statsmodels`
+#
+# Compared to special purpose languages such as R and SAS, Python is a little bit under-equipped when it comes to statistical modeling. Fortunately, [statsmodels](https://www.statsmodels.org/) is a comprehensive package that covers many modeling needs. It builds on top of [pandas](#scrollTo=pandas_dataframes_and_read_csv).
+#
+# Like most packages discussed in this notebook, statsmodels is preinstalled in Google Colab. You can import it as `statsmodels`. See the [API reference](https://www.statsmodels.org/stable/api.html) for a complete list of the types of statistical models that it support.
+#
+#
+
 # %% [markdown] id="EYVhwfCP2oEK"
 # ## Clustering with scikit-learn
 #
-# [scikit-learn][sklearn] is a package that provides many data mining and machine learning tools, including cluster analysis. You can find the documentation [here][sklearn.cluster]. We give a very minimal example of hierarchical clustering with Ward linkage below. You can find a more extensive example [here][sklearn-example]. Note that we are using the `data` object, which is a `pandas.DataFrame`, from the [previous section](#scrollTo=pandas_dataframes_and_read_csv).
+# [scikit-learn][sklearn] is a package that provides many data mining and machine learning tools, including cluster analysis. You can find the documentation [here][sklearn.cluster]. We give a very minimal example of hierarchical clustering with Ward linkage below. You can find a more extensive example [here][sklearn-example]. Note that we are using the `data` object, which is a `pandas.DataFrame`, from the [pandas section](#scrollTo=pandas_dataframes_and_read_csv).
 #
 # [sklearn]: https://scikit-learn.org/stable/index.html
 # [sklearn.cluster]: https://scikit-learn.org/stable/modules/clustering.html

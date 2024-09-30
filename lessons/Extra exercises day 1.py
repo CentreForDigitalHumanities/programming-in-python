@@ -13,7 +13,7 @@
 # ---
 
 # %% [markdown]
-# Hierbij wat extra opdrachtjes voor de modules van dag 1!
+# Here are some additional exercises for the day 1 modules!
 
 # %% [markdown]
 # # Types

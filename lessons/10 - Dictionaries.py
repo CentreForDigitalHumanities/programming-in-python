@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [9. String manipulation](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm)
+# Previous module: [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq#scrollTo=y5FcFvgypMfE)
 #
 # ### This module
 #
@@ -200,8 +200,102 @@ print(fruit_colors.pop('banana', 'wait, what was banana again?'))
 # %% [markdown] id="1ezL-XhlvHBq"
 # ## Exercise 10.1: Dictionaries
 
+# %% [markdown] id="xrw8tjm9WqEb"
+# 1. In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
+
+# %% id="JpVUxXa8W-yN"
+{0: 0}
+
+# %% id="62bKQZhpXQOA"
+{'0': 0}
+
+# %% id="FW2sYBJdXXWl"
+{1 + 2: 3 * 4}
+
+# %% id="KFOPs4O7Xf9a"
+{'1' + '2': {3: 'Hooray!'}}
+
+# %% id="PkuZzIm1XngU"
+programming_languages = {
+    'Fortran': 1957,
+    'Algol 60': 1960,
+    'C': 1972,
+    'Perl': 1987,
+    'Python': 1991,
+    'Julia': 2012,
+    'Mojo': 2023,
+}
+
+# %% id="j20ZYa6bbSpq"
+programming_languages[Perl]
+
+# %% id="sZC-YucJaXCa"
+programming_languages[1960]
+
+# %% id="jlTtefX6aKii"
+programming_languages['Perl']
+
+# %% id="Y-7am56bacgD"
+{None: None}[None]
+
+# %% id="SFgsCOnpapTp"
+programming_languages.get('Per1', 2125)
+
+# %% id="bx0WNXq2a7K1"
+programming_languages.get('Per1')
+
+# %% id="9dqApt0ObCuz"
+programming_languages.get('Python', None)
+
+# %% id="msMNmeGWbKRS"
+programming_languages.get('Python')
+
+# %% id="_tzsbkN5bbi0"
+'Per1' in programming_languages
+
+# %% id="6JEZlfkPbhP9"
+'Fortran' in programming_languages
+
+# %% id="dOIxLmPqbvDA"
+2012 in programming_languages
+
+# %% id="bv1WFXRab0Bv"
+programming_languages.update({'Per1': 2125, 'Raku': 2015})
+
+# %% id="idVFrA21cLc5"
+2012 in programming_languages.values()
+
+# %% id="i07oWzu5cScu"
+('Per1', 'Perl') in programming_languages.items()
+
+# %% id="xatUSQBPcr4x"
+del programming_languages[2012]
+
+for language, year in programming_languages.items():
+    print(f'{language} first appeared in {year}')
+
+# %% [markdown] id="gw7W_KMcdVqD"
+# 2. The code below attempts to count the frequencies of the individual characters in our party invitation from module 6. There is a bug which prevents it from working. Fix the bug.
+
+# %% id="s_OeNugZfG4J"
+invitation = '''
+    Dear Sheean,
+
+    I hereby invite you for my Python party on the 11th of April.
+    The bar will open at 2 PM. 🍸 Please bring pseudocode.
+
+    Yours sincerely,
+    Julian
+'''
+
+frequencies = {}
+for character in invitation:
+    count = frequencies.get(character, 0)
+    frequencies.set(character, count + 1)
+print(frequencies)
+
 # %% [markdown] id="rxcz60KQximW"
-# 1 . Below are two dictionaries containing information about different types of fruit. Print a nice message about each fruit stating its colour and price. For example, _An apple is red and costs € 2.50_, etc.
+# 3 . Below are two dictionaries containing information about different types of fruit. Print a nice message about each fruit stating its colour and price. For example, _An apple is red and costs € 2.50_, etc.
 
 # %% id="yn89oAAZu33C"
 fruit_colors = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange'}
@@ -210,9 +304,10 @@ fruit_prices = {'apple': 2.50, 'banana': 2.10, 'orange': 1.50}
 # your code here...
 
 # %% [markdown] id="Gtp5V9dE0LxK"
-# 2 . Here is a longer lists of fruit colours. Write a function `count_fruits` which gets a colour as input and returns the number of fruits that have that colour (according to `lots_of_fruit`).
+# 4 . Here is a longer lists of fruit colours. Write a function `count_fruits` which gets a colour as input and returns the number of fruits that have that colour (according to `lots_of_fruit`).
 
 # %% id="S7gCNyLCxdrO"
+# run this first!
 lots_of_fruit = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange',
                  'cucumber': 'green', 'kiwi': 'green', 'strawberry': 'red',
                  'pineapple': 'yellow','blackberry': 'black', 'cherry': 'red',
@@ -228,7 +323,7 @@ assert count_fruits('red') == 4
 assert count_fruits('lavender') == 0
 
 # %% [markdown] id="-Qp6R3Kp3GId"
-# 3 . The list `fruit_basket` contains a bunch of fruits. Can you make a dictionary `fruit_counts` which gives the amount for each fruit in `fruit_basket`? (Do not count the fruits by hand!)
+# 5 . The list `fruit_basket` contains a bunch of fruits. Can you make a dictionary `fruit_counts` which gives the amount for each fruit in `fruit_basket`? (Do not count the fruits by hand!)
 
 # %% id="awf-lLQO3N1U"
 fruit_basket = ['apple', 'banana', 'banana', 'banana', 'apple', 'orange',
@@ -245,7 +340,7 @@ assert fruit_counts['apple'] == 3
 
 
 # %% [markdown] id="h-kJhTO951pc"
-# 4 . Here is a different list, which contains the words in a sentence. Can you use your code above to make a dictionary `word_counts` telling us how often each word occurs? (Tip: if you need to do very similar tasks, make a function!)
+# 6 . Here is a different list, which contains the words in a sentence. Can you use your code above to make a dictionary `word_counts` telling us how often each word occurs? (Tip: if you need to do very similar tasks, make a function!)
 #
 # Write a function that takes a dictionary like `word_counts` tells us the most commonly occuring item and the count. Note that there can be multiple items that occurred the most.
 
@@ -267,4 +362,4 @@ sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the',
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [11 - Working with files](https://colab.research.google.com/drive/1_mDpeRCHzrGJstcxEWZgq5YMhHujPdfe)
+# [11 - Working with files](https://colab.research.google.com/drive/1KsFZV-jmfaQnCFevSxIZrd7chm3Z5CJo)

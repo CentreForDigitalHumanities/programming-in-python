@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)
 #
 # ### This module
 #
@@ -48,7 +48,7 @@ if a < 10:
 print('but not this!')
 
 # %% [markdown] id="5gqn2ac_sg7Y"
-# - Indented blocks are the reason we sometimes need `pass` as a placeholder (remember [1. introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)). It lets us create an indented block, without defining any behavior for it yet.
+# - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet.
 
 # %% id="ZdH7HnL6tDpS"
 earth = 'round'
@@ -218,7 +218,7 @@ if not (letter == 'a' or letter == 'b'):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=EKFdkLkWa8EY#scrollTo=Exercise_2_4_Bonus)!
 
 # %% id="SZGeQtqEhiAK"
 value = 9
@@ -228,4 +228,4 @@ value = 9
 # %% [markdown] id="YBC4OfihzFho"
 # ## Next module
 #
-# [4. Datastructures](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt)
+# [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI)

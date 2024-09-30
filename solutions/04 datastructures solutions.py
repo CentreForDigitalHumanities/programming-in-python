@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 4](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt)
+# [Module 4](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR) - [solutions](https://colab.research.google.com/drive/1-vBxja7MWudomSKEg1NU5D3JO0SEQc3J)
+# Previous module: [3. Conditionals](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox) - [solutions](https://colab.research.google.com/drive/1pJi95yhp50gPqgTnNaNvU5lO9WH5CZSs)
 
 # %% [markdown] id="70aMsClGPRy9"
 # ## Exercise 4.1: Lists
@@ -188,4 +188,4 @@ else:
 # %% [markdown] id="HiEWGB1V1W4U"
 # ## Next module
 #
-# [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH) - [solutions](https://colab.research.google.com/drive/1yrrB0EYglFKJ0_zhb91xY7FGgJosSUFw)
+# [5. Assertions](https://colab.research.google.com/drive/1OBdYVZCMXGzb3fCM_FPAqY_IfeDR1kub) - [solutions](https://colab.research.google.com/drive/17cNgIFtvZ9hckZOCjPSNW4g4-HryRXjg)

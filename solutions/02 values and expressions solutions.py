@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 2](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA)
+# [Module 2](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [1. Introduction](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B) - [solutions](https://colab.research.google.com/drive/13q9wUC6QRT3hDuvLOuctuph9yZYeEvVu)
+# Previous module: [1. Introduction](https://colab.research.google.com/drive/1W8DqryKuOwPKflPnObv4bJtNKknRsvav) - [solutions](https://colab.research.google.com/drive/1saiXnH0-kV08n5xkespxrPrtwAXMJf99)
 
 # %% [markdown] id="pDU1uK2Igmki"
 # ## Exercise 2.1: Variables and state
@@ -86,7 +86,7 @@ my_string = "I'm starving"
 # %% [markdown] id="GI9fyUO8XOcp"
 # How could you verify in code whether the variables you wrote above have the correct type? Write this code below.
 #
-# Hint: scroll back to the section [Difference between types](#scrollTo=Difference_between_types).
+# Hint: scroll back to the section [Difference between types](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=Difference_between_types).
 
 # %% id="Om6z53RXYBoS" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680606693012, "user_tz": -120, "elapsed": 223, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="3f66fabe-bd2c-4046-d165-b6dc475ffcc2"
 print(type(my_int))
@@ -383,4 +383,4 @@ word < 'r'
 # %% [markdown] id="jXSxbjf4q6q5"
 # ## Next module
 #
-# [3. Conditionals](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR) - [solutions](https://colab.research.google.com/drive/1-vBxja7MWudomSKEg1NU5D3JO0SEQc3J)
+# [3. Conditionals](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox) - [solutions](https://colab.research.google.com/drive/1pJi95yhp50gPqgTnNaNvU5lO9WH5CZSs)

@@ -18,7 +18,7 @@
 #
 # Congratulations, you finished the course. During the course, you learned basic Python techniques as well as important refactoring and debugging skills. Finally, you learned how to import CSV files and obtained leads on how to conduct your own analysis.
 #
-# Due to the limited time, we could not cover all the basic skills that a programmer needs in order to be economic with her development time. Also, while online notebooks are a great teaching tool and we would not have been able to cover as much ground without them, you will be better able to reuse your own code if you learn how to run standalone Python programs on your own computer.
+# Due to the limited time, we could not cover all the basic skills that a programmer needs in order to be economic with their development time. Also, while online notebooks are a great teaching tool and we would not have been able to cover as much ground without them, you will be better able to reuse your own code if you learn how to run standalone Python programs on your own computer.
 #
 # In order to help you with the next steps on your learning journey, we list the concepts below and provide links to web pages where you can learn more about the topic in question. We recommend that you scroll through the entire notebook; all principles and techniques discussed here are essential best practices.
 
@@ -27,7 +27,7 @@
 #
 # Whether you are trying to install something and it is refusing or your own code is throwing errors at you, more often than not a well-chosen web search will lead you to a solution. Good queries generally include the name of the program or package that you use, the name of the feature or function that you use, and the name of the error that you get (or a concise description of the problem: "no output", "lower value than expected", etcetera). For example [`pandas read_csv EncodingError`](https://duckduckgo.com/?q=pandas+read_csv+EncodingError).
 #
-# In many cases, a web search will lead you to [Stack Overflow](https://stackoverflow.com) (or a related question-and-answer site). You can also post your own questions about code-related problems here. There are some [tips](https://stackoverflow.com/help/how-to-ask) to help you maximize the change that you'll get a useful answer. If somebody answers your question adequately, be sure to [accept the answer](https://stackoverflow.com/help/someone-answers).
+# In many cases, a web search will lead you to [Stack Overflow](https://stackoverflow.com) (or a related question-and-answer site). You can also post your own questions about code-related problems here. There are some [tips](https://stackoverflow.com/help/how-to-ask) to help you maximize the change that you'll get a useful answer. If somebody answers your question adequately, be sure to [accept the answer](https://stackoverflow.com/help/someone-answers). Some Reddit groups, such as [r/learnpython](https://www.reddit.com/r/learnpython/), can also be useful spaces for asking questions about your code.
 
 # %% [markdown] id="cCxnaLPZVblw"
 # ## Command line interface (CLI, shell)
@@ -52,7 +52,7 @@
 # - [Notepad++](https://notepad-plus-plus.org) (Windows)
 # - [Sublime Text](https://www.sublimetext.com) (cross-platform)
 # - [TextMate](https://macromates.com) (macOS)
-# - [Visual Studio Code](https://code.visualstudio.com) (cross-platform)
+# - [Visual Studio Code](https://code.visualstudio.com) (cross-platform, Edo's recommendation)
 #
 # There are also "integrated development environments" (IDEs) specifically targeted at Python programming, such as [Spyder](https://www.spyder-ide.org) for data scientists and [PyCharm](https://www.jetbrains.com/pycharm/) for application developers. These have lots of bells and whistles. Some people find them very convenient. We mention them here for completeness, but we recommend learning how to work without one first.
 
@@ -168,7 +168,7 @@ def cheer(name):
 #
 # Once you start programming, you never stop. After your first program, there will be more projects. At some point, you might even be working on two or more projects in parallel.
 #
-# It is unlikely that two projects have exactly the same dependencies. In many cases, the dependencies of one project will conflict with the dependencies of another. For this reason (and a few other reasons), it is highly recommended to keep separate sets of installed dependencies for each project. This is the job of virtual environments.
+# It is unlikely that two projects will use exactly the same packages. The packages needed for a specific project are referred to as a project's depencies. In many cases, the dependencies of one project will conflict with the dependencies of another. For this reason (and a few other reasons), it is highly recommended to keep separate sets of installed dependencies for each project. This is the job of virtual environments.
 #
 # A virtual environment is a folder in which you install third-party packages. You can have as many virtual environments as you want. Each virtual environment can also have its own version of Python. When you *activate* a virtual environment, its installed packages become available to you, while the packages inside all other virtual environments are invisible. When you install additional packages, they are added to the active virtual environment only.
 #
@@ -393,7 +393,7 @@ def cheer(name):
 # %% [markdown] id="pdYC4dG8qbi1"
 # Now, our program will still work if used as intended, but if somebody passes a number, the program will fail with an `AssertionError`:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 402} id="c1H0veEyqxlr" executionInfo={"status": "error", "timestamp": 1638205958138, "user_tz": -60, "elapsed": 313, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}} outputId="b9d7d157-e102-41cb-d64e-679ae19f2fa5"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 402} executionInfo={"elapsed": 313, "status": "error", "timestamp": 1638205958138, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="c1H0veEyqxlr" outputId="b9d7d157-e102-41cb-d64e-679ae19f2fa5"
 print(cheer('Kermit'))
 print(cheer(100))
 
@@ -401,7 +401,7 @@ print(cheer(100))
 # %% [markdown] id="5TGC07rTr_mb"
 # We can make the error more informative by adding a comma and a string that will appear when the assertion fails:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 317} id="9TUQ7gVzsdyS" executionInfo={"status": "error", "timestamp": 1638206188361, "user_tz": -60, "elapsed": 317, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}} outputId="87ddce03-0a2b-4fdc-c877-e0c045b3ff33"
+# %% colab={"base_uri": "https://localhost:8080/", "height": 317} executionInfo={"elapsed": 317, "status": "error", "timestamp": 1638206188361, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="9TUQ7gVzsdyS" outputId="87ddce03-0a2b-4fdc-c877-e0c045b3ff33"
 def cheer(name):
     assert isinstance(name, str), 'name must be a string'
     letters = '\n'.join(map(announce, name))

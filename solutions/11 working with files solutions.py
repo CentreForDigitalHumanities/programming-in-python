@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 11](https://colab.research.google.com/drive/1_mDpeRCHzrGJstcxEWZgq5YMhHujPdfe)
+# [Module 11](https://colab.research.google.com/drive/1KsFZV-jmfaQnCFevSxIZrd7chm3Z5CJo)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1Dssqf65thuWCNZ9I3ezaawelaWpeaWoj) - [solutions](https://colab.research.google.com/drive/1j1hikQCS3Px0_q4hguuIqWSXSmyKcAiN)
+# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3) - [solutions](https://colab.research.google.com/drive/1ZvLc2Jrkh9uosmliA8IpT4q7YE-amvkW)
 #
 # ### This module
 #
@@ -249,3 +249,8 @@ new_data = add_column(data, 'total_income', total_income)
 # finally, write to a new file
 write_table_to_csv(new_data, 'sample_data/california_housing_test_expanded.csv')
 
+
+# %% [markdown] id="y5FcFvgypMfE"
+# ## Next module
+#
+# [12 - Functions, bis](https://colab.research.google.com/drive/1LHPo4gEzyKTPlVAkGifdzh9ahG2mJq6K) - [solutions](https://colab.research.google.com/drive/1YyQh6jL3QT17Z9Q8jdxZxhZR0gTZDm1a)

@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 3](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR)
+# [Module 3](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA) - [solutions](https://colab.research.google.com/drive/1R0_DYzufN6PSKpot8iBmn1Gh6mNSOCy5)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_) - [solutions](https://colab.research.google.com/drive/1nnt2VGcmOkHlAWco7xes1O3vr2ser9dD)
 
 # %% [markdown] id="tvXa9KWXAwge"
 # ## Exercise 3.1: if/elif/else
@@ -151,7 +151,7 @@ if (not (letter == 'a')) and (not (letter == 'b')):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=Exercise_2_4_Bonus)!
 
 # %% id="SZGeQtqEhiAK" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680782728257, "user_tz": -120, "elapsed": 233, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="f067c099-61f7-4d68-851d-8e7db89ed04f"
 value = 9
@@ -193,5 +193,4 @@ print(result or value)
 
 # %% [markdown] id="YBC4OfihzFho"
 # ## Next module
-#
-# [4. Datastructures](https://colab.research.google.com/drive/1CS9CxET2V1j0FQzy82AWBZZCbc8M_qWt) - [solutions](https://colab.research.google.com/drive/1mf_sQpAVxz8oRbsZnA548cC3TtVaQxmU)
+# [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI) - [solutions](https://colab.research.google.com/drive/1QI1iIkCyYOC43xuRBiPI3bgRHjiiqi3L)

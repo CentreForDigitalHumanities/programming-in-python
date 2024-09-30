@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [7. Functions](https://colab.research.google.com/drive/146De3ZjgWYldNBmKkDyu8-m_jkzUTrGg)
+# Previous module: [7. Functions](https://colab.research.google.com/drive/1w7Nor72UAJMVYEZrwAmbOahP8ItV0ggg)
 #
 # ### This module
 #
@@ -266,4 +266,4 @@ assert shuffled == alphabetical
 # %% [markdown] id="QBPQVbY_aoLt"
 # ## Next module
 #
-# [9. String manipulation](https://colab.research.google.com/drive/15djL6RWOHmSo7rpQMOLE1ga9bICxBLmm)
+# [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq)

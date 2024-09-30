@@ -16,11 +16,11 @@
 #
 # ## Exercise solutions
 #
-# [Module 1](https://colab.research.google.com/drive/1KVMLkUIYyUHK3svD9pLfVdhzpdhqIA1B)
+# [Module 1](https://colab.research.google.com/drive/1W8DqryKuOwPKflPnObv4bJtNKknRsvav)
 #
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 
 # %% [markdown] id="pKIEfocbMaIR"
 # ## Exercise 1.1: Try it out
@@ -81,20 +81,6 @@ print('cherry')
 # 'cherry'
 # ```
 
-# %% id="rbjHe9KbOzFb" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680598076019, "user_tz": -120, "elapsed": 292, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="9491cf85-fc36-4d10-dba3-b32ea38d8cdf"
-print('apricot')
-'banana'
-pass
-
-# %% [markdown] id="S9Jrnq4E5qPX"
-# `'banana'` is not shown here, because it is not the last value in the code block. While `pass` does not do anything, Python still considers it code. It is not ignored like a comment.
-
-# %% id="V1GiIP_ZNK8H" colab={"base_uri": "https://localhost:8080/", "height": 135} executionInfo={"status": "error", "timestamp": 1680598126605, "user_tz": -120, "elapsed": 370, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="c5c40560-3aa0-4fe1-d4fe-7a18d48ee139"
-print(pass)
-
-# %% [markdown] id="8Op9FLDB6HEZ"
-# Our very first error! The error tells us that you cannot put a `pass` inside a `print`. The reason for that is that `pass` is not a value (but a statement).
-
 # %% id="sNNoSfndOSiw" colab={"base_uri": "https://localhost:8080/", "height": 135} executionInfo={"status": "error", "timestamp": 1680598147401, "user_tz": -120, "elapsed": 286, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="11ca5bd8-3235-4980-9b67-0a191d6515b3"
 print(#oops)
 
@@ -132,4 +118,4 @@ print('Hello, world!')
 # %% [markdown] id="zI0ohEpPUwpC"
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/1FUicKa-_d5CINVGrHQdwnEpVFZlMbtkA) - [solutions](https://colab.research.google.com/drive/1R0_DYzufN6PSKpot8iBmn1Gh6mNSOCy5)
+# [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_) - [solutions](https://colab.research.google.com/drive/1nnt2VGcmOkHlAWco7xes1O3vr2ser9dD)

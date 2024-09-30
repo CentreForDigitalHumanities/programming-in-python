@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1YgmnpA7tRylvGBpp2PTFGvSV2P8tw5jl)
+# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
 #
-# Previous module: [5. Assertions](https://colab.research.google.com/drive/1ixrL5RCpNhtQN_MtCbpy4E5PYEG1N-qH)
+# Previous module: [5. Assertions](https://colab.research.google.com/drive/1OBdYVZCMXGzb3fCM_FPAqY_IfeDR1kub)
 
 # %% [markdown] id="mzWET4w4lAr4"
 # # 1. Loops
@@ -272,7 +272,7 @@ print('you wrote', word)
 
 
 # %% [markdown] id="uyqbuhKsUlhG"
-# 4. *FizzBuzz part 2* (advanced). Look back at your solution to [exercise 3.2](https://colab.research.google.com/drive/1qQzRBD1e-1yCKtUNAt8L2lRb8tGjYpkR#scrollTo=Exercise_3_2_Bonus) (*FizzBuzz part 1*). Now write a program that does the following: for each integer from `1` up to and including `100`, print `Fizz`, `Buzz`, `FizzBuzz` or the number itself, following the same rules as before. Separate the words and numbers by commas. Add a newline after every tenth number, so you print ten lines in total. The first line should start like `1, 2, Fizz, 4, Buzz, Fizz, ...` and the last line should be `91, 92, Fizz, 94, Buzz, Fizz, 97, 98, Fizz, Buzz, `.
+# 4. *FizzBuzz part 2* (advanced). Look back at your solution to [exercise 3.2](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox#scrollTo=Exercise_3_2_Bonus) (*FizzBuzz part 1*). Now write a program that does the following: for each integer from `1` up to and including `100`, print `Fizz`, `Buzz`, `FizzBuzz` or the number itself, following the same rules as before. Separate the words and numbers by commas. Add a newline after every tenth number, so you print ten lines in total. The first line should start like `1, 2, Fizz, 4, Buzz, Fizz, ...` and the last line should be `91, 92, Fizz, 94, Buzz, Fizz, 97, 98, Fizz, Buzz, `.
 
 # %% id="BUeMXIQXaKna"
 # the end=', ' argument will help you:
@@ -286,4 +286,4 @@ print('next line for illustration')
 # %% [markdown] id="0eGibfk04LI0"
 # ## Next module
 #
-# [7. Functions](https://colab.research.google.com/drive/146De3ZjgWYldNBmKkDyu8-m_jkzUTrGg)
+# [7. Functions](https://colab.research.google.com/drive/1w7Nor72UAJMVYEZrwAmbOahP8ItV0ggg)
