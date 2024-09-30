@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # Module 4: Datastructures
 #
 # ### Exercise solutions
@@ -24,12 +25,12 @@
 #
 # Previous module: [3. Conditionals](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20conditionals.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/03%20conditionals%20solutions.ipynb)
 
-# %% [markdown] id="70aMsClGPRy9"
+# %% [markdown]
 # ## Exercise 4.1: Lists
 #
 # 1. For each of the `print` statements below, what do you expect is printed? Run the lines to check predictions
 
-# %% id="KMUxwcSqPlU1" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680783691341, "user_tz": -120, "elapsed": 8, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="523705a3-8ae0-47ab-ace7-e48ed326a404"
+# %%
 countries = ['japan', 'hungary', 'maldives', 'gabon', 'bhutan']
 
 print(countries[0])
@@ -58,12 +59,12 @@ print(countries)
 # Appending a list to another list makes the former
 # a nested single element of the latter.
 
-# %% [markdown] id="TyebsOIpU6hv"
+# %% [markdown]
 # 2. Transform the list below into `['jasmin', 'john', 'ravi']` in one line of code.
 #
 #
 
-# %% id="H8o6vsHKVKoq"
+# %%
 students = ['jasmin', 'ravi', 'john']
 
 # Option 1: modify students in place by
@@ -82,10 +83,10 @@ students[1:3] = students[:-3:-1]
 # Variant of option 2
 new_students = students[:1] + students[:-3:-1]
 
-# %% [markdown] id="HMU5X7XFWbCw"
+# %% [markdown]
 # 3. For each of the print statements below, what do you expect is printed? Run the lines to check predictions.
 
-# %% id="u_RWc8wBWgMT"
+# %%
 random_fruit = 'pineapple'
 fruits = ['apple', 'pear', random_fruit]
 print(fruits)
@@ -116,12 +117,12 @@ print(veggies)
 random_veggie = 'pumpkin'
 print(veggies)
 
-# %% [markdown] id="3BfUO-jKS_u1"
+# %% [markdown]
 # ## Exercise 4.2: Bonus
 #
 # Below we introduce another parameter in the list slice. Try to explain what it does.
 
-# %% id="Y9oxyQb7TIPI"
+# %%
 countries = ['japan', 'hungary', 'maldives', 'gabon', 'bhutan']
 
 print(countries[0:5:1])
@@ -148,19 +149,19 @@ print(countries[-1::-2])
 # 4. Set the index to index + STEP.
 # 5. Repeat from step 2.
 
-# %% [markdown] id="Mb6CvHt3CaA0"
+# %% [markdown]
 # The piece of code below is supposed to recognize "fancy" words: words that are longer than 5 characters, contain at least one copy of the letter 'a' and start with an uppercase. However, the code is broken. It does not recognize any of our fancy example words.
 #
 # 1. Change the value of `word` into each of the examples in the comments on the first two lines and then run the code. See for yourself that the code considers none of the example words fancy. Try some other words as well.
 # 3. Try to understand why the code is giving the wrong result. Can you come up with a word that the code does consider fancy?
 # 4. Repair the code so that it gives the right result for all examples, and any other words that you come up with.
 
-# %% [markdown] id="n8q0tzvRpzWz"
+# %% [markdown]
 # > In step 2, you should find two reasons for failure which we highlight in code comments below. Once you understand these reasons, you should be able to construct words that the code does consider fancy: they must have length greater than 5, an uppercase letter in the *second* position, and a *lowercase* `'a'`. For example `'aRthur'`.
 #
 # > This exercise holds an important lesson: you need to fully understand why code is broken, before you can fix it!
 
-# %% id="QQyGzsqCCe3o"
+# %%
 # fancy: Alhambra, Arthur, Jasmine, Turandot
 # not so fancy: Jeep, paper, Python, Ada
 word = 'Alhambra'
@@ -185,7 +186,7 @@ if lengthy and has_a and first_uppercase:
 else:
     print('The word is not so fancy')
 
-# %% [markdown] id="HiEWGB1V1W4U"
+# %% [markdown]
 # ## Next module
 #
 # [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20assertions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20assertions%20solutions.ipynb)

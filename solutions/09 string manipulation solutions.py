@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # Module 9: String manipulation
 #
 # ### Exercise solutions
@@ -29,90 +30,90 @@
 # - Storing code in a variable so you can reuse it.
 # - Being explicit about the purpose of your code.
 
-# %% [markdown] id="5hIj-tbVleEq"
+# %% [markdown]
 # ## Exercise 9.1: String Utilities
 #
 # 1. In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
 
-# %% id="02q-FgvVlxEj"
+# %%
 print(len('two'))
 
-# %% [markdown] id="dZ8S2UialXke"
+# %% [markdown]
 # A string is an iterable, the `len` is the amount of elements (characters)
 
-# %% id="cvCrnnn9l-oH"
+# %%
 print(len(''))
 
-# %% [markdown] id="6vDjjHzIlcEY"
+# %% [markdown]
 # An empty string (just like an empty list) has length of 0.
 
-# %% id="UlWWF0k7mA62"
+# %%
 assert 'A' in 'Matilda'
 
-# %% [markdown] id="K_daSu19liik"
+# %% [markdown]
 # Python is case sensitive. The capitalized `A` is not in the string.
 
-# %% id="Ui3gmvCNmHfB"
+# %%
 assert 'A' in 'Matilda'.upper()
 
-# %% [markdown] id="i2bI-L6glqzO"
+# %% [markdown]
 # After capitalization of the whole string, `A` is in there.
 
-# %% id="1tDEnzrumNdO"
+# %%
 name = 'Matilda'
 assert name.upper() == 'MATILDA'
 
-# %% [markdown] id="1pbJz3qElujM"
+# %% [markdown]
 # This is the definition of `string.upper()`
 
-# %% id="BUpf6LglmZ4n"
+# %%
 name = 'Matilda'
 assert name.upper().lower() == 'Matilda'
 
-# %% [markdown] id="Rq3LXgkMlywN"
+# %% [markdown]
 # This does not work. `Matilda.upper()` equals `'MATILDA'`.
 #
 # `'MATILDA'.lower()` equals `'matilda'`. The first captilal is lost in translation.
 
-# %% id="sgfEH2jImlwz"
+# %%
 print('Matilda'.replace('ilda', 'ild4'))
 
-# %% [markdown] id="GhUlBMfPmGb3"
+# %% [markdown]
 # `string.replace()` is not limited to single characters
 
-# %% id="BEE94VVBmf7T"
+# %%
 print('Matilda'.replace('a', 4))
 
-# %% [markdown] id="qsPQT5VGlNZ2"
+# %% [markdown]
 # We can only replace strings with other strings. `'Matilda'.replace('a', '4')` would work
 
-# %% id="BVKc0bQAnGYq"
+# %%
 list_of_words = ['I', 'ate', 'a', 'banana']
 sentence = 'I ate a banana'
 
 assert sentence.split() == list_of_words
 
-# %% [markdown] id="xdueWI-yk_ME"
+# %% [markdown]
 # `string.split()` splits on all whitespace characters by default
 
-# %% id="R4U_8kVtmpHE"
+# %%
 list_of_words = ['I', 'ate', 'a', 'banana']
 sentence = 'I ate a banana'
 
 assert ''.join(list_of_words) == sentence
 
-# %% [markdown] id="ZpepgX5Lk0Mk"
+# %% [markdown]
 # We join the words on the empty string, and not on a space. Thus, the resulting sentence contains all the words concatenated.
 
-# %% [markdown] id="Y34UdLQVQY_B"
+# %% [markdown]
 # 2. In each of the code blocks below, replace each occurrence of `None` by an expression so that the assertions pass.
 
-# %% id="CMOb-BiRQkVd" executionInfo={"status": "ok", "timestamp": 1715696821132, "user_tz": -120, "elapsed": 3, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %%
 name = 'Julian'
 other_name = name.replace('Juli', 'Shee') # ANSWER: 'Shee'
 assert other_name == 'Sheean'
 
-# %% id="gmAD4po2RIAo" executionInfo={"status": "ok", "timestamp": 1715696871810, "user_tz": -120, "elapsed": 452, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %%
 sentence1 = 'Edo won an argument about function parameters.'
 sentence2 = 'To be or not to be, that is the question.'
 
@@ -124,7 +125,7 @@ def sentence_length(sentence):
 assert sentence_length(sentence1) == 7
 assert sentence_length(sentence2) == 10
 
-# %% id="VXHa1AIMSZW-" executionInfo={"status": "ok", "timestamp": 1715697085419, "user_tz": -120, "elapsed": 409, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %%
 book_title = 'iteration, or how I did the loop thing'
 
 words = []
@@ -137,10 +138,10 @@ capitalized_title = ' '.join(words) # after split comes join
 
 assert capitalized_title == 'Iteration, Or How I Did The Loop Thing'
 
-# %% [markdown] id="4dXMIBAUUk5T"
+# %% [markdown]
 # 3. **BONUS** Write a function `bwian_speech`. Its parameter is any sentence. It should return the same sentence, but with selective replacements: the first occurrence of the character `r` after every comma should be replaced by `w`. If you succeed, challenge yourself to replace `R` by `W` as well.
 
-# %% id="kT34vyPcVwNQ" executionInfo={"status": "ok", "timestamp": 1715698315133, "user_tz": -120, "elapsed": 226, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %%
 original = 'Do we have a prisoner by that name, "Brian"?'
 bwianized = 'Do we have a prisoner by that name, "Bwian"?'
 
@@ -174,7 +175,7 @@ def bwian_speech(text):
 
 assert bwian_speech(original) == bwianized
 
-# %% id="Mbps1JIeh8cS" executionInfo={"status": "ok", "timestamp": 1715699637307, "user_tz": -120, "elapsed": 355, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}}
+# %%
 original = 'Do we have a prisoner by that name, "Brian"?'
 bwianized = 'Do we have a prisoner by that name, "Bwian"?'
 original2 = 'Do we have a prisoner by that name, "Robert"?'
@@ -221,7 +222,7 @@ def bwian_speech(text):
 assert bwian_speech(original) == bwianized
 assert bwian_speech(original2) == bwianized2
 
-# %% [markdown] id="Xbi4ATS0mQzp"
+# %% [markdown]
 # ## Exercise 9.2: Additional utilities
 # For each of the string functions below, find out what they do. If they take any parameters, describe what these do:
 # - `string.startswith()`
@@ -233,7 +234,7 @@ assert bwian_speech(original2) == bwianized2
 # - `string.find()`
 # - `string.split(',', x)` (describe what 'x' does. It should be a number)
 
-# %% id="ZYHALHE7mU4-"
+# %%
 # string.startswith(substring) checks if a string starts with a substring
 assert 'matilda'.startswith('mat')
 
@@ -261,73 +262,73 @@ assert 'matilda'.find('il') == 3
 # after x splits have been made, the rest of the string is left intact
 assert 'Matilda by Roald Dahl'.split(' ', 2) == ['Matilda', 'by', 'Roald Dahl']
 
-# %% [markdown] id="avcqgDAAoq-w"
+# %% [markdown]
 # ## Exercise 9.3: String formatting
 #
 # 1. In each of the code blocks below, try to predict what will be printed, then run the code. If your guess was incorrect, try to figure out why the result is different. If your guess was correct, celebrate!
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 7, "status": "ok", "timestamp": 1681825929769, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="BIa0VOX_owF4" outputId="ddc080fa-bf11-4064-c5f4-efcbef9b9a64"
+# %%
 print('hey {}')
 
-# %% [markdown] id="SDnzz_IYoqRP"
+# %% [markdown]
 # Using `{}` in a string with `.format()` leaves the curly brackets untouched.
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 3, "status": "ok", "timestamp": 1681825932026, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="81GUitOZo0l2" outputId="6be221d0-52b7-47f9-8269-991811402ff7"
+# %%
 print('hey {Julian}')
 
-# %% [markdown] id="-HFk3OAAoyyy"
+# %% [markdown]
 # Again, without `.format()`, the string is untouched
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 267, "status": "ok", "timestamp": 1681825967240, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}, "user_tz": -120} id="96Dq4eSCpAji" outputId="7e3086d7-4e02-4b98-d96e-d91257f65fb5"
+# %%
 print('hey {}'.format('Julian'))
 
-# %% [markdown] id="OFmrf_lto6_k"
+# %% [markdown]
 # Calling `.format()` fills the placeholders
 
-# %% id="h43fjzPco4V_"
+# %%
 print('hey {Julian}'.format('Julian'))
 
-# %% [markdown] id="XP3dKwEXpAir"
+# %% [markdown]
 # This doesn't work, the names placeholder expects a named parameter.
 #
 # `'hey {Julian}'.format(Julian='julian')` would work
 
-# %% id="wA18AIPKpFAH"
+# %%
 print('hey {name}'.format('Julian'))
 
-# %% [markdown] id="LI43JmY2pcIg"
+# %% [markdown]
 # Same as above
 
-# %% [markdown] id="PkBMT-kYiIqd"
+# %% [markdown]
 # 2. Change each of the code blocks above so that it outputs `hey Edo`. You are **not** allowed to change the contents of the strings that start with `'hey`! *The solutions are contained in the copies **below**.*
 
-# %% id="rHlCJXILrOfX"
+# %%
 # for the first one, just add .format
 print('hey {}'.format('Edo'))
 
-# %% id="zBrCVWsErOfZ"
+# %%
 # For this one, you need a named argument.
 print('hey {Julian}'.format(Julian='Edo'))
 
-# %% id="g8KtBFyirOfa"
+# %%
 # You are not allowed to change the string starting with 'hey',
 # but you are allowed to change the argument to .format!
 # This solution ends up being the same as the first.
 print('hey {}'.format('Edo'))
 
-# %% id="FdoISOiWrOfb"
+# %%
 # This one is the same as the second solution.
 print('hey {Julian}'.format(Julian='Edo'))
 
-# %% id="EnizWx77rOfc"
+# %%
 # For this one, you need a named argument with the key "name",
 # AND you need to change the value of the argument.
 print('hey {name}'.format(name='Edo'))
 
-# %% [markdown] id="ArVJo3y0jJ8T"
+# %% [markdown]
 # 3. What do you think the following piece of code will do? Try it out. Can you explain the result?
 
-# %% id="iAkugK6wjqfl" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1715700086149, "user_tz": -120, "elapsed": 294, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="bb998fe7-45dc-4ad0-9a2b-04bc2faff77a"
+# %%
 name = 'Jill'
 welcome = 'welcome, {}'.format
 goodbye = 'farewell, {}'.format
@@ -335,7 +336,7 @@ connect = '; '.join
 
 print(connect((welcome(name), goodbye(name))))
 
-# %% [markdown] id="OLzxrMb9svd_"
+# %% [markdown]
 # This one is quite advanced. If you are surprised, it is probably because so far, we have only seen this notation:
 #
 # ```py
@@ -360,7 +361,7 @@ print(connect((welcome(name), goodbye(name))))
 #
 # Python supports this trick for all methods on all values. This is why we could repeat the trick on lines 3 and 4.
 
-# %% [markdown] id="Dntbbioh29xm"
+# %% [markdown]
 # ## Next module
 #
 # [10. Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20-%20Dictionaries%20solutions.ipynb)

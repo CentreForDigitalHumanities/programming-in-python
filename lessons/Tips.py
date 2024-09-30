@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="eL_rkx7cIm77"
+# %% [markdown]
 # # Tips
 #
 # This notebook contains tips for the final exercise of the CDH entry level Python course at Utrecht University. Participants were asked to think of an analysis that they might want to perform and to submit a description of this analysis in advance of the course. The tips in this notebook were chosen based on those submissions.
@@ -24,42 +25,42 @@
 #
 # [python-libs]: https://docs.python.org/3/library/index.html
 
-# %% [markdown] id="wBOMsp2twgbB"
+# %% [markdown]
 # ## Converting between types
 #
 # String to int:
 
-# %% id="1aU45qPvwntM"
+# %%
 int('123')
 
-# %% [markdown] id="cfrMiRd3wy9d"
+# %% [markdown]
 # Integer to string:
 
-# %% id="LNJEIXCtw6rq"
+# %%
 str(123)
 
-# %% [markdown] id="RtGlRbICxf__"
+# %% [markdown]
 # Float to string:
 
-# %% id="ejGhZs8SxjUN"
+# %%
 str(0.5)
 
-# %% [markdown] id="TdaVUNpBxmQ8"
+# %% [markdown]
 # String to float:
 
-# %% id="Nwk3D9VExoU_"
+# %%
 float('0.5')
 
-# %% [markdown] id="6CYPccQYxwCm"
+# %% [markdown]
 # Boolean to string:
 
-# %% id="JJf6fjNGxzvC"
+# %%
 str(True)
 
-# %% [markdown] id="LV7o-rkDx3MY"
+# %% [markdown]
 # String to boolean:
 
-# %% id="UUPNXO4mx5eb"
+# %%
 print('Direct boolean from string does not work:', bool('False'))
 
 # So we have to write a function.
@@ -72,58 +73,58 @@ def boolean_from_string(string):
 print(boolean_from_string('True'))
 print(boolean_from_string('False'))
 
-# %% [markdown] id="CfnNAUKmyhOj"
+# %% [markdown]
 # Integer to float:
 
-# %% id="st9vZgf0yixm"
+# %%
 float(123)
 
-# %% [markdown] id="Gmw_vdGoyl3c"
+# %% [markdown]
 # Float to integer:
 
-# %% id="JZ_l3IdhynF-"
+# %%
 int(0.5)
 
-# %% [markdown] id="97z6FUGz8uAS"
+# %% [markdown]
 # ## Strings
 #
 # Strings have a couple of tricks that may be useful for the final exercise. We illustrate them quickly below. A complete overview of all string methods can be found [here](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str).
 #
 # [`str.startswith`](https://docs.python.org/3/library/stdtypes.html#str.startswith) and [`str.endswith`](https://docs.python.org/3/library/stdtypes.html#str.endswith) will tell you whether a string begins or ends with a particular other string, respectively.
 
-# %% id="07ik0vd2-6tQ"
+# %%
 for word in ['magazine', 'kangaroo', 'rooster', 'broom']:
     if word.startswith('roo'):
         print('"' + word + '" starts with "roo"')
     if word.endswith('roo'):
         print('"' + word + '" ends with "roo"')
 
-# %% [markdown] id="TyjWFAWR_0Dp"
+# %% [markdown]
 # [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) can glue a sequence of strings together, as we have seen in *9. String manipulation*.
 
-# %% id="JlqAc5N8AQPu"
+# %%
 print(' + '.join(['1', '2', '3', '4']))
 print(', '.join(['do', 're', 'mi', 'fa', 'sol', 'la', 'ti', 'do']))
 
-# %% [markdown] id="g0x1VvE5B71w"
+# %% [markdown]
 # [`str.split`](https://docs.python.org/3/library/stdtypes.html#str.split) is the opposite of `str.join`: it will split a string by a given separator and return a list with the fragments. If you don't specify a separator, it will split by whitespace.
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="R11wYmWFCVdb" outputId="ca8804e9-80a5-4771-e3f0-1adee880f66b"
+# %%
 print('1 + 2 + 3 + 4'.split(' + '))
 print('1 + 2 + 3 + 4'.split('+'))
 print('1 + 2 + 3 + 4'.split())
 print('1   2   3   4'.split())
 
-# %% [markdown] id="0csn-TVPC8qG"
+# %% [markdown]
 # [`str.splitlines`](https://docs.python.org/3/library/stdtypes.html#str.splitlines) is basically `str.split('\n')`, but it cleverly recognizes many types of line endings (which might differ between platforms) and it has an option to keep the line endings in the resulting fragments.
 
-# %% [markdown] id="k1xy1XmaED7X"
+# %% [markdown]
 # [`str.strip`](https://docs.python.org/3/library/stdtypes.html#str.strip) will return a new string with the whitespace removed from the beginning and end. You can also specify a different set of characters that should be removed. The default mode of removing whitespace is useful for cleaning up text that was downloaded from the internet or that was copypasted from some kind of document.
 
-# %% id="djsFEC5DE6md"
+# %%
 "  This string isn't very tidy. ".strip()
 
-# %% [markdown] id="G4tC_OiFFth3"
+# %% [markdown]
 # ### Escapes
 #
 # There are some characters that normally aren't allowed to appear in a literal string. We can shoehorn them in anyway by placing a backslash `\` in front of the character, or another letter that acts as a placeholder. This is called *escaping* the character. The combination of the backslash and the following character is called an *escape sequence*. Python also uses these escape sequences when echoing raw strings back at us. The following escape sequences occur often:
@@ -142,20 +143,20 @@ print('1   2   3   4'.split())
 #
 # You can get a complete overview of escape sequences if you scroll down from [here](https://docs.python.org/3/reference/lexical_analysis.html#string-and-bytes-literals).
 
-# %% [markdown] id="5BlYPydVDvWt"
+# %% [markdown]
 # ### Searching for substrings
 #
 # Searching for a substring within a larger string is a common task, especially in the humanities. [`str.find`](https://docs.python.org/3/library/stdtypes.html#str.find) will tell us the first position in the large string at which the substring is found, or `-1` if it is not found:
 
-# %% id="kxLt4yApEtpV"
+# %%
 print('kangaroo'.find('roo'))
 print('kangaroo'.find('skip'))
 
 
-# %% [markdown] id="_SmGTTzwFAFj"
+# %% [markdown]
 # `str.find` accepts an optional second argument, which lets us specify the position from which to start searching. We can use this to continue searching for more occurrences after the first match. For example, the following function returns *all* positions of the substring `needle` within the larger string `haystack`:
 
-# %% id="lAlw_L-sFikq"
+# %%
 def str_find_all(haystack, needle):
     results = []
     position = -1
@@ -171,19 +172,19 @@ def str_find_all(haystack, needle):
 
 str_find_all('Colorless green ideas sleep furiously', 'e')
 
-# %% [markdown] id="_U9XtQyTLQyC"
+# %% [markdown]
 # With the optional third argument, we can also make `str.find` *stop* searching at a given position. In the example below, `'roo'` is not found in the first four characters of `'kangaroo'`.
 
-# %% id="jL0nWgb4LivF"
+# %%
 print('kangaroo'.find('roo', 0, 4))
 
-# %% [markdown] id="lVzhE5VuMQdZ"
+# %% [markdown]
 # During the lectures, we mentioned a simpler way to search for a substring that only tells you whether the substring appears at all:
 
-# %% id="KfieQsYOMkK7"
+# %%
 'roo' in 'kangaroo'
 
-# %% [markdown] id="LhCDt6xTMq2i"
+# %% [markdown]
 # ### Regular expressions
 #
 # If you need pattern-based search, [regular expressions](https://docs.python.org/3/library/re.html) are the tool of choice. A regular expression lets you describe a set of similar strings with a single pattern. For example, the following notation will match all occurrences of the word "colour" in a text, even if it is capitalized or spelled "color":
@@ -194,15 +195,15 @@ print('kangaroo'.find('roo', 0, 4))
 #
 # The `search` function from the standard module `re` (described by the above link) lets us use such patterns to search through a string:
 
-# %% id="jOJl_23IOvyG"
+# %%
 import re
 
 re.search('[Cc]olou?r', 'Colorless green ideas sleep furiously')
 
-# %% [markdown] id="Me7D092xO-u0"
+# %% [markdown]
 # Regular expressions are a powerful tool and the `re` module has many bells and whistles. Please refer to [the documentation](https://docs.python.org/3/library/re.html) for the details.
 
-# %% [markdown] id="mUmNSdNzMq_M"
+# %% [markdown]
 # ### Format strings
 #
 # A format string is a perfectly normal string that contains some special notation, i.e., pairs of braces `{}`. While the presence of those braces does not oblige us to anything, we *can* use their presence (and insert them on purpose) in order to benefit from the [`str.format`](https://docs.python.org/3/library/stdtypes.html#str.format) method. For example, if I have the following string,
@@ -219,20 +220,20 @@ re.search('[Cc]olou?r', 'Colorless green ideas sleep furiously')
 #
 # If I call `str.format` on a format string, it will interpret pairs of braces as placeholders and replace them by any arguments that I pass.
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 37} id="NQmg3z2cPPFW" outputId="c6647728-a0ac-4f50-e5ed-36e9b0c94cbf"
+# %%
 'Ta-da: {}'.format('this is Python!')
 
-# %% [markdown] id="ZtwiQhMJPcAd"
+# %% [markdown]
 # You can insert as many placeholders and pass as many arguments as you like, as long as there are at least as many arguments as placeholders. Of course, you usually want the number of arguments to exactly match the number of placeholders in the format string, but `str.format` will simply skip any arguments that remain.
 
-# %% id="x_f2iRsQQNqr"
+# %%
 print('Ta-da: {}'.format(1, 2, 3))
 print('Ta{}da{} {}'.format('-', ':', 'success!'))
 
-# %% [markdown] id="7GOzHkgLRGYi"
+# %% [markdown]
 # Format strings are a great way to compose strings out of some fixed parts and some variable parts, especially if the fixed parts aren't entirely regular. Consider the following code:
 
-# %% id="mTVp_EOmR_nm"
+# %%
 YELL_START = 'Go go '
 YELL_END = '!!!'
 
@@ -241,10 +242,10 @@ def yell(name):
 
 yell('Jelte')
 
-# %% [markdown] id="fwTdCa4QSOuv"
+# %% [markdown]
 # Using a format string, this code would be a bit more explicit and a bit easier to read and write as well:
 
-# %% id="KvbXfNykSmiB"
+# %%
 YELL_FORMAT = 'Go go {}!!!'
 
 def yell(name):
@@ -252,10 +253,10 @@ def yell(name):
 
 yell('Jelte')
 
-# %% [markdown] id="TbnEKRdlTGTj"
+# %% [markdown]
 # The above discussion addresses about 90% of all string formatting needs, but for the remaining 10%, `str.format` is chock-full of bells and whistles. You can use named arguments, reuse the same argument in multiple places, align placeholders to a particular width with filler characters of choice, specify how to format numbers, and so forth and so on. You can read all about it [here](https://docs.python.org/3/library/string.html#formatstrings).
 
-# %% [markdown] id="0FJ_vXwlwT_5"
+# %% [markdown]
 # ### Cross-platform file paths
 #
 # Consider the location of the current notebook (`Tips.ipynb`). It is located inside a folder called `Colab Notebooks`, which is inside a folder called `My Drive`, which is inside my Google Drive account. In Windows, we write such paths as follows:
@@ -287,7 +288,7 @@ yell('Jelte')
 #
 # [os.path]: https://docs.python.org/3/library/os.path.html
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="AfuPbq5iwRsR" outputId="48cb5576-1a6d-4b82-fcb2-46c76c0bbb3d"
+# %%
 import os.path as op
 
 crossplatform_path = op.join('My Drive', 'Colab Notebooks', 'Tips.ipynb')
@@ -295,10 +296,10 @@ crossplatform_path = op.join('My Drive', 'Colab Notebooks', 'Tips.ipynb')
 print(crossplatform_path)
 
 
-# %% [markdown] id="hhu9T00mFSHd"
+# %% [markdown]
 # ## Iterables
 
-# %% [markdown] id="X6KSp6FbMPRP"
+# %% [markdown]
 # Python's `for` loop knows how to take one value at a time out of a generator, just like it knows how to take one value at a time out of a list. We call the more general class of things that `for` can loop over *iterables*. There are many more types of iterables besides lists and generators (including tuples and dictionaries) and `for` is able to deal with all of them, because all iterables follow the same **iterator convention**.
 #
 # In fact, this convention is not restricted to `for`. Most functions in the Python standard library that work with sequences, accept not just lists but any iterable. We have already seen this in action when we did `list(range(0, 101))`: `list` accepted an iterable, `range(0, 101)`, took out its values one by one, stored all of them in a list, and finally returned that list to you.
@@ -309,14 +310,14 @@ print(crossplatform_path)
 #
 # [range]: https://docs.python.org/3/library/functions.html#func-range
 
-# %% [markdown] id="vX59S1uDaBLI"
+# %% [markdown]
 # ### `filter`
 #
 # The built-in [`filter`][filter] accepts a function and an iterable. It passes each value in the iterable to the function in a separate call. It returns a generator with only the values in the input sequence for which the function returned `True`.
 #
 # [filter]: https://docs.python.org/3/library/functions.html#filter
 
-# %% id="YgQ2RCRbbJDY"
+# %%
 def odd(number):
     return number % 2 == 1
 
@@ -324,10 +325,10 @@ fibonacci_10 = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
 list(filter(odd, fibonacci_10))
 
-# %% [markdown] id="30NBqwSZbqee"
+# %% [markdown]
 # For comparison, this is what the last line would look like without `filter`:
 
-# %% id="UuzJGcjOcOL8"
+# %%
 result_list = []
 for number in fibonacci_10:
     if odd(number):
@@ -335,32 +336,32 @@ for number in fibonacci_10:
 result_list
 
 
-# %% [markdown] id="81vNGdqgc1PI"
+# %% [markdown]
 # ### `map`
 #
 # The built-in [`map`][map] accepts a function and an iterable. It passes each value in the iterable as the first argument to the function in a separate call. It returns a generator with the return values of each of those calls.
 #
 # [map]: https://docs.python.org/3/library/functions.html#map
 
-# %% id="Gdw4kFoCeQ4x"
+# %%
 def square(number):
     return number ** 2
 
 list(map(square, range(10)))
 
-# %% [markdown] id="CMWKdfZued1f"
+# %% [markdown]
 # For comparison, code without `map` that produces the same output as the last line:
 
-# %% id="I13FNH_ZeptA"
+# %%
 result_list = []
 for number in range(10):
     result_list.append(square(number))
 result_list
 
-# %% [markdown] id="S5NtKmJ21L_u"
+# %% [markdown]
 # You can also pass multiple iterables to `map`. In that case, `map` will take one value from each iterable per iteration and pass the value from the first iterable as the first argument to the function, the corresponding value from the second iterable as the second argument, and so on. In the following example, we use a [format string](#scrollTo=Format_strings).
 
-# %% id="5W6NwA8D2Kz3"
+# %%
 sentence = '{} {} {} {}.'.format
 
 # The following lists have been shuffled.
@@ -376,10 +377,10 @@ phrases = map(sentence, properties, people, verbs, objects)
 for phrase in phrases:
     print(phrase)
 
-# %% [markdown] id="G7fup_SyBode"
+# %% [markdown]
 # Without `map` (and without `enumerate` or `range`), the last loop would have looked like this instead:
 
-# %% id="9a1XKPuFBtpF"
+# %%
 index = 0
 for prop in properties:
     group = people[index]
@@ -388,10 +389,10 @@ for prop in properties:
     print(sentence(prop, group, verb, obj))
     index = index + 1
 
-# %% [markdown] id="9DCBUR61DNRr"
+# %% [markdown]
 # If you pass iterables of unequal lengths, `map` will stop at the end of the shortest iterable. In the next subsection, we will take a quick look at how this can sometimes be useful.
 
-# %% id="pR-4fFPZDMOi"
+# %%
 # operator.mul is a function that multiplies two numbers. It
 # does exactly the same thing as the `*` operator, but as a
 # function so you can pass it as an argument to other functions.
@@ -403,7 +404,7 @@ large = [5, 7, 11, 13, 17, 19, 23, 29]
 
 list(map(mul, small, large))
 
-# %% [markdown] id="yBYdJR9VHLQU"
+# %% [markdown]
 # ### More built-in functions
 #
 # `range`, `enumerate`, `filter` and especially `map` are the functions on iterables that you'll be using the most. There are however more built-in functions on iterables worth knowing about. Below, we briefly mention a few.
@@ -416,21 +417,21 @@ list(map(mul, small, large))
 # - [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join), which I covered in more detail in [Strings](#scrollTo=Strings), can take the strings that it will glue together from any iterable sequence.
 # - [`sum`](https://docs.python.org/3/library/functions.html#sum), as the name suggests, will return the sum of all values in an iterable sequence.
 
-# %% [markdown] id="LugfHklV0b4C"
+# %% [markdown]
 # ### Operators
 #
 # Given two lists of numbers, we might want to create a third list where each element is the sum of the correponding elements of the first two lists. We cannot pass the `+` operator to `map`, because the `+` operator is not a function:
 
-# %% id="ddcs1QaK1APC"
+# %%
 first_list = [1, 2, 3]
 second_list = [7, 7, 5]
 
 list(map(+, first_list, second_list))
 
-# %% [markdown] id="Ix-TPRvY1Pc-"
+# %% [markdown]
 # Fortunately, the [`operator`](https://docs.python.org/3/library/operator.html) standard module exports function versions of most operators, so we can do this instead:
 
-# %% id="UG_UUx8S1jQw"
+# %%
 from operator import add
 
 first_list = [1, 2, 3]
@@ -438,7 +439,7 @@ second_list = [7, 7, 5]
 
 list(map(add, first_list, second_list))
 
-# %% [markdown] id="ezmNWLLM2G4w"
+# %% [markdown]
 # The operators that you would most likely use this way, and their corresponding functions exported from `operator`, are the following (full list [here](https://docs.python.org/3/library/operator.html#mapping-operators-to-functions)):
 #
 # `+` - `add` (for adding numbers)
@@ -467,30 +468,30 @@ list(map(add, first_list, second_list))
 #
 # `!=` - `ne`
 
-# %% [markdown] id="0SMYES0-gyBX"
+# %% [markdown]
 # ### Bound methods
 #
 # In the `map` subsection, I used an [example](#scrollTo=5W6NwA8D2Kz3&line=1&uniqifier=1) with the notation `'{} {} {} {}.'.format`. I stored that in a variable and then passed that as a function to `map`. We have seen something similar in *exercise 9.3.3*. It turns out this is a general thing we can do in more situations, so let's briefly touch on how this works.
 #
 # The essence is that
 
-# %% id="51cj58Pdogj_"
+# %%
 '{} {} {} {}.'.format(1, 2, 3, 4)
 
-# %% [markdown] id="O-0kegzaonFi"
+# %% [markdown]
 # is equivalent to
 
-# %% id="GqxgL5Rgorx3"
+# %%
 str.format('{} {} {} {}.', 1, 2, 3, 4)
 
-# %% [markdown] id="3DWOZQHKpClX"
+# %% [markdown]
 # We generally use the first form because it is more convenient, but Python is actually translating it to the second form behind our backs. The [format string](#scrollTo=Format_strings) `'{} {} {} {}.'` is being passed as the first argument to the function `str.format` in both cases.
 #
 # If we do `'{} {} {} {}.'.format` without actually calling the function and passing an argument list, Python understands that we want to use `'{} {} {} {}.'` as the first argument when we later make the call. It returns a special, *bound* version of `str.format` that already has our format string filled in, so we only need to supply the remaining arguments. This is a special form of *partial application* (we will see the more general form of partial application in the [next subsection](#scrollTo=partial)). Python's support for this special form has something to do with classes and objects, which you can optionally read more about in [a later section](#scrollTo=Classes_and_objects).
 #
 # With this theory out of the way, let's look at a couple more examples of how we can use both bound and unbound functions in `map` and similar functions. We use [string](#scrollTo=Strings) and [dictionary](#scrollTo=Dictionaries) functions in this example.
 
-# %% id="xSptat6auBDW"
+# %%
 # We can map the unbound str.lower to lowercase a sequence of strings.
 strings = ['Hawaii', 'Iceland', 'Hokkaido', 'Vanuatu']
 print(list(map(str.lower, strings)))
@@ -503,10 +504,10 @@ topography = {
 # Give me only the islands I know something about.
 print(list(filter(topography.get, strings)))
 
-# %% [markdown] id="EqorhEmy6pxq"
+# %% [markdown]
 # With bound methods, we can achieve ultimate minimalism in our [example](#scrollTo=fwTdCa4QSOuv&line=1&uniqifier=1) from the format strings section, repeated here:
 
-# %% id="Q49H5CvR7DbK"
+# %%
 YELL_FORMAT = 'Go go {}!!!'
 
 def yell(name):
@@ -514,26 +515,26 @@ def yell(name):
 
 yell('Jelte')
 
-# %% [markdown] id="kJnvBskM7GvW"
+# %% [markdown]
 # because we can suffice with this:
 
-# %% id="BHiKKKM77JKL"
+# %%
 yell = 'Go go {}!!!'.format
 
 yell('Jelte')
 
 
-# %% [markdown] id="XO0Q3vhf74Nd"
+# %% [markdown]
 # ### `itertools` and `functools`
 #
 # The [`itertools`](https://docs.python.org/3/library/itertools.html) and [`functools`](https://docs.python.org/3/library/functools.html) standard modules let you turn your iterable-fu up to 11. Most of the contents of these modules are a bit advanced, but there are a couple of tricks in there that might be useful during the final exercise. We quickly illustrate them below.
 
-# %% [markdown] id="ucNV6xs0Tr8x"
+# %% [markdown]
 # #### `repeat`
 #
 # [`itertools.repeat`](https://docs.python.org/3/library/itertools.html#itertools.repeat), as the name suggests, will keep repeating a value that you specify. *Forever*. That means you should definitely not try to loop over it! However, you can use it when you need to `map` a function that takes multiple arguments, where some arguments come from a (finite) iterable sequence while at least one argument is the same every time. Consider the following example code, which prints a triangle of stars:
 
-# %% id="HbbMbbNvckz7"
+# %%
 def centered_stars(center, width):
     padding = center - width // 2
     return ' ' * padding + '*' * width
@@ -544,22 +545,22 @@ for width in range(1, 6, 2):
 
 print('\n'.join(lines))
 
-# %% [markdown] id="YHOPuLOwh3Qx"
+# %% [markdown]
 # We can replace the loop by an expression using `map` and `repeat`:
 
-# %% id="I8NMn7KUh-3S"
+# %%
 from itertools import repeat
 
 lines = map(centered_stars, repeat(2), range(1, 6, 2))
 
 print('\n'.join(lines))
 
-# %% [markdown] id="PW2498IlmijJ"
+# %% [markdown]
 # #### `partial`
 #
 # [`functools.partial`](https://docs.python.org/3/library/functools.html#functools.partial) takes a function plus any number of other arguments, and then returns a new version of the function to which those arguments have already been applied.
 
-# %% id="i_Pjs-rGnfH2"
+# %%
 from functools import partial
 
 # center_2_stars is a version of centered_stars when the first
@@ -569,28 +570,28 @@ center_2_stars = partial(centered_stars, 2)
 
 center_2_stars(3)
 
-# %% [markdown] id="yCkaJitHnrXk"
+# %% [markdown]
 # While `functools.partial` does not operate on iterables by itself, it can be really useful when you want to adjust functions before you pass them to `filter`, `map` and the like. We could have used it instead of `itertools.repeat` to eliminate the loop from our triangle example:
 
-# %% id="jjr_D7jpoYul"
+# %%
 lines = map(center_2_stars, range(1, 6, 2))
 
 print('\n'.join(lines))
 
 
-# %% [markdown] id="IRRPl6piyQn8"
+# %% [markdown]
 # `partial` also works with keyword arguments. In some cases, this makes it possible to partially apply arguments out of order. This doesn't work for the operators, but there are some workarounds possible. Consider writing a function that subtracts `3` from whatever number you pass to it:
 
-# %% id="WT3OJFSr18MW"
+# %%
 def minus_3(number):
     return number - 3
 
 minus_3(4)
 
-# %% [markdown] id="MVmN8nSt2Ow1"
+# %% [markdown]
 # It would be nice if we could skip writing a function ourselves and instead just combine `operator.sub` with `functools.partial`.
 
-# %% id="DK8Y4dWHzY_J"
+# %%
 from operator import sub
 from functools import partial
 
@@ -598,10 +599,10 @@ minus_3 = partial(sub, b=3)
 
 minus_3(4)
 
-# %% [markdown] id="pQpjPTbb2oNd"
+# %% [markdown]
 # The above code doesn't work, but we can avoid the problem by adding `-3` instead of subtracting `+3`:
 
-# %% id="H3MwPyuF27vg"
+# %%
 from operator import add
 from functools import partial
 
@@ -609,7 +610,7 @@ minus_3 = partial(add, -3)
 
 minus_3(4)
 
-# %% [markdown] id="-LH3TiwCpNbp"
+# %% [markdown]
 # #### `reduce`
 #
 # [`functools.reduce`](https://docs.python.org/3/library/functools.html#functools.reduce) is for when you want to combine (or *reduce*) all values from a sequence to a single value. It accepts a function, an iterable and an optional starting value. If you don't supply a starting value, it will use the first value in the sequence instead.
@@ -618,7 +619,7 @@ minus_3(4)
 #
 # For illustration, here is how you might use `reduce` to reverse a string:
 
-# %% id="kN5Uw_iB6QE6"
+# %%
 from functools import reduce
 
 def prepend_letter(accumulator, next_letter):
@@ -630,10 +631,10 @@ def reverse_string(string):
 
 reverse_string('abcdef')
 
-# %% [markdown] id="AxfCOlrU7H75"
+# %% [markdown]
 # And here is how we could write our own implementations of the built-in functions `max` and `sum` using `reduce`:
 
-# %% id="P1CltqPc7UvG"
+# %%
 from functools import reduce
 from operator import add
 
@@ -654,7 +655,7 @@ numbers = [3, 5, 4]
 print('max:', max(numbers))
 print('sum:', sum(numbers))
 
-# %% [markdown] id="_zR8E_94YHCv"
+# %% [markdown]
 # ## Calculations
 #
 # As we have written in the course manual, Python is "batteries included"&mdash;it comes with a lot of functionality out of the box. This is certainly also the case for numerical computations and even some basic statistics. We highlight some common tools below.
@@ -692,15 +693,15 @@ print('sum:', sum(numbers))
 # [statistics.linear_regression]: https://docs.python.org/3/library/statistics.html#statistics.linear_regression
 # [python-numeric]: https://docs.python.org/3/library/numeric.html
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1715884348191, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="xoBLhOpvmu2P" outputId="9d9aff55-cc93-437f-ae06-12cf1241f94a"
+# %%
 # !python --version
 
-# %% [markdown] id="rKxMNbMMuMCw"
+# %% [markdown]
 # ### Computing covariance and correlation yourself
 #
 # Given two equally long sequences of numbers and their averages (which you might have already computed because you needed them elsewhere), you can compute the sample covariance and correlation as follows using [iterables](#scrollTo=Iterables):
 
-# %% id="moprSI-g90tZ"
+# %%
 from itertools import repeat
 from operator import sub, mul
 from statistics import mean, stdev
@@ -731,12 +732,12 @@ print('correlation 2-1:', correlation(column2, column1))
 print('correlation 1-3:', correlation(column1, column3))
 print('correlation 2-3:', correlation(column2, column3))
 
-# %% [markdown] id="JYTbShRDBoS1"
+# %% [markdown]
 # ### Using covariance and correlation from an external package
 #
 # [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) provides implementations of [covariance](https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html#covariance), [correlation](https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html#correlation) and many other statistical functions. If you want to do serious statistics, you should probably use pandas or some other third-party package that can do the heavy lifting for you. If you choose this path, head over to [dataframes](#scrollTo=pandas_dataframes_and_read_csv) first.
 
-# %% [markdown] id="F6mIIM3zLw1p"
+# %% [markdown]
 # ## Classes and objects
 #
 # For the final exercise, you do not need to create your own classes. However, since you may encounter the terminology and the notation when using third-party packages, here is a *very* quick explanation.
@@ -757,14 +758,14 @@ print('correlation 2-3:', correlation(column2, column3))
 #
 # There is no danger in thinking of a class instantiation as a function call, or in instantiating a class without knowing it because its name starts with a lowercase letter. In reality, however, a class is not a function but an object!
 
-# %% [markdown] id="MoyqHwBhvBTH"
+# %% [markdown]
 # ## Working with times and calendar dates
 #
 # The [`datetime`][datetime] standard module provides tools for working with dates and times. It exports the `date`, `time` and `datetime` [classes](#scrollTo=Classes_and_objects), which let you represent a date, a time or both, exactly as the names suggest.
 #
 # [datetime]: https://docs.python.org/3/library/datetime.html
 
-# %% [markdown] id="W5ZlB-uXkC6S"
+# %% [markdown]
 # ### Parsing dates from text
 #
 # If you are working with dates for the final course exercise, it is most likely that you are extracting date strings from a CSV. Such a string might, for example, look like `'2021/11/15'`. In some cases, you may need to extract specific information from those dates, such as the year, month, hour or even weekday. For such use cases, it is advisable to convert the date string to a `date`, `time` or `datetime` object first by *parsing* it.
@@ -774,7 +775,7 @@ print('correlation 2-3:', correlation(column2, column3))
 # [datetime.strptime]: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior
 # [datetime-formats]: https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes
 
-# %% id="cOo_KnhWsR2m"
+# %%
 from datetime import datetime as dt
 
 yesterday_str = '2021/11/15'
@@ -790,7 +791,7 @@ print('datetime:', yesterday_obj)
 print('date:    ', yesterday_obj.date())
 print('time:    ', yesterday_obj.time())
 
-# %% [markdown] id="iDp5QxvpxZIo"
+# %% [markdown]
 # ### Extracting information from date and time objects
 #
 # Once you have a `date`, `time`, or `datetime` object, extracting information from it is very easy, as we demonstrate below. [`datetime`][datetime.datetime] objects have all date-related attributes and methods of `date` as well as all time-related attributes and methods of `time`. You can find the most important attributes [here][datetime-attributes] and the most important methods [here][datetime-methods] (you can also scroll up from the latter link for some additional methods related to time zones).
@@ -799,7 +800,7 @@ print('time:    ', yesterday_obj.time())
 # [datetime-attributes]: https://docs.python.org/3/library/datetime.html#datetime.datetime.year
 # [datetime-methods]: https://docs.python.org/3/library/datetime.html#datetime.datetime.utcoffset
 
-# %% id="M9pQ2otg0EQU"
+# %%
 # Year, month etcetera attributes are all represented as numbers.
 print('year:      ', yesterday_obj.year)
 print('month:     ', yesterday_obj.month)
@@ -810,7 +811,7 @@ print('weekday:   ', yesterday_obj.weekday())
 # The ISO 8601 standard also starts on Monday, but starts numbering at one.
 print('isoweekday:', yesterday_obj.isoweekday())
 
-# %% [markdown] id="GLBue3palj8M"
+# %% [markdown]
 # ## Sorting
 #
 # Python has a built-in function [`sorted`][sorted], which can sort anything that you can loop over (including the key-value pairs of a [dictionary](#scrollTo=Dictionaries)). It always returns a list with the result.
@@ -820,7 +821,7 @@ print('isoweekday:', yesterday_obj.isoweekday())
 # [sorted]: https://docs.python.org/3/library/functions.html#sorted
 # [sorting-howto]: https://docs.python.org/3/howto/sorting.html#sortinghowto
 
-# %% id="FIw_4XyNn9UK"
+# %%
 list_of_numbers = [5, 3, 4]
 list_of_strings = ['Good', 'day', 'to', 'you']
 list_of_lists = [
@@ -833,25 +834,25 @@ print(sorted(list_of_numbers))
 print(sorted(list_of_strings))
 print(sorted(list_of_lists))
 
-# %% [markdown] id="_uzxS1S1setr"
+# %% [markdown]
 # ### Sorting in descending order
 #
 # If you want to sort descending instead, pass the named argument `reverse=True`.
 
-# %% id="e2RSQaXFszpT"
+# %%
 sorted(list_of_numbers, reverse=True)
 
-# %% [markdown] id="YKx3ObxltgXz"
+# %% [markdown]
 # ### Custom comparison
 #
 # If you want `sorted` to perform a different kind of comparison in order to decide on the order of the items, you can pass a function as the named `key` argument. This function should take one item as its parameter and return a new value that `sorted` will use for the comparison instead.
 #
 # Below, we use the function `str.lower` to do a case-insensitive sort:
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="5_w-T2ryuknR" outputId="d9f68252-3e93-48c0-fdf9-f001a107fdf2"
+# %%
 sorted(list_of_strings, key=str.lower)
 
-# %% [markdown] id="92yLh2OWvO-q"
+# %% [markdown]
 # The [`operator`][operator] standard module exports several useful functions that let you create instant simple functions for the purpose of sorting. Most importantly, [`itemgetter`][operator.itemgetter] lets you sort sequences by a different item than the first and [`attrgetter`][operator.attrgetter] lets you sort [objects](#scrollTo=Classes_and_objects) by a particular attribute. There is also [`methodcaller`][operator.methodcaller] which lets you sort by the result of a method call.
 #
 # Below, we use `itemgetter` to sort the key-value pairs of a dictionary by value instead of by key:
@@ -861,17 +862,17 @@ sorted(list_of_strings, key=str.lower)
 # [operator.attrgetter]: https://docs.python.org/3/library/operator.html#operator.attrgetter
 # [operator.methodcaller]: https://docs.python.org/3/library/operator.html#operator.methodcaller
 
-# %% id="HigJMisJydem"
+# %%
 from operator import itemgetter
 
 example_dict = {'banana': 'yellow', 'cherry': 'sweet', 'date': 'wrinkly'}
 
 sorted(example_dict.items(), key=itemgetter(1))
 
-# %% [markdown] id="P16V-uttzQXw"
+# %% [markdown]
 # And below, we use `attrgetter` to sort [dates](#scrollTo=Working_with_times_and_calendar_dates) by month:
 
-# %% id="jG1RMiBzzpky"
+# %%
 from operator import attrgetter
 from datetime import date
 
@@ -883,7 +884,7 @@ list_of_dates = [
 
 sorted(list_of_dates, key=attrgetter('month'))
 
-# %% [markdown] id="7rsvpuMn1kSl"
+# %% [markdown]
 # ## `pandas` dataframes and `read_csv`
 #
 # [pandas][pandas] is a package that provides general data structures and data analysis tools for Python. If you venture into statistics or datamining with Python, it is likely that you will sooner or later encounter [`pandas.DataFrame`][pandas.DataFrame] (which is a [class](#scrollTo=Classes_and_objects)). It holds tabular data in which each column might have a different type. Other packages often use this data structure, too.
@@ -896,7 +897,7 @@ sorted(list_of_dates, key=attrgetter('month'))
 # [pandas.DataFrame]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
 # [pandas.read_csv]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv-table
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 143} executionInfo={"elapsed": 921, "status": "ok", "timestamp": 1715689944930, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="1m-b-UVLF_rM" outputId="8c25103d-0063-4cbf-c824-8ad8bd177d05"
+# %%
 #requires pandas
 
 import os.path as op
@@ -929,12 +930,12 @@ data.iloc[0:3]
 # Both ways of slicing can be combined:
 data.loc[:, ['households', 'population']].iloc[0:3]
 
-# %% [markdown] id="l0NeIki5L-LI"
+# %% [markdown]
 # ## Visualizing data with `matplotlib`
 #
 # [`matplotlib`](https://matplotlib.org) is a comprehensive and easy to use package for creating data graphics. It is preinstalled on Google Colab, so you can use it right away. Here is a quick example:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 430} executionInfo={"elapsed": 761, "status": "ok", "timestamp": 1715692800081, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}, "user_tz": -120} id="ZBxC0c32NN7v" outputId="d42f13a0-b117-4255-d854-d06998f98a81"
+# %%
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
@@ -942,10 +943,10 @@ import numpy as np
 fig, ax = plt.subplots()  # Create a figure containing a single axes.
 ax.plot([1, 2, 3, 4], [1, 4, 2, 3]);  # Plot some data on the axes.
 
-# %% [markdown] id="RIGMSlw7NhnT"
+# %% [markdown]
 # The above example was shamelessly copied from `matplotlib`'s [Quick start guide](https://matplotlib.org/stable/tutorials/introductory/quick_start.html), which is the best place to start learning how to use the package yourself.
 
-# %% [markdown] id="584VEcMqI0Fm"
+# %% [markdown]
 # ## Statistical modeling with `statsmodels`
 #
 # Compared to special purpose languages such as R and SAS, Python is a little bit under-equipped when it comes to statistical modeling. Fortunately, [statsmodels](https://www.statsmodels.org/) is a comprehensive package that covers many modeling needs. It builds on top of [pandas](#scrollTo=pandas_dataframes_and_read_csv).
@@ -954,7 +955,7 @@ ax.plot([1, 2, 3, 4], [1, 4, 2, 3]);  # Plot some data on the axes.
 #
 #
 
-# %% [markdown] id="EYVhwfCP2oEK"
+# %% [markdown]
 # ## Clustering with scikit-learn
 #
 # [scikit-learn][sklearn] is a package that provides many data mining and machine learning tools, including cluster analysis. You can find the documentation [here][sklearn.cluster]. We give a very minimal example of hierarchical clustering with Ward linkage below. You can find a more extensive example [here][sklearn-example]. Note that we are using the `data` object, which is a `pandas.DataFrame`, from the [pandas section](#scrollTo=pandas_dataframes_and_read_csv).
@@ -963,7 +964,7 @@ ax.plot([1, 2, 3, 4], [1, 4, 2, 3]);  # Plot some data on the axes.
 # [sklearn.cluster]: https://scikit-learn.org/stable/modules/clustering.html
 # [sklearn-example]: https://scikit-learn.org/stable/auto_examples/cluster/plot_digits_linkage.html#sphx-glr-auto-examples-cluster-plot-digits-linkage-py
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="upo6gPd46sVt" outputId="6938e3d2-8104-4f8c-fca6-f10b70d36dbb"
+# %%
 #requires sklearn
 
 from sklearn.cluster import AgglomerativeClustering
@@ -983,7 +984,7 @@ print(clustering.labels_[:20])
 # the cluster assignment of each data point. The scikit-learn
 # documentation explains how to do such things.
 
-# %% [markdown] id="hofJ0jOJ-fKo"
+# %% [markdown]
 # ## Parsing XML and HTML
 #
 # In the humanities, data are often stored in XML format, for example [TEI](https://en.wikipedia.org/wiki/Text_Encoding_Initiative). XML is a more complicated format than CSV, so extracting information from it is also a bit more involved.
@@ -992,19 +993,19 @@ print(clustering.labels_[:20])
 #
 # XML and HTML can both be parsed (and written) using [Beautiful Soup](https://beautiful-soup-4.readthedocs.io/en/latest/). It is preinstalled in Google Colab and can be imported by the name `bs4`.
 
-# %% [markdown] id="lEy6U7SF-uFe"
+# %% [markdown]
 # ## Fetching information from the internet
 #
 # [Requests](https://docs.python-requests.org/en/latest/) lets you fetch information from the internet, similar to how your browser might view or download information from a particular web address. It is a Python alternative to the command line program `curl` or the graphical program Postman, if you happen to know either.
 #
 # The package is preinstalled on Google Colab and can be imported as `requests`. How to do this is explained in the [Quickstart](https://docs.python-requests.org/en/latest/user/quickstart/). You can use Beautiful Soup for parsing HTML and XML responses, as explained in [the previous section](#scrollTo=hofJ0jOJ-fKo&line=7&uniqifier=1).
 
-# %% [markdown] id="1ft-t0CGvOl2"
+# %% [markdown]
 # ## Network visualizations
 #
 # [This article](https://towardsdatascience.com/visualizing-networks-in-python-d70f4cbeb259) lists four packages that you could use to visualize networks. Most of them can interface with [pandas](#scrollTo=pandas_dataframes_and_read_csv).
 
-# %% [markdown] id="Fd6n2BgZwlUi"
+# %% [markdown]
 # ## Natural language processing
 #
 # While there are more options, you should probably start by taking a look at [NLTK](https://www.nltk.org/) if you want to do any form of natural language processing, for example:

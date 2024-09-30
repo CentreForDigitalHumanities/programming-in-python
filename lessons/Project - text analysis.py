@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="kIc3b-0fqM6n"
+# %% [markdown]
 # # Project - Text Analysis
 # In this series of exercises you will develop a text analysis tool. The steps roughly simulate real-life Digital Humanities projects:
 # - Obtaining data
@@ -20,17 +21,17 @@
 #
 #
 
-# %% [markdown] id="OSpUjXmAqJI9"
+# %% [markdown]
 # > 💡 The exercises are very useful and fun if you would like to analyse textual data. The code you write here can be reused in your own analysis.
 #
 # > ⚠️ The exercises are difficult and may take you some time to complete. Consider them a bonus, study them at home, and don't be hestitant to contact the instructors, during or after the course. If you are not interested in text-analysis, ask the instructors for similarly challenging projects on a different topic, or pursue your own ideas!
 #
 
-# %% [markdown] id="v1MTwBNTpTcN"
+# %% [markdown]
 # ## Exercise 1: Cleaning interpunction
 # Implement the function `clean_interpunction` in a way that satisfies the docstrings and assertions
 
-# %% id="fOZBq4OLp2Lz"
+# %%
 def clean_interpunction(string):
     """Pads words and sentence-ending interpunction with a space.
     Other interpunction should be removed.
@@ -55,13 +56,13 @@ assert clean_interpunction(complex_sent) == 'A sentence with a dependent clause 
 print('All cases passed! The function works.')
 
 
-# %% [markdown] id="U8QVnwgwqTR6"
+# %% [markdown]
 # ## Exercise 2: only_periods
 # Add an optional parameter named `only_periods` to `clean_interpunction`.  
 # When this parameter is `True`, all sentence-ending interpunction should be changed to a period.  
 # The use of this will become clear in the next exercise.
 
-# %% id="TdLKVbsvqhGb"
+# %%
 def clean_interpunction(string, only_periods=None):
     """Pads words and sentence-ending interpunction with a space.
     Other interpunction should be removed.
@@ -89,11 +90,11 @@ assert clean_interpunction(complex_sent, only_periods=True) == 'A sentence with 
 print('All cases passed! The function works.')
 
 
-# %% [markdown] id="f5q3jw66q3EG"
+# %% [markdown]
 # ## Exercise 3: Split into sentences
 # Using the results of the previous exercises, implement a function that satisfies the docstring and assertions:
 
-# %% id="5lTZXUgwq6lW"
+# %%
 def split_sentences(text):
     """Takes a single string and splits it into sentences.
     Sentences are lists containing words (as strings).
@@ -121,10 +122,10 @@ split_text = split_sentences(text)
 assert len(split_text) == 2
 assert split_text == expected
 
-# %% [markdown] id="Um-nFxcTq1WA"
+# %% [markdown]
 # ## Exercise 4 - Putting it all together
 
-# %% [markdown] id="YNbDTnBrheRq"
+# %% [markdown]
 # ### The data
 # In the `class materials` section of the [Teams channel](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fteams.microsoft.com%2Fl%2Fteam%2F19%253a7fUy9HLO6LExOYQiz81CKmKv3wN7FI7cXyOgyPSz6Xo1%2540thread.tacv2%2Fconversations%3FgroupId%3D5d0856b8-3287-4585-8d42-6b65e5eee6e6%26tenantId%3Dd72758a0-a446-4e0f-a0aa-4bf95a4a10e7) you will find three `.txt`files:
 #
@@ -138,12 +139,12 @@ assert split_text == expected
 # We will use these variables in the rest of the notebook. Make sure you've executed this cell at least once.
 #
 
-# %% id="q_58MJYQadJO"
+# %%
 catcher_chapter1 = ''
 matilda_chapter1 = ''
 ij_chapter1 = ''
 
-# %% [markdown] id="EuaRmuhwhTIZ"
+# %% [markdown]
 # ### Writing functions
 # Implement a few function to use in the final analysis:
 #
@@ -158,6 +159,6 @@ ij_chapter1 = ''
 #
 #
 
-# %% [markdown] id="SSnrAH0xjUx8"
+# %% [markdown]
 # ### Output
 # Implement a function that calls 1-3 (and optionally 4) for each of the novels, and outputs their results. Try to format it in a nice way, so that it is clear what the output is.

@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="QMJDG-UsDngf"
+# %% [markdown]
 # # Life after the course
 #
 # Entry level programming in Python - CDH
@@ -22,28 +23,28 @@
 #
 # In order to help you with the next steps on your learning journey, we list the concepts below and provide links to web pages where you can learn more about the topic in question. We recommend that you scroll through the entire notebook; all principles and techniques discussed here are essential best practices.
 
-# %% [markdown] id="F2I_ZaA9J496"
+# %% [markdown]
 # ## Troubleshooting
 #
 # Whether you are trying to install something and it is refusing or your own code is throwing errors at you, more often than not a well-chosen web search will lead you to a solution. Good queries generally include the name of the program or package that you use, the name of the feature or function that you use, and the name of the error that you get (or a concise description of the problem: "no output", "lower value than expected", etcetera). For example [`pandas read_csv EncodingError`](https://duckduckgo.com/?q=pandas+read_csv+EncodingError).
 #
 # In many cases, a web search will lead you to [Stack Overflow](https://stackoverflow.com) (or a related question-and-answer site). You can also post your own questions about code-related problems here. There are some [tips](https://stackoverflow.com/help/how-to-ask) to help you maximize the change that you'll get a useful answer. If somebody answers your question adequately, be sure to [accept the answer](https://stackoverflow.com/help/someone-answers). Some Reddit groups, such as [r/learnpython](https://www.reddit.com/r/learnpython/), can also be useful spaces for asking questions about your code.
 
-# %% [markdown] id="cCxnaLPZVblw"
+# %% [markdown]
 # ## Command line interface (CLI, shell)
 #
 # Command line interfaces (CLIs) let you control your computer by typing commands instead of by clicking with your mouse. Every PC comes with a CLI by default (including macs). On Windows, the default CLI is called Command Prompt (`cmd.exe`) while on other platforms, it is usually called Terminal. In both cases, the text-based interface running within the window is called the *shell*. Since the distinction is not so important most of the time, we often use the word "shell" or "terminal" to refer to either.
 #
 # You don't need to be a shell expert, but being able to navigate your file system and to run basic commands can be very useful when programming on your own PC. There are many [introductory tutorials online](https://duckduckgo.com/?q=basic+command+line+interface+tutorial). https://ss64.com is a useful cross-platform reference of standard commands and syntax.
 
-# %% [markdown] id="E343lYdIZvPB"
+# %% [markdown]
 # ## Software needed for editing and running Python on your PC
 #
 # Running standalone Python on your PC is a bit different from using notebooks. At the very least, you will need a code editor and a Python interpreter. As the name suggests, a Python interpreter is a program that reads Python code and executes the program that is described in the code.
 #
 # Over time, programmers usually end up installing a lot of other software as well. For this reason, it is generally worthwhile to install a package manager.
 
-# %% [markdown] id="TsJgFTy7hiPv"
+# %% [markdown]
 # ### Editor
 #
 # While there are more options, we will mention a few general-purpose code editors that are both widely used and actively maintained:
@@ -56,7 +57,7 @@
 #
 # There are also "integrated development environments" (IDEs) specifically targeted at Python programming, such as [Spyder](https://www.spyder-ide.org) for data scientists and [PyCharm](https://www.jetbrains.com/pycharm/) for application developers. These have lots of bells and whistles. Some people find them very convenient. We mention them here for completeness, but we recommend learning how to work without one first.
 
-# %% [markdown] id="agGDd9aQk_or"
+# %% [markdown]
 # ### Python and a package manager
 #
 # macOS and Linux come with Python preinstalled by default, though this is usually an outdated version of Python. In principle, you *could* also just [download Python from the website](https://www.python.org/downloads/). However, since it is likely that you'll be installing more software alongside Python, we recommend investing some additional time to install a package manager instead, which will give you a central workflow for installing Python as well as any related software. Especially on Windows, using a package manager will likely provide a smoother experience as well.
@@ -69,7 +70,7 @@
 #
 # Windows does not follow the same conventions as Linux and macOS, but there are options. [Chocolatey](https://chocolatey.org) is a dedicated package manager for Windows. Since Windows 10, Microsoft provides its own [native package manager](https://docs.microsoft.com/en-us/windows/package-manager/) as well. At the DH Lab, we have tried neither of these options, so we cannot comment on how well they work. Alternatively, you can use the `pacman` package manager that is included with [Git for Windows](https://gitforwindows.org), which we recommend to install anyway. More about Git in a later section.
 
-# %% [markdown] id="SprAGQ0AzjfR"
+# %% [markdown]
 # ## Basic workflow for running standalone Python
 #
 # Notebooks contain a mixture of formatted text and runnable snippets of Python code. Standalone Python programs, on the other hand, are plain text files containing only Python code (including comments) with the `.py` extension. Suppose that you copy-paste the following code into a new file using your code editor, and save it with the name `hello.py`:
@@ -94,7 +95,7 @@
 # python --version
 # ```
 
-# %% [markdown] id="Q0sFMv09Vzdp"
+# %% [markdown]
 # ## Modules
 #
 # The official name for a plain text file that contains Python code is *module*. The `hello.py` from the previous section is an example of a module. Modules are named this way because your program can consist of multiple files, so they enable *modular programming*. Spreading your code over multiple files can make it easier to find back the right piece of code (if you chunk your code in a logical way). Individual modules can also be reused in new programs.
@@ -103,7 +104,7 @@
 #
 # Suppose that we have a module named `cheerlead.py` with the following functions (the short notation used here was discussed in the "Iterables" section of the final exercise tips):
 
-# %% id="N69uA9Ibrakg"
+# %%
 announce = 'We have a: {}'.format
 yell = 'Go go {}!!!'.format
 
@@ -112,7 +113,7 @@ def cheer(name):
     return '\n'.join([letters, yell(name)])
 
 
-# %% [markdown] id="A-5PwPAYra7B"
+# %% [markdown]
 # and we have a second module in the same folder, named `greet.py`, which uses the `cheer` function from `cheerlead.py`:
 #
 # ```python
@@ -130,7 +131,7 @@ def cheer(name):
 #
 # While `greet.py` contains only part of the program, Python knows where to find the rest by following the `import` statements. You can read more about modules [here](https://docs.python.org/3/tutorial/modules.html).
 
-# %% [markdown] id="Lp68EBfdDp6B"
+# %% [markdown]
 # ## Dependencies
 #
 # So far, we have used the word "package" liberally, but there are actually two kinds of "package": it can either refer to any software that you install using your package manager (such as Python itself), or to a collection of Python modules that was published for general reuse. This section is about the latter kind. When you use such a Python package in your project, this is called a dependency.
@@ -163,7 +164,7 @@ def cheer(name):
 #
 # In Google Colab, many third-party packages are installed by default, so the code examples just worked. In the general case, however, third-party packages must be downloaded first. When your program requires such packages in order to run, it is necessary to document those dependencies. In the next three subsections, we discuss the main ingredients that you need in order to manage your dependencies well.
 
-# %% [markdown] id="nxzGlbHfRIN1"
+# %% [markdown]
 # ### Virtual environments
 #
 # Once you start programming, you never stop. After your first program, there will be more projects. At some point, you might even be working on two or more projects in parallel.
@@ -194,7 +195,7 @@ def cheer(name):
 #
 # Beyond the basic case, there are various tools that add sophistications, such as storing environments in a central place and switching between them with shorter commands. Anaconda/miniconda takes this quite far by including environment creation and switching into its own `conda` command. You can read more about that [here](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html).
 
-# %% [markdown] id="Aydk8okoYqV3"
+# %% [markdown]
 # ### Installing packages
 #
 # By default, every virtual environment has the `pip` command, which lets you install third-party packages that were published to the [Python Package Index (PyPI)](https://pypi.org). Basically, this is a second, dedicated package manager just for Python packages. Manually installing a single package, for example `pandas`, looks like this:
@@ -205,7 +206,7 @@ def cheer(name):
 #
 # Of course, it is also possible to update packages and to uninstall them again. You can read more about pip [here](https://packaging.python.org/installing/). Again, `conda` has its own way of doing things, which you can read more about [here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-pkgs.html).
 
-# %% [markdown] id="oypf9UVDcbVS"
+# %% [markdown]
 # ### `requirements.txt`
 #
 # When using an external package, it is often the case that the feature you need was not yet present in an older version. It might also be removed again in a newer version. For this reason, the **versions** of the packages that you use, **are very important**. Each package itself might again depend on other packages (such indirect dependencies are automatically included when you `pip install` a package), and the versions of those indirect dependencies matter as well.
@@ -236,7 +237,7 @@ def cheer(name):
 #
 # The `setup.py` or `setup.cfg` that comes with [`setuptools`](https://setuptools.pypa.io/en/latest/userguide/quickstart.html) is a more sophisticated alternative to the `requirements.txt`. It is recommended to convert to using `setuptools` when you consider publishing your package to PyPI. Like `requirements.txt`, it integrates well with `pip`.
 
-# %% [markdown] id="rPBZJd32-I_i"
+# %% [markdown]
 # ## The interactive Python prompt
 #
 # If you just enter `python3` in the shell, without passing the name of a module, Python will run in interactive mode. It shows a prompt that looks like this:
@@ -247,7 +248,7 @@ def cheer(name):
 #
 # You can exit the interactive prompt by typing `quit()` (note that this doesn't work inside a regular module). You can also type `help()` for very helpful interactive documentation.
 
-# %% [markdown] id="yn6rwOg-0Tmz"
+# %% [markdown]
 # ## `main`
 #
 # In the example from the [Modules section](#scrollTo=Q0sFMv09Vzdp), there was a very strict task division between `cheerlead.py` and `greet.py`. `cheerlead.py` contained only reusable functions. If you were to run `python cheerlead.py`, it would silently exit without reading input or printing output. `greet.py`, on the other hand, contained *no* reusable code and was *only* fit for being run as a program. If we were to do `import greet` inside another module, that module would always ask for the same input and print the same output as `greet.py` would do, even if that other module is actually supposed to do something else. We could say that `cheerlead.py` is a reusable module while `greet.py` is a program entry point, although this isn't an official distinction.
@@ -283,7 +284,7 @@ def cheer(name):
 #
 # We could now continue to add a `main` function to `cheerlead.py` as well, and to add reusable functions to `greet.py` for importing in other modules. In this way, every module can be a reusable module and a program entry point at the same time.
 
-# %% [markdown] id="a4INew0rDA5I"
+# %% [markdown]
 # ## Exit status (exit code)
 #
 # A long-standing convention in shells is that programs "return" a number when they exit, similar to how a function might return a value. So far, we have done nothing to indicate what should be this *exit status* of our program. By default, Python assumes that we want to set the exit status to `0` (zero), so that has been the implicit exit code of our programs. We can see the exit code of the last command that we ran using `echo %ERRORLEVEL%` in the Windows Command Prompt, or `echo $?` in most other shells:
@@ -311,7 +312,7 @@ def cheer(name):
 #     sys.exit(main())
 # ```
 
-# %% [markdown] id="9lR2Badd7pon"
+# %% [markdown]
 # ## Program arguments
 #
 # We have previously shown the program `greet.py`, which will ask us for a name and then cheer it. Arguably, it would be a bit more efficient if we could pass the name already when calling the program, so we could skip the interactive question. Something like this:
@@ -376,32 +377,32 @@ def cheer(name):
 #
 # If I then run `python3 greet.py @greet.conf`, it will do exactly the same as when I would run `python3 greet.py --name Julian`. In this case, the difference is not so impressive, but when you are passing more than a few arguments, this can be very convenient.
 
-# %% [markdown] id="XXiw0yh4IoWE"
+# %% [markdown]
 # ## Assertions
 #
 # *This section is mostly redundant with module 5 of the course. It is retained for consistency with the next section.*
 #
 # Python has an `assert` keyword that lets you check that a condition that *should* be `True` is *actually* `True`. This is different from `if`, where the truth of the condition is optional; if you `assert` a condition and it is `False`, your program will stop with an error message. We can use this to protect ourselves and other programmers from mistakes. For example, we can add an assertion to our `cheer` function as follows:
 
-# %% id="Hv82mos_Ditb"
+# %%
 def cheer(name):
     assert isinstance(name, str)
     letters = '\n'.join(map(announce, name))
     return '\n'.join([letters, yell(name)])
 
 
-# %% [markdown] id="pdYC4dG8qbi1"
+# %% [markdown]
 # Now, our program will still work if used as intended, but if somebody passes a number, the program will fail with an `AssertionError`:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 402} executionInfo={"elapsed": 313, "status": "error", "timestamp": 1638205958138, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="c1H0veEyqxlr" outputId="b9d7d157-e102-41cb-d64e-679ae19f2fa5"
+# %%
 print(cheer('Kermit'))
 print(cheer(100))
 
 
-# %% [markdown] id="5TGC07rTr_mb"
+# %% [markdown]
 # We can make the error more informative by adding a comma and a string that will appear when the assertion fails:
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 317} executionInfo={"elapsed": 317, "status": "error", "timestamp": 1638206188361, "user": {"displayName": "J Gonggrijp", "photoUrl": "https://lh3.googleusercontent.com/a/default-user=s64", "userId": "10559993329647399108"}, "user_tz": -60} id="9TUQ7gVzsdyS" outputId="87ddce03-0a2b-4fdc-c877-e0c045b3ff33"
+# %%
 def cheer(name):
     assert isinstance(name, str), 'name must be a string'
     letters = '\n'.join(map(announce, name))
@@ -410,12 +411,12 @@ def cheer(name):
 print(cheer(100))
 
 
-# %% [markdown] id="S3n1rFNcswVL"
+# %% [markdown]
 # You can use as few or as many assertions in your code as you want. This is mostly a matter of taste. You don't need to omit them for performance; if you have a program that needs to run for a long time and you worry that the assertions might be slowing it down, just run `python3 -o program.py` instead of `python3 program.py` and all assertions will be skipped. Just keep in mind that assertions are meant for checking assumptions, rather than for reporting errors; for reporting errors there is the `raise` keyword, which you can read more about in Python's [exceptions tutorial](https://docs.python.org/3/tutorial/errors.html).
 #
 # There is however a special type of function that is all about writing assertions: the unittest.
 
-# %% [markdown] id="Ajt86gVUv02n"
+# %% [markdown]
 # ## Testing
 #
 # So far, when we wrote a function and we wanted to check that it worked, we just wrote a line in which we called the function. We did this in notebooks, and we could also use the interactive Python prompt for this purpose.
@@ -428,15 +429,15 @@ print(cheer(100))
 #
 # If we edit the `yell` function again in the future, we will want to write such a line of code again to check that it still works. However, this would mean repeating ourselves. Better would be to save our test code in a function so we can run it as often as we want. Such a function is called a unittest. A unittest for the `yell` function might look like this:
 
-# %% id="eB4uCJ4xyvE8"
+# %%
 def test_yell():
     assert yell('Kermit') == 'Go go Kermit!!!'
 
 
-# %% [markdown] id="Gr-9hXvnzLhh"
+# %% [markdown]
 # We might as well write tests for `announce` and `cheer` while we're at it and save all of our tests in a module named `cheerlead_test.py`, next to the `cheerlead.py` module:
 
-# %% id="SCtmdYJA0FgH"
+# %%
 from cheerlead import announce, yell, cheer
 
 def test_yell():
@@ -464,7 +465,7 @@ def main():
 if __name__ == '__main__':
     main()
 
-# %% [markdown] id="kb_40quq2DN7"
+# %% [markdown]
 # Now, whenever we change the contents of `cheerlead.py`, we only need to run `python cheerlead_test.py` in order to check that everything still works. If everything works, we get no output, otherwise we will see an `AssertionError`. We can add or update tests as desired. There is still some room for improvement, though:
 #
 # - It is a bit counterintuitive to remember that *no output* means that all tests *pass*. It would be nice to get some kind of explicit confirmation instead.
@@ -502,7 +503,7 @@ if __name__ == '__main__':
 #
 # On top of all that, `pytest` gives us many other tools to make testing even more flexible and efficient. For example, we can also check that functions will fail in a particular way if you pass them particular arguments. Testing with `pytest` is such a helpful, powerful tool during development that we recommend using it in every Python project. You can read all about it [here](https://docs.pytest.org/).
 
-# %% [markdown] id="esIxQGvUQZhH"
+# %% [markdown]
 # ## Version control (Git)
 #
 # A version control system (VCS) keeps track of the changes that you make to your code. This enables you to find back changes that you made in the past and find out why you made them. You can also use this to revert an old change, while keeping changes that came after it. VCSs do this by efficiently storing all versions of your code in a system called a *repository*.

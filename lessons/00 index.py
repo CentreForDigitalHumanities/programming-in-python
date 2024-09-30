@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="RQ73d6XVysi7"
+# %% [markdown]
 # # CDH course "Programming in Python"
 #
 # **October 2024 edition**

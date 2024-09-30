@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,24 +12,24 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="q2_7oxCuwonl"
+# %% [markdown]
 # # 7a - Functions (extra exercises)
 #
 # This notebook contains extra exercises to help you get more familiar with writing python code, and especially making functions. It contains no new theory.
 #
 # There are a lot of exercises, and they can be very similar. Don't feel like you have to do everything: if the exercises start to feel repetitive, you're ready to move on to the next section.
 
-# %% [markdown] id="KoEzBrcFxk8T"
+# %% [markdown]
 # ## 1. Writing functions
 #
 # In these exercises, the instructions describe a function that you need to make. Each code block also has some assert statements that try to use your function, which you can use to verify your solution.
 
-# %% [markdown] id="DxKNUR11yfvL"
+# %% [markdown]
 # 1.1: Write a function `first`, which returns the first item in a list. The function should take one argument (a list).
 #
 # If the list if empty, `first` should return `None`.
 
-# %% id="YtJmU-K0woBC"
+# %%
 # your code here...
 
 # check your function
@@ -36,10 +37,10 @@ assert first(['apple', 'banana', 'orange']) == 'apple'
 assert first(['just one item']) == 'just one item'
 assert first([]) == None
 
-# %% [markdown] id="jgxg9ecn0GkZ"
+# %% [markdown]
 # 1.2: Write a function `check_wallet` which takes a list of items as its argument. If the list includes `'wallet'`, it should return the list as-is. If it doesn't, it should add `'wallet'` to the end of list.
 
-# %% id="Z2Xa8C6z0BrI"
+# %%
 # your code here...
 
 # check your function
@@ -47,10 +48,10 @@ assert check_wallet(['keys',  'wallet', 'phone', 'gloves']) == ['keys',  'wallet
 assert check_wallet(['keys', 'phone']) == ['keys', 'phone', 'wallet']
 assert check_wallet([]) == ['wallet']
 
-# %% [markdown] id="Zx9RsFoY2o5M"
+# %% [markdown]
 # 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10.
 
-# %% id="Y8M_CCuCcVZm"
+# %%
 # your code here...
 
 # check your function
@@ -59,10 +60,10 @@ assert round_to_10(22.1) == 20
 assert round_to_10(40) == 40
 assert round_to_10(55) == 60
 
-# %% [markdown] id="YKRA2X94dmfm"
+# %% [markdown]
 # 1.4: Let's make our rounding function a bit more generic. Make a new function `round_to_n` which takes two arguments: the number that you want to round, and the unit that you want to round to. `round_to_n(35, 50)` will round 35 to the nearest multiple of 50.
 
-# %% id="CFukYZRFeMMr"
+# %%
 # your code here
 
 
@@ -71,10 +72,10 @@ assert round_to_n(8, 10) == 10
 assert round_to_n(8, 20) == 0
 assert round_to_n(24.3, 20) == 20
 
-# %% [markdown] id="9C8cDTS3e62p"
+# %% [markdown]
 # 1.5: Write a function `in_alphabet` that takes a character (a string of length 1) as a parameter. It should return `True` if the character is one of the 26 letters in the latin alphabet. Uppercase and lowercase characters should both return `True`. Otherwise, the function should return `False`.
 
-# %% id="X9kXxwe3fD7P"
+# %%
 # your code here
 
 # check your function
@@ -84,10 +85,10 @@ assert in_alphabet('A') == True
 assert in_alphabet('1') == False
 assert in_alphabet('✨') == False
 
-# %% [markdown] id="lXc43yNgicoA"
+# %% [markdown]
 # 1.6: Use your function `in_alphabet` to write a new function `clean_text`. It should take one parameter, which is a string. It should return a new string, which is like the old one but leaves out any characters that are not in the latin alphabet or the space `' '`.
 
-# %% id="YOqKnf7rjpvW"
+# %%
 # your code here...
 
 # check your function
@@ -95,7 +96,7 @@ assert clean_text('Hello, how are you?') == 'Hello how are you'
 assert clean_text('Hooray! Hooray! Hooray!') == 'Hooray Hooray Hooray'
 assert clean_text('Yummy!! 😋') == 'Yummy '
 
-# %% [markdown] id="mzKQAJxNLUgV"
+# %% [markdown]
 # 1.7: Write a function `travel_time` that estimates the travel time for a journey. It takes 3 named arguments:
 # - `car`: the distance traversed by car
 # - `bike`: the distance traversed by bike
@@ -109,7 +110,7 @@ assert clean_text('Yummy!! 😋') == 'Yummy '
 #
 # Your function should return the travel time in hours.
 
-# %% id="XDVlkfHyMIfE"
+# %%
 # your code here...
 
 # check your function
@@ -117,12 +118,12 @@ assert travel_time(car=10, walk=0.1) == 0.15
 assert travel_time(bike=10, walk=0.1) == 0.65
 assert travel_time(car=55, bike=3, walk=0.3) == 0.95
 
-# %% [markdown] id="SQHPePrYxdnG"
+# %% [markdown]
 # 1.8: Write a function `to_time` which takes a decimal number of hours (like the output of `travel time`) and converts it to hours, minutes, and seconds. For example, 1.5 hours is 1 hours, 30 minutes and 0 seconds.
 #
 # The input should be a single `float` or `int`, and the output should be three numbers: hours, minutes, and seconds. The output should be given in whole numbers (`int`, not `float`).
 
-# %% id="5cdwImkNUGcc"
+# %%
 # your code here...
 
 # check your function
@@ -130,10 +131,10 @@ assert to_time(1.5) == (1, 30, 0)
 assert to_time(3.6532) == (3, 39, 55)
 assert to_time(0) == (0, 0, 0)
 
-# %% [markdown] id="shtLjnOGxen9"
+# %% [markdown]
 # 1.9: Write a function `mean` which takes one argument, a list of numbers, as input. It should return the mean value of the list (a single number).
 
-# %% id="xJ_XTebzxfCs"
+# %%
 # your code here...
 
 # check your function
@@ -141,7 +142,7 @@ assert mean([1, 2, 7 , 2]) == 3.0
 assert mean([3.2, 4.5, 0.0, 2.5]) == 2.55
 assert mean([0.0]) == 0.0
 
-# %% [markdown] id="p1NF-Tbpxfs1"
+# %% [markdown]
 # 1.10: Write a function `is_number` that checks if a string describes a number. It takes one argument (a string).
 #
 # It should return `True` if:
@@ -150,7 +151,7 @@ assert mean([0.0]) == 0.0
 #
 # Otherwise, the function should return `False`.
 
-# %% id="LsA_B5iPxgEE"
+# %%
 # your code here...
  
 # check your function.
@@ -160,7 +161,7 @@ assert is_number('two') == False
 assert is_number('1.2.3') == False
 
 
-# %% [markdown] id="o55Hp9SomntG"
+# %% [markdown]
 # ## 2. Writing `assert` checks
 #
 # The code blocks below contain a function definition, but are missing some `assert` statements to check if everything works. Read the docstring and try to think of some assertions you could use to check the function.
@@ -169,7 +170,7 @@ assert is_number('1.2.3') == False
 #
 # You do not have to correct the functions (but you can if you want to).
 
-# %% id="aqngxSucow39"
+# %%
 def distance(a, b):
     '''
     Gives the distance between two numbers.
@@ -185,7 +186,7 @@ def distance(a, b):
 # write some checks!
 
 
-# %% id="khwUSdMWn1CR"
+# %%
 def reverse(word):
     '''
     Reverses a string
@@ -203,7 +204,7 @@ def reverse(word):
 # write some checks!
 
 
-# %% id="nkpyPnDgoxKf"
+# %%
 def exclude_short_words(words, min_length=5):
     '''
     Filters all short words (shorter than min_length) out of a list
@@ -223,7 +224,7 @@ def exclude_short_words(words, min_length=5):
 # write some checks!
 
 
-# %% id="yQ_-_xnuoyZ9"
+# %%
 def every_third_item(items):
     '''
     Returns every third item in a list.
@@ -242,7 +243,7 @@ def every_third_item(items):
 # write some checks!
 
 
-# %% id="ArwDSoguox2j"
+# %%
 def grade(score):
     '''
     Gives a letter grade (F, D, C, B, A) based on a score from 0-100.
@@ -263,7 +264,7 @@ def grade(score):
 # write some checks!
 
 
-# %% id="hMIpfW_lMK0l"
+# %%
 def is_prime(number):
     '''
     Checks if a int is a prime number.
@@ -281,7 +282,7 @@ def is_prime(number):
 # write some checks!
 
 
-# %% [markdown] id="aKgZVXZXoF3g"
+# %% [markdown]
 # ## 3. Writing functions with checks
 #
 # For the functions in section 1, we provided some assert statements, but when you write your own programs, you usually don't have those. Instead, you have _something you want to do_, and it is up to you to make your own `assert` checks.
@@ -296,30 +297,30 @@ def is_prime(number):
 # - What are some checks you could write?
 # - What should be in the body of the function? How does it work?
 
-# %% [markdown] id="EXgk0_mjoukf"
+# %% [markdown]
 # 3.1: Write a function that turns a sentence into a question. The input should be a string. If the last character in the string is a `.` or `!`, it should be replaced with a `?`. Otherwise, we just want to add `?` to the end of the string (without replacing anything).
 
-# %% id="ExH64Sbgovw0"
+# %%
 
-# %% [markdown] id="uA4PQxchxUrT"
+# %% [markdown]
 # 3.2: Write a function that takes a year as input and tells you whether or not that year is a leap year.
 #
 # From [wikipedia](https://en.wikipedia.org/wiki/Leap_year):
 #
 # > Every year that is exactly divisible by four is a leap year, except for years that are exactly divisible by 100, but these centurial years are leap years if they are exactly divisible by 400. For example, the years 1700, 1800, and 1900 are not leap years, but the years 1600 and 2000 are.
 
-# %% id="VIYiW1OCxVEo"
+# %%
 
-# %% [markdown] id="QzewFsCJomVB"
+# %% [markdown]
 # 3.3: Write a function to calculate the area of a circle based on the diameter.
 #
 # - The _area_ is equal the _radius_ of the circle, squared, multiplied by pi. In a formula: $A = r^2 \times \pi$. 
 # - The radius of a circle is half its diameter.
 # - You can assume that pi is equal to 3.14
 
-# %% id="oCID8txRotb-"
+# %%
 
-# %% [markdown] id="SoO0C4pyxSjO"
+# %% [markdown]
 # 3.4: We want to calculate prices for an online store. Prices are calculated as follows:
 # - An order will include one or more items, each with their own price. You can just represent the order as a list of prices, e.g. `[15.00, 4.40, 31.50]`
 # - Customers may have a coupon that gives them 10% off all the items in their basket.
@@ -327,14 +328,14 @@ def is_prime(number):
 #
 # Write a function that calculates the total of an order.
 
-# %% id="ddWh7EWCxS6M"
+# %%
 
-# %% [markdown] id="m1bBl0RvxXe-"
+# %% [markdown]
 # 3.5: Write a function that counts how often a string occurs within another string.
 
-# %% id="GKRKIpKgxXwV"
+# %%
 
-# %% [markdown] id="NPXFJd95o3Ei"
+# %% [markdown]
 # ## 4. Don't repeat yourself
 #
 # An important use for functions is to avoid unnecessary repetition in code. When you write two pieces of very similar code, it's often convenient to make a single function.
@@ -348,7 +349,7 @@ def is_prime(number):
 # - At the top of the code block, add a definition for a function (or several), that can handle the shared functionality.
 # - Use your functions(s) in the code, and check that everything still works.
 
-# %% id="JFc_E5sF5rt1"
+# %%
 small_pizza_price = 9.00
 small_pizza_slices = 6
 
@@ -372,7 +373,7 @@ assert small_pizza_price_per_slice == 1.5
 assert medium_pizza_price_per_slice == 1.5
 assert large_pizza_price_per_slice == 2.0
 
-# %% id="lirYtOcWpJ6m"
+# %%
 fruit_basket = ['apple', 'banana', 'banana', 'banana', 'apple', 'orange',
                 'orange', 'grape', 'grape', 'grape', 'grape', 'grape', 'grape',
                 'grape', 'grape', 'grape', 'pear', 'apple', 'strawberry',
@@ -393,7 +394,7 @@ apples_to_oranges = apples / oranges
 # check if everything works
 assert apples_to_oranges == 1
 
-# %% id="mdNug4ct5645"
+# %%
 weather_this_month = ['rain', 'rain', 'sun', 'sun', 'cloudy', 'cloudy', 'rain',
     'cloudy', 'rain', 'rain', 'cloudy', 'sun', 'cloudy', 'sun', 'sun', 'sun',
     'rain', 'cloudy', 'cloudy', 'sun', 'cloudy', 'rain', 'rain', 'cloudy',

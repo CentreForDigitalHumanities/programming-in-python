@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # CDH course "Programming in Python"
 #
 # ### Exercise Solutions
@@ -23,12 +24,12 @@
 #
 # Previous module:  [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20assertions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20assertions%20solutions.ipynb)
 
-# %% [markdown] id="0Gun_3cX1ey8"
+# %% [markdown]
 # ## Exercise 1: basic `for` loops
 #
 # 1. Make a small change to the following code block (copied from above), so that it prints the `full_text` only at the end, when it is complete.
 
-# %% id="nMF8WE3F19HC" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681144232455, "user_tz": -120, "elapsed": 5, "user": {"displayName": "Mees van Stiphout", "userId": "10520931415894572279"}} outputId="7e9843ae-f3d5-43f1-b0a4-64a3c2c309c7"
+# %%
 words = ['A', 'very', 'short', 'sentence']
 full_text = ''
 
@@ -37,10 +38,10 @@ for word in words:
     print(word)
 print(full_text)
 
-# %% [markdown] id="8zB10pLC2ZaT"
+# %% [markdown]
 # 2. Using a `for` loop, create a copy of the list of fruits below that has the fruits in the reverse order. Change the contents of the list on the first line to check that your solution is general.
 
-# %% id="bAwZ_ipU28AY" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681311205916, "user_tz": -120, "elapsed": 208, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="34d5cb4c-d675-413e-adb6-9d3f7bc41908"
+# %%
 fruits = ['apricot', 'banana', 'cherry', 'date']
 
 # insert your code here
@@ -81,13 +82,13 @@ for fruit in fruits:
 print(reverse_fruits)
 
 
-# %% [markdown] id="-K0CvNkOLEYE"
+# %% [markdown]
 # ## Exercise 2: more loops
 
-# %% [markdown] id="Qj9LsMfw-RMT"
+# %% [markdown]
 # 1. The code block below is written to help you explore what kind of "stuff" comes out of `range` and `enumerate`. Read the code from top to bottom. What stands out to you? Why do you think it was written this way?
 
-# %% [markdown] id="otBq-xEi-SiC"
+# %% [markdown]
 # > Things that you might notice:
 # >
 # > - It is possible to call `range` with one, two or three arguments.
@@ -107,10 +108,10 @@ print(reverse_fruits)
 #
 #
 
-# %% [markdown] id="EjmxzbeY-USj"
+# %% [markdown]
 # 2. Run the code block for each example value of `miracle`. Based on the results, describe in your own words what `range` and `enumerate` do.
 
-# %% [markdown] id="ZyllJHKCBtoy"
+# %% [markdown]
 # > Possible elements of a good answer for `range`:
 # >
 # > - If you pass only one value, this sets the exclusive end. It generates whole numbers from `0` (zero) up to but not including the end.
@@ -129,7 +130,7 @@ print(reverse_fruits)
 # > - The numerical indices start at `0` (zero).
 #
 
-# %% id="7gappYcLOrsu" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681311440820, "user_tz": -120, "elapsed": 189, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="039590e8-bbae-4ad4-c622-95110c3e9a8d"
+# %%
 basket = ['apricot', 'banana', 'cherry', 'date']
 
 miracle = range(100)
@@ -154,10 +155,10 @@ for value in miracle:
 
 print('number of iterations:', iteration_count)
 
-# %% [markdown] id="2Haq4E95bN6T"
+# %% [markdown]
 # 3. The `input` function, demonstrated below, lets you ask the human user for a string and then store it in a variable. Write a program that keeps asking the user for words until the word is `'stop'`. For each word, report to the user how many characters it contains.
 
-# %% id="0k_YQbBccyC_" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681313320536, "user_tz": -120, "elapsed": 6762, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="ef5102e8-4248-47f3-a59c-87a5958b41db"
+# %%
 #solution 1:
 word = ''
 while word != 'stop':
@@ -173,10 +174,10 @@ while True:
     print('you wrote', word)
     print('the length is', len(word))
 
-# %% [markdown] id="uyqbuhKsUlhG"
+# %% [markdown]
 # 4. *FizzBuzz part 2* (advanced). Look back at your solution to exercise 5.3 from day 1 (*FizzBuzz part 1*). Now write a program that does the following: for each integer from `1` up to and including `100`, print `Fizz`, `Buzz`, `FizzBuzz` or the number itself, following the same rules as before. Separate the words and numbers by commas. Add a newline after every tenth number, so you print ten lines in total. The first line should start like `1, 2, Fizz, 4, Buzz, Fizz, ...` and the last line should be `91, 92, Fizz, 94, Buzz, Fizz, 97, 98, Fizz, Buzz, `.
 
-# %% id="BUeMXIQXaKna" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681313256562, "user_tz": -120, "elapsed": 1068, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="0c5ddcc6-e2d0-40bb-9456-892f751320b6"
+# %%
 # Variant 1
 
 for n in range(1, 101):
@@ -209,7 +210,7 @@ for number in numbers:
         print(output, end=', ')
 
 
-# %% [markdown] id="0eGibfk04LI0"
+# %% [markdown]
 # ## Next module
 #
 # [7. Functions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/07%20Functions.ipynb) - [solution](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/07%20Functions%20solutions.ipynb)

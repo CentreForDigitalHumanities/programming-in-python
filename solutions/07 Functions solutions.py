@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,7 +12,7 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # Module 7: Functions
 #
 # ### Exercise solutions
@@ -29,28 +30,28 @@
 # - Storing code in a variable so you can reuse it.
 # - Being explicit about the purpose of your code.
 
-# %% [markdown] id="aPFGhEVz40JP"
+# %% [markdown]
 # ## Exercise 7.1: functions
 
-# %% [markdown] id="hfcz-cSEKZWW"
+# %% [markdown]
 # 1. We have seen several standard functions during the course, such as `ord` and `len`. List as many as you can from memory. Try to list the types of the parameters and return values of each function as well. Do any of these functions have side effects?
 
-# %% [markdown] id="ZG0lv6MhVP8L"
+# %% [markdown]
 # Some examples:
 # - `ord`: Has 1 parameter: a string of 1 character. The return value is an integer. No side effects.
 # - `len`: Has 1 parameter: a list, tuple or other iterable. The return value is an integer. No side effects.
 # - `input`: Has 1 optional parameter `prompt`, which should be a string. The function has a side effect, which is to wait for the user to type something. Its return value is a string (namely the text that you have entered).
 
-# %% [markdown] id="BUnMsiUzKbws"
+# %% [markdown]
 # 2. For exercise purposes, code in the following blocks may call `print` inside a function and omit a docstring. Predict the output, then run the code to see whether your prediction was right. Try to explain any discrepancies.
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 366, "status": "ok", "timestamp": 1681904959646, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="_3va9jT5O0H7" outputId="0187c43c-58c4-45c6-935f-a22d2bf5c864"
+# %%
 def greet(name):
     return 'Hello, ' + name + '!'
 
 print(greet('Berit'))
 
-# %% id="vdTIwoGxM_JV"
+# %%
 name = 'Luka'
 
 def exclaim(name):
@@ -59,7 +60,7 @@ def exclaim(name):
 # nothing happens: we have created a function but we haven't called it!
 
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 5, "status": "ok", "timestamp": 1681905065618, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="30fv8SAMOblV" outputId="99fd2054-9609-4646-c321-2f4513b6cc5f"
+# %%
 def false():
     return True
 
@@ -68,7 +69,7 @@ print(False)
 # we are printing the literal value `False`, which is not the same as our function `false` (all lower case)
 # Capitalisation matters in python!
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 13, "status": "ok", "timestamp": 1681905150776, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="ongrNaZFNNmV" outputId="45d7e513-7157-4c54-ab92-c4380fb59f02"
+# %%
 length = 5
 width = 2
 
@@ -80,14 +81,14 @@ print(calculate_area())
 # calculate_area calculates something, but it does not make a return statement.
 # So the returned value of `calculate_area()` is None
 
-# %% colab={"base_uri": "https://localhost:8080/", "height": 35} executionInfo={"elapsed": 378, "status": "ok", "timestamp": 1681905166543, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="MSkOCMMyNoUO" outputId="a9fca128-9415-4ef7-97cb-1546e36f67db"
+# %%
 def question(name):
     return 'Who is ' + name + '?'
 
 question('Jelte')
 
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 6, "status": "ok", "timestamp": 1681905320174, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="72DDRhD5OQ0g" outputId="3cd844dd-d4ca-4418-db9e-8c3065a9d3b7"
+# %%
 def add(left, right):
     return left + right
 
@@ -101,7 +102,7 @@ print(add('sweet', 'addition') * add(1, 1))
 # then 'sweetaddition' * 2 means "repeat 'sweetaddition' twice"
 # hence 'sweetadditionsweetaddition'
 
-# %% colab={"base_uri": "https://localhost:8080/"} executionInfo={"elapsed": 360, "status": "ok", "timestamp": 1681906368916, "user": {"displayName": "Luka van der Plas", "userId": "16305747382115943293"}, "user_tz": -120} id="L0GlJecf8ntf" outputId="893d9d77-378d-4d5c-8a17-fa14fdbd0322"
+# %%
 # I've added some comments to each print statement, to explain what's happening and in what order.
 
 name = 'Julian'
@@ -142,10 +143,10 @@ print(age) # 9th print
 
 
 
-# %% [markdown] id="Rwvwlpp0-Hrt"
+# %% [markdown]
 # 3. In each of the following code blocks, write a docstring for the function, then add assertions and run the block to check that your documentation is correct.
 
-# %% id="ajcRnvzQQ9c5"
+# %%
 def odd(number):
     '''
     Checks whether a number is odd
@@ -160,7 +161,7 @@ assert odd(6) == False
 assert odd(0) == False
 
 
-# %% id="giU_bIKrRME4"
+# %%
 def magic(word):
     '''
     Checks that the input is a nonempty string and starts with a capital letter.
@@ -182,7 +183,7 @@ assert magic('🤔') == False
 assert magic('') == False
 
 
-# %% id="pAChbRWn-SKS"
+# %%
 def join_commas(words):
     '''
     Joins a iterable of strings into a single string, with ', ' between each item.
@@ -200,10 +201,10 @@ assert join_commas(['a']) == 'a'
 assert join_commas(('a', 'b', 'c')) == 'a, b, c'
 
 
-# %% [markdown] id="mc9RtAeATiHw"
+# %% [markdown]
 # 4. Write a function `is_number` that takes one argument. If the argument is a number, it should return `True`; otherwise, it should return `False`. Make sure to include a docstring!
 
-# %% id="Ap33-rF-UbsB"
+# %%
 # Your definition of is_number here
 
 def is_number(value):
@@ -224,13 +225,13 @@ assert not is_number('dear')
 assert not is_number('123')
 
 
-# %% [markdown] id="apA7o120TYRl"
+# %% [markdown]
 # ## Exercise 7.2: bonus
 
-# %% [markdown] id="nM43w3VlB3-O"
+# %% [markdown]
 # 1. Write a function `last_a_index` that, given a string, returns the **last** index of the letter `'a'` in the string. If there is no `'a'` in the string, the function should return `None`.
 
-# %% id="I5s4_a53ENJC"
+# %%
 # Define last_a_index here
 
 def last_a_index(text):
@@ -253,10 +254,10 @@ assert last_a_index('cherry') == None
 assert last_a_index('Once upon a time, there was a dragon') == 32
 
 
-# %% [markdown] id="z4z3-dOaVROx"
+# %% [markdown]
 # 2. Write a function `replace` with three string arguments: `text`, `query` and `replacement`. It should return a copy of `text` in which all occurrences of `query` are replaced by `replacement`. For example, `replace('small', 'a', 'e')` should return `'smell'`. You may assume that `query` is always a single character. For an additional challenge, you can try to also handle multi-character query strings. For ultimate challenge, try to think of a way to handle the empty string!
 
-# %% id="kyQwfz-mYvfW"
+# %%
 # Define replace here
 
 # solution one: does not work with multi-character strings
@@ -285,7 +286,7 @@ assert replace('banana', 'a', 'o') == 'bonono'
 assert replace('cherry', 'a', 'x') == 'cherry'
 
 
-# %% id="2ajcWTx1gi2r"
+# %%
 # solution 2: handle multi-character strings and empty strings
 
 # There no clear answer for what should happen in the case of empty strings!
@@ -335,7 +336,7 @@ assert replace('banana', 'an', 'ab') == 'bababa'
 assert replace('banana', 'banana', 'apple') == 'apple'
 assert replace('banana', 'e', 'o') == 'banana'
 
-# %% [markdown] id="Dntbbioh29xm"
+# %% [markdown]
 # ## Next module
 # <!-- This has already been updated: Edo, 02-05-24
 # [8. Debugging](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)
