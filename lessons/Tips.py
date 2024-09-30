@@ -99,7 +99,7 @@ for word in ['magazine', 'kangaroo', 'rooster', 'broom']:
         print('"' + word + '" ends with "roo"')
 
 # %% [markdown] id="TyjWFAWR_0Dp"
-# [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) can glue a sequence of strings together, as we have seen in [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq#scrollTo=Join_an_iterable_into_a_string).
+# [`str.join`](https://docs.python.org/3/library/stdtypes.html#str.join) can glue a sequence of strings together, as we have seen in *9. String manipulation*.
 
 # %% id="JlqAc5N8AQPu"
 print(' + '.join(['1', '2', '3', '4']))
@@ -470,7 +470,7 @@ list(map(add, first_list, second_list))
 # %% [markdown] id="0SMYES0-gyBX"
 # ### Bound methods
 #
-# In the `map` subsection, I used an [example](#scrollTo=5W6NwA8D2Kz3&line=1&uniqifier=1) with the notation `'{} {} {} {}.'.format`. I stored that in a variable and then passed that as a function to `map`. We have seen something similar in [exercise 9.3.3](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq#scrollTo=ArVJo3y0jJ8T). It turns out this is a general thing we can do in more situations, so let's briefly touch on how this works.
+# In the `map` subsection, I used an [example](#scrollTo=5W6NwA8D2Kz3&line=1&uniqifier=1) with the notation `'{} {} {} {}.'.format`. I stored that in a variable and then passed that as a function to `map`. We have seen something similar in *exercise 9.3.3*. It turns out this is a general thing we can do in more situations, so let's briefly touch on how this works.
 #
 # The essence is that
 

@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb)
 #
 # ### This module
 #
@@ -218,7 +218,7 @@ if not (letter == 'a' or letter == 'b'):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=EKFdkLkWa8EY#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb#scrollTo=EKFdkLkWa8EY#scrollTo=Exercise_2_4_Bonus)!
 
 # %% id="SZGeQtqEhiAK"
 value = 9
@@ -228,4 +228,4 @@ value = 9
 # %% [markdown] id="YBC4OfihzFho"
 # ## Next module
 #
-# [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI)
+# [4. Datastructures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20datastructures.ipynb)

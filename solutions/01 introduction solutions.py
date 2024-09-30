@@ -16,11 +16,11 @@
 #
 # ## Exercise solutions
 #
-# [Module 1](https://colab.research.google.com/drive/1W8DqryKuOwPKflPnObv4bJtNKknRsvav)
+# [Module 1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/01%20introduction.ipynb)
 #
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 
 # %% [markdown] id="pKIEfocbMaIR"
 # ## Exercise 1.1: Try it out
@@ -118,4 +118,4 @@ print('Hello, world!')
 # %% [markdown] id="zI0ohEpPUwpC"
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_) - [solutions](https://colab.research.google.com/drive/1nnt2VGcmOkHlAWco7xes1O3vr2ser9dD)
+# [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/02%20values%20and%20expressions%20solutions.ipynb)

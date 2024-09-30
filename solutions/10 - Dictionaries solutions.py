@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 10](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3)
+# [Module 10](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq) - [solutions](https://colab.research.google.com/drive/1vfoSsG_arMA-m21YgdD6zYQ_7h2iuy45)
+# Previous module: [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20string%20manipulation.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/09%20string%20manipulation%20solutions.ipynb)
 #
 # ### This module
 #
@@ -349,4 +349,4 @@ assert most_frequent({}) == ([], 0)
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [11 - Working with files](https://colab.research.google.com/drive/1KsFZV-jmfaQnCFevSxIZrd7chm3Z5CJo) - [solutions](https://colab.research.google.com/drive/1UZywfMphqJx8iB7aFvBH4ePKBh7E_-Hd)
+# [11 - Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20working%20with%20files.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/11%20working%20with%20files%20solutions.ipynb)

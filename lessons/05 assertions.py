@@ -18,9 +18,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI)
+# Previous module: [4. Datastructures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20datastructures.ipynb)
 #
 # ### This module
 #
@@ -112,4 +112,4 @@ assert students[0] < students[1] < students[2]
 # %% [markdown] id="JaaguG-D3k_i"
 # ## Next module
 #
-# [6. Loops](https://colab.research.google.com/drive/1wzbgGKNbZ1Ao0gHjN6jbFnWh0cxp8bQ1)
+# [6. Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/06%20Loops.ipynb)

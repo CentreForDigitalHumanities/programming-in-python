@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3)
+# Previous module: [10. dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)
 #
 # ### This module
 #
@@ -210,4 +210,4 @@ print(data[10]['name'])
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [12 - Functions, bis](https://colab.research.google.com/drive/1LHPo4gEzyKTPlVAkGifdzh9ahG2mJq6K)
+# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20functions%2C%20bis.ipynb)

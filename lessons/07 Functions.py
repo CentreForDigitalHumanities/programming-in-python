@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [6. Loops](https://colab.research.google.com/drive/1wzbgGKNbZ1Ao0gHjN6jbFnWh0cxp8bQ1)
+# Previous module: [6. Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/06%20Loops.ipynb)
 #
 # ### This module
 #
@@ -444,4 +444,4 @@ assert replace('cherry', 'a', 'x') == 'cherry'
 
 # %% [markdown] id="Dntbbioh29xm"
 # ## Next module
-# [8. Debugging](https://colab.research.google.com/drive/1Rj6qEuT3BFcQwexAxKg3zbAAD6t1cc8p)
+# [8. Debugging](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)

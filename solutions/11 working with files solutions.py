@@ -16,13 +16,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 11](https://colab.research.google.com/drive/1KsFZV-jmfaQnCFevSxIZrd7chm3Z5CJo)
+# [Module 11](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20working%20with%20files.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3) - [solutions](https://colab.research.google.com/drive/1ZvLc2Jrkh9uosmliA8IpT4q7YE-amvkW)
+# Previous module: [10. Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20-%20Dictionaries%20solutions.ipynb)
 #
 # ### This module
 #
@@ -253,4 +253,4 @@ write_table_to_csv(new_data, 'sample_data/california_housing_test_expanded.csv')
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [12 - Functions, bis](https://colab.research.google.com/drive/1LHPo4gEzyKTPlVAkGifdzh9ahG2mJq6K) - [solutions](https://colab.research.google.com/drive/1YyQh6jL3QT17Z9Q8jdxZxhZR0gTZDm1a)
+# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20functions%2C%20bis.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/12%20Functions%2C%20bis.ipynb)

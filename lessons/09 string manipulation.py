@@ -16,9 +16,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [8. Debugging](https://colab.research.google.com/drive/1Rj6qEuT3BFcQwexAxKg3zbAAD6t1cc8p)
+# Previous module: [8. Debugging](hthttps://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)
 #
 # ### This module
 #
@@ -325,4 +325,4 @@ print(connect((welcome(name), goodbye(name))))
 # %% [markdown] id="y5FcFvgypMfE"
 # ## Next module
 #
-# [10 - Dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3)
+# [10 - Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)

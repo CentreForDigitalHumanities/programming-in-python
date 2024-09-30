@@ -16,13 +16,12 @@
 #
 # ### Exercise Solutions
 #
-# [Module 6](https://colab.research.google.com/drive/1wzbgGKNbZ1Ao0gHjN6jbFnWh0cxp8bQ1)
-#
+# [6. Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/06%20Loops.ipynb)
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [5. Assertions](https://colab.research.google.com/drive/1OBdYVZCMXGzb3fCM_FPAqY_IfeDR1kub) - [solutions](https://colab.research.google.com/drive/17cNgIFtvZ9hckZOCjPSNW4g4-HryRXjg)
+# Previous module:  [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20assertions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20assertions%20solutions.ipynb)
 
 # %% [markdown] id="0Gun_3cX1ey8"
 # ## Exercise 1: basic `for` loops
@@ -213,4 +212,4 @@ for number in numbers:
 # %% [markdown] id="0eGibfk04LI0"
 # ## Next module
 #
-# [7. Functions](https://colab.research.google.com/drive/1w7Nor72UAJMVYEZrwAmbOahP8ItV0ggg) - [solution](https://colab.research.google.com/drive/16DdxhY37R1rSqOv8fnFEo5zHvc7UH5VK)
+# [7. Functions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/07%20Functions.ipynb) - [solution](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/07%20Functions%20solutions.ipynb)
