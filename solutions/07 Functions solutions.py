@@ -338,6 +338,5 @@ assert replace('banana', 'e', 'o') == 'banana'
 
 # %% [markdown]
 # ## Next module
-# <!-- This has already been updated: Edo, 02-05-24
+#
 # [8. Debugging](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)
-# -->
