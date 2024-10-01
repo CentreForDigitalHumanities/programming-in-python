@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,17 +12,16 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="Buvh9v-iYeOO"
+# %% [markdown]
 # # Module 1: Introduction
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
 # ## Welcome!
 #
 # ## Who are we?
 #
-# - Julian Gonggrijp, Sheean Spoel, Edo Storm
 # - Developers at the Centre for Digital Humanities (CDH)
 #
 # ## Who are you?
@@ -43,7 +43,7 @@
 # - Presenting straight from Colab, so you can follow our example
 # - Copy the notebooks to edit them, instructions in exercise 1
 
-# %% [markdown] id="STQf1EROV-4I"
+# %% [markdown]
 # ## Python
 #
 # - Programming language
@@ -54,7 +54,7 @@
 # - Designed to be readable
 # - Many versions, currently on major version 3.
 
-# %% [markdown] id="rC4AwjL06k0q"
+# %% [markdown]
 # ### Why learn Python?
 #
 # - (Relatively) easy to learn
@@ -63,12 +63,12 @@
 #     - Many resources available
 # - Many good packages and libraries available
 
-# %% [markdown] id="xyNb4mPMcQCd"
+# %% [markdown]
 # ## Notebooks 101
 #
 # Let's get started!
 
-# %% [markdown] id="4lc8nYpP9mtf"
+# %% [markdown]
 # ### Copy a notebook to your own Google Drive
 #
 # You can only run code in this notebook, not edit it. To edit it, you need to copy it to [your own Google Drive](https://drive.google.com) first.
@@ -78,7 +78,7 @@
 # Tip: give it a recognizable name (e.g. `Module 1 - my solutions`).
 #
 
-# %% [markdown] id="8zoSNQtC_6_v"
+# %% [markdown]
 # ### Adjust some settings
 #
 # Open the *Settings*, in the *Tools* menu or by clicking the cogwheel icon in the top right. Open the *Editor* section.
@@ -88,50 +88,50 @@
 #
 # The other settings are up to you.
 
-# %% [markdown] id="qtRYKOWnB5Wl"
+# %% [markdown]
 # ### Execute Python code
 #
 # Press the triangle icon in the top left corner of a code block to run it, *OR* type **ctrl-enter** when the text cursor is in the code block. Type **ctrl-shift-enter** to run only the current line.
 #
 # If you open a notebook for the first time, or if you have not run any code for a while, it takes a while before you see a result.
 
-# %% id="MdA4_KyrDAsf"
+# %%
 print('Hello')
 print('Goodbye')
 
-# %% [markdown] id="AoBoZqIeFEru"
+# %% [markdown]
 # ## Python 101
 
-# %% [markdown] id="ZOqgk7VAFKnJ"
+# %% [markdown]
 # ### `print`
 #
 # In the previous code block, we saw the `print` function in action. It causes Python to "talk" to us.
 
-# %% [markdown] id="NOtudpGlFe78"
+# %% [markdown]
 # ### Values
 #
 # Between the parentheses `( )` of the `print` function, we put the *value* that we want Python to show. We can also write the value without passing it to `print`.
 
-# %% id="in8WoUafGEyK"
+# %%
 'Hello'
 
-# %% [markdown] id="BHQPB7LuQ1mf"
+# %% [markdown]
 # A bare value does not always cause output. We will explore this in the first exercise.
 
-# %% [markdown] id="Src0ZdRKGHtl"
+# %% [markdown]
 # ### Comments
 #
 # A comment starts with a hash `#` and runs until the end of the line. Python ignores comments. You can use them as notes for yourself and for other programmers.
 
-# %% id="ssP4GWUOIxWS"
+# %%
 # Python will not look here!
 
 print('Hello') # comments can start after code
 
-# %% [markdown] id="YxXeF4u5I2c_"
+# %% [markdown]
 # Use comments to explain *why* your code was written the way it is. You will be grateful to yourself when you read your own code after a few weeks!
 
-# %% id="nMTlvlbbJUWu"
+# %%
 # Useless comment:
 
 # Print "Hello".
@@ -143,66 +143,66 @@ print('Hello')
 # I prefer something a little bit more British.
 print('How do you do?')
 
-# %% [markdown] id="pKIEfocbMaIR"
+# %% [markdown]
 # ## Exercise 1.1: Try it out
 #
 # Read each of the code blocks below. Try to predict what it will do, then run the block to check your prediction.
 #
 # Do you see any (subtle or not-so subtle) surprises? Can you explain them?
 
-# %% id="6hlNxRNNM1fV"
+# %%
 print(1)
 1
 
-# %% id="VIm6FdRIM6OE"
+# %%
 print('oops')
 'oops'
 
-# %% id="_MN48xz5NAya"
+# %%
 print()
 
-# %% id="g9WKeIA2NVIA"
+# %%
 print('apricot')
 print('banana')
 print('cherry')
 
-# %% id="NCbCfbHaNafJ"
+# %%
 'apricot'
 'banana'
 'cherry'
 
-# %% id="-ZuiJ92yNqpi"
+# %%
 # apricot
 # banana
 # cherry
 
-# %% id="b9bTbrNSNwwn"
+# %%
 print('apricot')
 'banana'
 # cherry
 
-# %% id="GYmcSm6iOAiA"
+# %%
 # apricot
 'banana'
 print('cherry')
 
-# %% id="sNNoSfndOSiw"
+# %%
 print(#oops)
 
-# %% id="6IZS1NUuTdOX"
+# %%
 print('apricot', 'banana')
 
-# %% [markdown] id="Tr3wPlHMeBCI"
+# %% [markdown]
 # ## Exercise 1.2: Hello, world!
 #
 # The classic way to demonstrate a programming language's syntax is the hello world-program. This is the minimal amount of code required to output the text "Hello, world!" to the user.  
 #
 # Write a hello world-program for Python.
 
-# %% id="jN7WTVOOSq2C"
+# %%
 # Your solution here
 
-# %% [markdown] id="zI0ohEpPUwpC"
+# %% [markdown]
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)
+# [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb)

@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,21 +12,21 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fBBVyNmi8Fo0"
+# %% [markdown]
 # # Module 8: Debugging
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [7. Functions](https://colab.research.google.com/drive/1w7Nor72UAJMVYEZrwAmbOahP8ItV0ggg)
+# Previous module: [7. Functions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/07%20Functions.ipynb)
 #
 # ### This module
 #
 # - How to see exactly what is going on in your program.
 # - Using this to solve problems with code.
 
-# %% [markdown] id="y0FX-JxubjAb"
+# %% [markdown]
 # ## Stepping with the debugger
 #
 # The following "magic line", which you can insert anywhere in your code (preferably inside a function), will create a *breakpoint*:
@@ -51,7 +52,7 @@
 #
 # Demonstration below!
 
-# %% id="rDx9b5MJhR7X"
+# %%
 def scream(name):
     """ Using at least one bang (!), make `name` at least 10 chars long. """
     # import pdb; pdb.set_trace()
@@ -65,15 +66,15 @@ exclamation = scream(name)
 print(exclamation)
 
 
-# %% [markdown] id="V5a4AtnAAMc2"
+# %% [markdown]
 # ## Exercise 8.1: Debugging
 
-# %% [markdown] id="5fI43xswHUXJ"
+# %% [markdown]
 # ### 1. Building muscle memory
 #
 # In the definition of `scream` above, uncomment the breakpoint and step through the code. Make the debugger print two different values of `name`, then allow it to complete the program until the end.
 
-# %% [markdown] id="6OXyDh8tASN_"
+# %% [markdown]
 # ### 2. Known bugs
 #
 # Each of the code blocks below has a function, a `print` statement and an assertion. The assertion should pass, but it fails because of a bug in the function. For each code block, take the following steps:
@@ -83,7 +84,7 @@ print(exclamation)
 # 3. Uncomment the breakpoint. Step through the code and make very sure that you understand what is going wrong.
 # 4. Fix the broken function and check that the assertion now passes.
 
-# %% id="Z_oXfbLeI6mK"
+# %%
 def echo(word):
     """ Make the given word sound like an echo. """
     # import pdb; pdb.set_trace()
@@ -95,7 +96,7 @@ my_echo = echo('Mees')
 print(my_echo)
 assert my_echo == 'Mees, Mees...'
 
-# %% id="mxcdaX6SNFdl"
+# %%
 # Remember that letters have a numeric ordinal?
 # We can use these to convert a lowercase to
 # uppercase and vice versa!
@@ -114,7 +115,7 @@ print(upper_a)
 assert upper_a == 'A'
 
 
-# %% [markdown] id="CqsSkFb_H7Sk"
+# %% [markdown]
 # ### 3. Unknown bugs
 #
 # Like in the previous exercises, the following code blocks have a function with a bug and an assertion. However, the assertion passes, because it does not demonstrate the bug. For each code block, take the following steps:
@@ -128,7 +129,7 @@ assert upper_a == 'A'
 # 7. Uncomment all assertions that you previously outcommented, so that all assertions are checked when you run the code block.
 # 8. Run the code block and verify that your fixed version of the function passes all the assertions.
 
-# %% id="6Nm0bcBINyNk"
+# %%
 # Python has a built-in function for reversing strings,
 # so normally you would not need to write it yourself.
 
@@ -142,7 +143,7 @@ def reverse_string(text):
 assert reverse_string('abc') == 'cba'
 
 
-# %% id="vooRS00TQNSP"
+# %%
 vowels = 'aeiouy'
 
 def count_vowels(text):
@@ -155,10 +156,10 @@ def count_vowels(text):
 
 assert count_vowels('The quick fox jumps over the lazy dog.') == 11
 
-# %% [markdown] id="O0Piet3Y-T6B"
+# %% [markdown]
 # ## Exercise 8.2: Bonus
 
-# %% [markdown] id="833NNleFrsro"
+# %% [markdown]
 # ### 1. Gnome sort
 #
 # Gnome sort is possibly the simplest way to sort a list. It can be understood by imagining that a gnome (indicated below by the `^`) is standing next to the list.
@@ -217,7 +218,7 @@ assert count_vowels('The quick fox jumps over the lazy dog.') == 11
 #
 # > ⚠️ If you need to sort something "for real", Python has ready-to-use solutions, so you do not normally need to write your own sorting code!
 
-# %% id="TcfxzJ_Bn971"
+# %%
 shuffled = ['banana', 'apricot', 'date', 'cherry', 'date']
 alphabetical = ['apricot', 'banana', 'cherry', 'date', 'date']
 
@@ -239,7 +240,7 @@ gnome_sort(shuffled)
 print(shuffled)
 assert shuffled == alphabetical
 
-# %% [markdown] id="bDpSj4jmTe-G"
+# %% [markdown]
 # ### 2. Debugging your own algorithm
 #
 # Write a completely new function (or multiple) that does something useful. For inspiration, here are some suggestions:
@@ -256,14 +257,14 @@ assert shuffled == alphabetical
 #
 # Once you have written code with a failing assertion, step with the debugger to understand why the assertion is failing. Fix the bug only after you fully understand the cause. Finally, check that all your assertions pass after the fix. If you still have failing assertions, step with the debugger again. Repeat until all assertions pass.
 
-# %% id="TjsG6HmVanqq"
+# %%
 # maybe some test data here
 
 # your own function(s) here
 
 # your own assertions here
 
-# %% [markdown] id="QBPQVbY_aoLt"
+# %% [markdown]
 # ## Next module
 #
-# [9. String manipulation](https://colab.research.google.com/drive/19yTpFfp9uhBb-kAuOmSQY8_LrMtj8Goq)
+# [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20string%20manipulation.ipynb)

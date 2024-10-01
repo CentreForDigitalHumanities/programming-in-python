@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,18 +12,18 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="aBR46fQqgyGt"
+# %% [markdown]
 # # Module 11: Working with files
 #
 # ### Exercise solutions
 #
-# [Module 11](https://colab.research.google.com/drive/1KsFZV-jmfaQnCFevSxIZrd7chm3Z5CJo)
+# [Module 11](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20working%20with%20files.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/drive/1w2s28vLo26hzppP0Z-kSqniU2eoXJNU3) - [solutions](https://colab.research.google.com/drive/1ZvLc2Jrkh9uosmliA8IpT4q7YE-amvkW)
+# Previous module: [10. Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20-%20Dictionaries%20solutions.ipynb)
 #
 # ### This module
 #
@@ -30,11 +31,11 @@
 # - Writing files
 # - Use existing code
 
-# %% [markdown] id="YC0q3Z4HiM5Z"
+# %% [markdown]
 # ## Exercise 11.1 - Files
 # In the code block below, try to predict what will be printed, then run the code.
 
-# %% id="vZtR4360i7kh"
+# %%
 PATH = 'sample_data/california_housing_test.csv'
 file = open(PATH)
 print(file)
@@ -43,15 +44,15 @@ print(file.readlines())
 file.close()
 print(file)
 
-# %% [markdown] id="F9f99yil6tQQ"
+# %% [markdown]
 # `print(file)` prints the File Object. There is no way to determine by printing if this is still open, or has been closed.
 
-# %% [markdown] id="BXOkW2J7ldYK"
+# %% [markdown]
 # Read the file `sampledata/california_housing_test.csv'`, and print the first row containing data as a list.
 #
 # Are the data in the correct format? Try to fix it if not.
 
-# %% id="eP_TfHcmlsce" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1681914737357, "user_tz": -120, "elapsed": 202, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}} outputId="b58e166d-1764-4e0f-91e2-7ea872519052"
+# %%
 PATH = 'sample_data/california_housing_test.csv'
 file = open(PATH)
 lines = file.readlines()
@@ -60,29 +61,29 @@ lines = file.readlines()
 first_row = lines[0]
 print(first_row)
 
-# %% [markdown] id="9Bobwjk07Ssq"
+# %% [markdown]
 # Note that this prints the header row, as one big string. Not really what we are looking for!
 
-# %% id="bwxxok8a7Wyy"
+# %%
 # Split the file into header row and data rows
 header, *data = lines
 first_row = data[0]
 print(first_row)
 print(type(first_row))
 
-# %% [markdown] id="JZeGlr5p7nlV"
+# %% [markdown]
 # This is the first actual row of data, but still as a big string.
 
-# %% colab={"base_uri": "https://localhost:8080/"} id="g4XFr9pG7qor" executionInfo={"status": "ok", "timestamp": 1681914801091, "user_tz": -120, "elapsed": 2, "user": {"displayName": "Jelte van Boheemen", "userId": "01262930844892157638"}} outputId="ee3cb701-edf8-44f2-c28b-593f1d33acef"
+# %%
 columns = first_row.split(',')
 print(columns)
 print(type(columns[0]))
 
 
-# %% [markdown] id="EuCKWl9z7zUf"
+# %% [markdown]
 # The row is split into columns. They still contain strings, not numbers. And the last value includes the newline character `\n`
 
-# %% id="BnpSq28I766w"
+# %%
 def clean_value(value):
     '''
     Clean a single value. Assumes value is a string representation
@@ -113,7 +114,7 @@ def clean_values(values):
 
 assert clean_values(columns) == [-122.05, 37.37, 27, 3885, 661, 1537, 606, 6.6085, 344700]
 
-# %% [markdown] id="h-mOS3pwoc1O"
+# %% [markdown]
 # ## Exercise 11.2: Bonus - working with csv datasets
 # > 💡 If you wish to perform an analysis on your own dataset in the upcoming sessions, make sure you complete this exercise. The code you write here can be reused in your own analysis.
 #
@@ -126,10 +127,10 @@ assert clean_values(columns) == [-122.05, 37.37, 27, 3885, 661, 1537, 606, 6.608
 #         - Calculate the *harmonic mean* of a column containing numbers. Search the [standard library](https://docs.python.org/3.7/library/index.html) for a a relevant module containing the code to do so.
 #     3. Add an extra column to the data (think of something that makes sense). Write the whole dataset to a new csv file.
 
-# %% [markdown] id="nqZZLHi4-HyR"
+# %% [markdown]
 # #### 11.2.1
 
-# %% id="3UI9XbgN-Ffb"
+# %%
 import csv
 PATH = 'sample_data/california_housing_test.csv'
 
@@ -141,13 +142,13 @@ def read_data():
 assert len(read_data()) == 3001
 
 
-# %% [markdown] id="6PUt-Fni-3g0"
+# %% [markdown]
 # #### 11.2.2
 # This may seem like a whole load of code just to calculate some stuff.
 #
 # But notice that by definding general functions, we create a toolkit that we can apply to any future problems! Think ahead!
 
-# %% id="wOEhjWRq-6QL"
+# %%
 def get_row(data, row_index):
     '''
     Returns the row at row_index
@@ -250,7 +251,7 @@ new_data = add_column(data, 'total_income', total_income)
 write_table_to_csv(new_data, 'sample_data/california_housing_test_expanded.csv')
 
 
-# %% [markdown] id="y5FcFvgypMfE"
+# %% [markdown]
 # ## Next module
 #
-# [12 - Functions, bis](https://colab.research.google.com/drive/1LHPo4gEzyKTPlVAkGifdzh9ahG2mJq6K) - [solutions](https://colab.research.google.com/drive/1YyQh6jL3QT17Z9Q8jdxZxhZR0gTZDm1a)
+# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20functions%2C%20bis.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/12%20Functions%2C%20bis.ipynb)

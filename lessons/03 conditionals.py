@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,20 +12,20 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # Module 3: Conditionals
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb)
 #
 # ### This module
 #
 # - Execute code only under specific conditions.
 
-# %% [markdown] id="SshSsbtF8ldm"
+# %% [markdown]
 # ## `if`
 #
 # - Only evaluate part of the code if some condition is met
@@ -32,13 +33,13 @@
 # - `<condition>` can be any expression that evaluates to `True` or `False`
 # - Introducing *indented blocks*
 
-# %% id="Va6X8kIz9ey0"
+# %%
 a = 12
 
 if a > 10:
     print('the condition is met!')
 
-# %% id="ADXv-2u090ql"
+# %%
 a = 15
 
 if a < 10:
@@ -47,22 +48,22 @@ if a < 10:
     print('and so does this')
 print('but not this!')
 
-# %% [markdown] id="5gqn2ac_sg7Y"
+# %% [markdown]
 # - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet.
 
-# %% id="ZdH7HnL6tDpS"
+# %%
 earth = 'round'
 
 if earth == 'square':
     # TODO not sure yet how to handle this case
     pass
 
-# %% [markdown] id="sQxxBZwm-FYm"
+# %% [markdown]
 # ## `else`
 #
 # - `if` is nice, but what if we are interested in the other case?
 
-# %% id="atRhlkGq-Mh1"
+# %%
 letter = 'b'
 
 if letter == 'a':
@@ -74,10 +75,10 @@ if letter == 'b':
 if letter == 'c':
     print('this is not a')
 
-# %% [markdown] id="O1repWSS-3Y0"
+# %% [markdown]
 # Instead of specifying *all other* cases, use `else:`
 
-# %% id="4n9ksUuH-8kE"
+# %%
 letter = 'b'
 
 if letter == 'a':
@@ -85,14 +86,14 @@ if letter == 'a':
 else:
     print('this is not a')
 
-# %% [markdown] id="Rg1ohowkAGFh"
+# %% [markdown]
 # ## `elif`
 #
 # Specify extra cases with `elif <condition>:` (else if)
 #
 #
 
-# %% id="JbiihBgdANIM"
+# %%
 letter = 'a'
 
 if letter == 'a':
@@ -102,11 +103,11 @@ elif letter == 'b':
 else:
     print('this is not a or b')
 
-# %% [markdown] id="lVOu8HvVIEj6"
+# %% [markdown]
 # ## Multiple conditions
 # - We can *nest* conditions
 
-# %% id="MH_RrrBRIPh4"
+# %%
 number = 11
 
 if number > 2:
@@ -117,12 +118,12 @@ if number > 2:
 # There is a mistake in the code above, can you find
 # and fix it?
 
-# %% [markdown] id="8Lvam7rpIms6"
+# %% [markdown]
 # - Even better: we can *combine* conditions
 # - use `<condition1> and <condition2>`, `<condition1> or <condition2>` and `not <condition>`
 #
 
-# %% id="zJ8rBgcfIw4I"
+# %%
 number = 11
 if number > 2 and number < 10:
     print('between 2 and 10')
@@ -134,10 +135,10 @@ if letter == 'a' or letter == 'b' or letter == 'c':
 if not (letter == 'a' or letter == 'b'):
     print('neither a nor b')
 
-# %% [markdown] id="SmsIZBLEtg9r"
+# %% [markdown]
 # - `and`, `or`, `not` are operators, just like `+` and `==`. You can use them outside conditionals.
 
-# %% id="XMWJeaujt2lj"
+# %%
 height = 185
 weight = 52
 
@@ -147,23 +148,23 @@ light = weight < 65
 skinny = tall and light
 print(skinny)
 
-# %% [markdown] id="tvXa9KWXAwge"
+# %% [markdown]
 # ## Exercise 3.1: if/elif/else
 
-# %% [markdown] id="pKBuViM9u7ZC"
+# %% [markdown]
 # 1. Try to predict the output of the following code blocks. Can you explain any surprises?
 
-# %% id="sEQyw2xJvzQN"
+# %%
 if 3 <= 2:
     print('What a strange day.')
 print('What a strange day.')
 
-# %% id="FnCFfEb_v-0Y"
+# %%
 if None == 0:
     pass
     print('I got nothing to do.')
 
-# %% id="arta4ZQ0vDSC"
+# %%
 name = 'Julian'
 
 if name < 'Sheean':
@@ -173,10 +174,10 @@ elif name > 'Sheean':
 else:
     print('Same name as Sheean')
 
-# %% [markdown] id="4SVSiqHSu4WX"
+# %% [markdown]
 # 2. In the following code block, replace `None` with your own condition in the `if` statement. If `value` is greater than `5`, `size` must be `'large'`; otherwise, `size` must be `'small'`. Change `value` a few times and rerun the code to check that your condition is correct.
 
-# %% id="czmdFacjeUaL"
+# %%
 value = 4
 
 if None:
@@ -186,30 +187,30 @@ else:
 
 print(size)
 
-# %% [markdown] id="sEOwMi04e6WW"
+# %% [markdown]
 # 3. Write an `if`/`elif`/`else` statement like the previous, but with different cutoff points: if `value` is less than `4`, `size` must be `'small'`; if `value` is between `4` and `6` (inclusive), `size` must be `'medium'`; if `value` is greater than `6`, `size` must be `'large'`.
 
-# %% id="8HeaY6l9f9iA"
+# %%
 value = 4
 
 # your if/elif/else here
 
 print(size)
 
-# %% [markdown] id="TWzbez_2RUh4"
+# %% [markdown]
 # 4. Rewrite the conditional that checks if a letter is neither 'a' nor 'b', using a different notation.
 
-# %% id="XsIg1MD4JrPX"
+# %%
 letter = 'c'
 
 # original
 if not (letter == 'a' or letter == 'b'):
     print('neither a nor b')
 
-# %% [markdown] id="-XEYQZJ1ya1j"
+# %% [markdown]
 # ## Exercise 3.2: Bonus
 
-# %% [markdown] id="POVFwRu_f91I"
+# %% [markdown]
 # *FizzBuzz part 1* (advanced).
 # Write an `if`/`elif`/`else` statement that behaves as follows:
 #
@@ -218,14 +219,14 @@ if not (letter == 'a' or letter == 'b'):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=EKFdkLkWa8EY#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb#scrollTo=EKFdkLkWa8EY#scrollTo=Exercise_2_4_Bonus)!
 
-# %% id="SZGeQtqEhiAK"
+# %%
 value = 9
 
 # Your code here
 
-# %% [markdown] id="YBC4OfihzFho"
+# %% [markdown]
 # ## Next module
 #
-# [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI)
+# [4. Datastructures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20datastructures.ipynb)

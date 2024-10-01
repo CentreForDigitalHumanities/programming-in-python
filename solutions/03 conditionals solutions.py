@@ -1,6 +1,7 @@
 # ---
 # jupyter:
 #   jupytext:
+#     cell_metadata_filter: -all
 #     text_representation:
 #       extension: .py
 #       format_name: percent
@@ -11,26 +12,26 @@
 #     name: python3
 # ---
 
-# %% [markdown] id="fqMJHzNk5yXQ"
+# %% [markdown]
 # # Module 3: Conditionals
 #
 # ### Exercise solutions
 #
-# [Module 3](https://colab.research.google.com/drive/1Lpr5qBYk9bqtAbY6bzfYcbGzCJpWM-ox)
+# [Module 3](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20conditionals.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/drive/1kFvnhumJ0tOTzDVJnIvvMDRRJ19yk9ZS)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_) - [solutions](https://colab.research.google.com/drive/1nnt2VGcmOkHlAWco7xes1O3vr2ser9dD)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/02%20values%20and%20expressions%20solutions.ipynb)
 
-# %% [markdown] id="tvXa9KWXAwge"
+# %% [markdown]
 # ## Exercise 3.1: if/elif/else
 
-# %% [markdown] id="pKBuViM9u7ZC"
+# %% [markdown]
 # 1. Try to predict the output of the following code blocks. Can you explain any surprises?
 
-# %% id="sEQyw2xJvzQN" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680618391562, "user_tz": -120, "elapsed": 232, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="f38ca572-f203-48ea-875e-a1d5b6b89fc6"
+# %%
 if 3 <= 2:
     # The first print is not executed,
     # because it is inside the conditional and
@@ -43,14 +44,14 @@ print('What a strange day.')
 
 # Therefore, we see the sentence once.
 
-# %% id="FnCFfEb_v-0Y"
+# %%
 if None == 0:
     # The condition is False, so this code never runs.
     # The pass statement makes no difference.
     pass
     print('I got nothing to do.')
 
-# %% id="arta4ZQ0vDSC" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680618415623, "user_tz": -120, "elapsed": 228, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="26955fab-9309-484f-c088-23bfc2d04480"
+# %%
 name = 'Julian'
 
 if name < 'Jelte':
@@ -64,10 +65,10 @@ else:
     # this block does not execute.
     print('Same name as Jelte')
 
-# %% [markdown] id="4SVSiqHSu4WX"
+# %% [markdown]
 # 2. In the following code block, fill the condition in the `if` statement. If `value` is greater than `5`, `size` must be `'large'`; otherwise, `size` must be `'small'`. Change `value` a few times and rerun the code to check that your condition is correct.
 
-# %% id="czmdFacjeUaL" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680618457948, "user_tz": -120, "elapsed": 199, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="1d9e3543-af26-4b51-a511-3a575f11596f"
+# %%
 value = 4
 
 if value > 5:
@@ -77,10 +78,10 @@ else:
 
 print(size)
 
-# %% [markdown] id="sEOwMi04e6WW"
+# %% [markdown]
 # 3. Write an `if`/`elif`/`else` statement like the previous, but with different cutoff points: if `value` is less than `4`, `size` must be `'small'`; if `value` is between `4` and `6` (inclusive), `size` must be `'medium'`; if `value` is greater than `6`, `size` must be `'large'`.
 
-# %% id="8HeaY6l9f9iA" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680618544259, "user_tz": -120, "elapsed": 546, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="615a9d80-7dca-4e14-c9cc-2ee096f90f3f"
+# %%
 value = 4
 
 # Option 1: multiple independent conditionals.
@@ -116,10 +117,10 @@ else:
 
 print(size)
 
-# %% [markdown] id="TWzbez_2RUh4"
+# %% [markdown]
 # 4. Rewrite the conditional that checks if a letter is neither 'a' nor 'b', using a different notation.
 
-# %% id="XsIg1MD4JrPX" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680618957473, "user_tz": -120, "elapsed": 10, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="87f54254-5a5f-47a4-bab8-7feb4703bf2f"
+# %%
 letter = 'c'
 
 # original
@@ -139,10 +140,10 @@ if not letter == 'a' and not letter == 'b':
 if (not (letter == 'a')) and (not (letter == 'b')):
     print('neither a nor b')
 
-# %% [markdown] id="-XEYQZJ1ya1j"
+# %% [markdown]
 # ## Exercise 3.2: Bonus
 
-# %% [markdown] id="POVFwRu_f91I"
+# %% [markdown]
 # *FizzBuzz part 1* (advanced).
 # Write an `if`/`elif`/`else` statement that behaves as follows:
 #
@@ -151,9 +152,9 @@ if (not (letter == 'a')) and (not (letter == 'b')):
 # - if `value` is divisible by 3 *and* by 5, print `'FizzBuzz'`;
 # - in all remaining cases, print `value`.
 #
-# Tip: use the result of [Exercise 2.4.1](https://colab.research.google.com/drive/1FDQgdJabqIr2sZd1PNchJ_CKGefOrPE_#scrollTo=Exercise_2_4_Bonus)!
+# Tip: use the result of *Exercise 2.4.1*!
 
-# %% id="SZGeQtqEhiAK" colab={"base_uri": "https://localhost:8080/"} executionInfo={"status": "ok", "timestamp": 1680782728257, "user_tz": -120, "elapsed": 233, "user": {"displayName": "Julian Gonggrijp", "userId": "06467962548183964912"}} outputId="f067c099-61f7-4d68-851d-8e7db89ed04f"
+# %%
 value = 9
 
 # A straightforward variant, in which we literally
@@ -191,6 +192,6 @@ if value % 5 == 0:
 #   and result is printed instead.
 print(result or value)
 
-# %% [markdown] id="YBC4OfihzFho"
+# %% [markdown]
 # ## Next module
-# [4. Datastructures](https://colab.research.google.com/drive/15YpXew3euXvEtuAlGPX19QAU8MVmWBJI) - [solutions](https://colab.research.google.com/drive/1QI1iIkCyYOC43xuRBiPI3bgRHjiiqi3L)
+# [4. Datastructures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/04%20datastructures.ipynb) - [solutions](htthttps://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/04%20datastructures%20solutions.ipynb)
