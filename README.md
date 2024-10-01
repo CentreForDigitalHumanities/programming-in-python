@@ -22,7 +22,7 @@ Steps:
 2. Open Visual Studio Code
 3. Choose "Source Control" on the left
 4. Choose "Clone Git Repository..."
-5. Use the URL of this repository (https://github.com/UUDigitalHumanitieslab/programming-in-python.git)
+5. Use the URL of this repository (https://github.com/CentreForDigitalHumanities/programming-in-python.git)
 6. Decide on a convenient location for storing this repository e.g. create a folder "Sources" for storing this and all your future code!
 7. The repository will now be opened, choose "Yes, I trust the authors"
 8. Open the introduction lesson using the file explorer on the left
