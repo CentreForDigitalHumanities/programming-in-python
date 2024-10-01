@@ -17,7 +17,7 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.10604608
 repository-code: >-
-  https://github.com/UUDigitalHumanitieslab/programming-in-python
+  https://github.com/CentreForDigitalHumanities/programming-in-python
 abstract: >-
   The entry level course 'Programming in Python', by the
   Utrecht Centre for Digital Humanities aims to teach the
@@ -25,5 +25,5 @@ abstract: >-
   attention is given to best practices in coding, e.g.:
   writing clean code and documentation.
 license: BSD-3-Clause
-version: 2024-11
-date-released: '2024-09-26'
+version: 2024-05
+date-released: '2024-01-01'
