@@ -39,7 +39,7 @@
 #
 #
 # ## Extra material
-#
+# - [Extra exercises for Day 1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/Extra%20exercises%20day%201.ipynb)
 # - [Extra exercises for functions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/07a%20Functions%20(extra%20exercises).ipynb)
 # - [Text analysis project](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/Project%20-%20text%20analysis.ipynb)
 # - [Tips](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/Tips.ipynb)
