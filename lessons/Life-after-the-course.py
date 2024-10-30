@@ -523,3 +523,22 @@ if __name__ == '__main__':
 # - If you worked a little bit "out of order", Git has tricks that let you include only some of the changes that you made in the next commit, while keeping the remainder for subsequent commits. Look into "interactive staging" on how to do this.
 # - Similarly, if you make a change that with hindsight should have been included in an earlier commit, you can fix this afterwards. Look into "interactive rebase" on how to do this. Note that you should only rebase commits that you have not shared with other people yet.
 # - If, with hindsight, you combined changes in a commit that should have been in separate commits, you can also split that commit afterwards during an interactive rebase. However, keep in mind that reordering and merging small commits is much easier than breaking apart large commits. This is another reason why you should err on the side of tiny commits.
+
+# %% [markdown]
+# # Resources
+#
+#
+# ## Courses
+#
+# If you want to do further courses that guide you through learning Python, here are some good options:
+#
+# - [Practical Python](https://dabeaz-course.github.io/practical-python/). Much of it we already covered, but you can read through to see what looks unfamiliar.
+# - [Advanced Python Mastery](https://github.com/dabeaz-course/python-mastery), for learning how to write more advanced Python programs.
+#
+# ## Books
+#
+# If you like to read or work through full books covering a lot of Python material, the following books are helpful (and open access):
+#
+# - [Think Python](https://greenteapress.com/wp/think-python-3rd-edition/) is a free, open access introduction to Python programming for beginners. The whole book can also be worked through via (Colab) notebooks.
+# - [Dive Into Python 3](https://diveintopython3.net/).
+# - [Full Stack Python](https://www.fullstackpython.com/) covers a lof of related technologies that can be used with Python.
