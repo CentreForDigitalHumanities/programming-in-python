@@ -77,10 +77,15 @@
 # escaping difficult characters with \
 "I won't say \"banana\"\\"
 
-# line breaks are preserved
+# line breaks are preserved if you use triple quotes (''' or """)
 '''a long string
 
 that can go over multiple lines'''
+
+"""
+and here
+is another one!
+"""
 
 ''
 ""
@@ -100,6 +105,11 @@ print('hello \n world')
 # %%
 True
 False
+
+# %% [markdown]
+# Careful: the following are not booleans
+
+# %%
 false
 true
 "True"
@@ -110,6 +120,11 @@ true
 
 # %%
 None
+
+# %% [markdown]
+# Careful: the following are not the same as None.
+
+# %%
 none
 "none"
 
@@ -182,6 +197,7 @@ chr(129327)
 # - in Python, no strict type
 #     - `a = 1`
 #     - `a = 'hello'`
+# Tip: hold your mouse over a variable to see its type, or use `type(variable_name)` as shown above.
 
 # %%
 a = 1

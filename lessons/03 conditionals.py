@@ -46,10 +46,10 @@ if a < 10:
     print('everything on the same indentation level belongs to this if-condition')
     print('so this will only get printed if the condition is met')
     print('and so does this')
-print('but not this!')
+print('but this gets printed regardless!')
 
 # %% [markdown]
-# - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet.
+# - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet. Everything after `pass` in the same block will be ignored.
 
 # %%
 earth = 'round'
@@ -57,6 +57,7 @@ earth = 'round'
 if earth == 'square':
     # TODO not sure yet how to handle this case
     pass
+    print('This will not be printed.')
 
 # %% [markdown]
 # ## `else`
@@ -101,7 +102,7 @@ if letter == 'a':
 elif letter == 'b':
     print('we found the letter b')
 else:
-    print('this is not a or b')
+    print('this is neither a nor b')
 
 # %% [markdown]
 # ## Multiple conditions
@@ -173,6 +174,27 @@ elif name > 'Sheean':
     print('Alphabetically after Sheean')
 else:
     print('Same name as Sheean')
+
+# %%
+score = 10
+
+if score > 9:
+    verdict_1 = 'Wow, amazing!'
+elif score > 5:
+    verdict_1 = 'Okay, sure.'
+else:
+    verdict_1 = 'Pathetic.'
+
+if score > 9:
+    verdict_2 = 'Wow, amazing!'
+if score > 5:
+    verdict_2 = 'Okay, sure.'
+else:
+    verdict_2 = 'Pathetic.'
+
+print(verdict_1)
+print(verdict_2)
+
 
 # %% [markdown]
 # 2. In the following code block, replace `None` with your own condition in the `if` statement. If `value` is greater than `5`, `size` must be `'large'`; otherwise, `size` must be `'small'`. Change `value` a few times and rerun the code to check that your condition is correct.

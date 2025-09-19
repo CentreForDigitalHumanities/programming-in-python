@@ -86,6 +86,10 @@
 # - Set *Indentation width in spaces* to **4**.
 # - Switch *Show line numbers* **on**.
 #
+# In the *AI Assistance* section:
+# - Switch "Show AI-powered inline completions" **off**.
+# - Switch "Consented to use generative AI features" **off**.
+#
 # The other settings are up to you.
 
 # %% [markdown]
@@ -136,6 +140,7 @@ print('Hello') # comments can start after code
 
 # Print "Hello".
 print('Hello')
+
 
 # Useful comment:
 
