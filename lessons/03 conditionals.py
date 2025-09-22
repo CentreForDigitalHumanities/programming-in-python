@@ -176,18 +176,18 @@ else:
     print('Same name as Sheean')
 
 # %%
-score = 10
+power_level = 10000
 
-if score > 9:
+if power_level > 9000:
     verdict_1 = 'Wow, amazing!'
-elif score > 5:
+elif power_level > 5000:
     verdict_1 = 'Okay, sure.'
 else:
     verdict_1 = 'Pathetic.'
 
-if score > 9:
+if power_level > 9000:
     verdict_2 = 'Wow, amazing!'
-if score > 5:
+if power_level > 5000:
     verdict_2 = 'Okay, sure.'
 else:
     verdict_2 = 'Pathetic.'
