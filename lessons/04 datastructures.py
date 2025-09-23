@@ -58,6 +58,13 @@ print(students)
 ['hello', 1, False]
 
 # %% [markdown]
+# They can also contain the same value multiple times.
+
+# %%
+numbers = [1, 1, True, True, "hello", "hello"]
+print(numbers)
+
+# %% [markdown]
 # Lists can also contain variables
 
 # %%
@@ -66,7 +73,7 @@ nl = 'The Netherlands'
 countries = [usa, nl]
 
 # %% [markdown]
-# ### Accessing elements
+# ### Accessing single elements
 # - Every element has an *index*
 # - Index goes from 0 to length of the list - 1
 # - Negative index counts backwards from the last element
@@ -86,8 +93,8 @@ numbers = [1, 2, 3]
 one, two, three = numbers
 
 # %% [markdown]
-# ### Changing elements
-# - Assign element at index just like you would a variable
+# ### Changing single elements
+# - Assign element at index just like you would assign a value to a variable
 
 # %%
 students = ['jasmin', 'ravi', 'john']
@@ -101,7 +108,7 @@ students
 # %% [markdown]
 # ### Adding and removing elements
 # - The `+` operator works for two lists
-# - The `.append(value)` and `.remove(index)` functions works on a list
+# - The `.append(value)` and `.remove(index)` functions work on a single list
 
 # %%
 hello_world = ['hello', ',', 'world']
@@ -111,7 +118,7 @@ full_sentence = hello_world + exclamation
 print(full_sentence)
 
 # %%
-# note: .append() works in-place, you don't need to reassign the variable
+# note: `.append()` works in-place, you don't need to reassign the variable
 students = ['jasmin', 'ravi', 'john']
 students.append('mark')
 print(students)
