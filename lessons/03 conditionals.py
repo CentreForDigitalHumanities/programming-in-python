@@ -49,7 +49,7 @@ if a < 10:
 print('but this gets printed regardless!')
 
 # %% [markdown]
-# - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet. Everything after `pass` in the same block will be ignored.
+# - For indented blocks, we sometimes need `pass` as a placeholder. It lets us create an indented block, without defining any behavior for it yet.
 
 # %%
 earth = 'round'
@@ -57,7 +57,6 @@ earth = 'round'
 if earth == 'square':
     # TODO not sure yet how to handle this case
     pass
-    print('This will not be printed.')
 
 # %% [markdown]
 # ## `else`
