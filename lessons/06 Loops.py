@@ -121,7 +121,8 @@ while True:
 
 # %% [markdown]
 # ### Breaking out of a loop
-# You can break out of a loop by using the `break` statement, like shown here:
+# You can break out of a loop by using the `break` statement. If Python encounters a `break` statement, it immediately exits the loop, and continues with the code after the loop. It will stop iterating even if the loop condition is still `True` (in case of a `while` loop) or there are still items left in the iterable (in case of a `for` loop).
+#
 
 # %%
 basket = ['apricot', 'banana', 'cherry', 'date']
@@ -135,7 +136,40 @@ else:
     print('Aww no elderberry. 😞')
 
 # %% [markdown]
-# `break`/`else` can be used both with `for` and `while` loops. The `else` is not required though, you can have an `if` statement without it, in which case nothing will happen if the `if` statement returns `False`.
+# Using `break` can be useful in combination with `while` to avoid infinite loops:
+
+# %%
+counter = 0
+while counter < 10:
+    print('The counter is now', counter)
+    counter = counter + 1
+    if counter >= 5:
+        print('Counter reached 5, stopping the loop.')
+        break
+
+
+# %% [markdown]
+# You can also use `else` (which we also saw in Module 3 about conditionals) in combinations with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. If the loop if exited with a `break`, the `else` block will be skipped.
+
+# %%
+basket = ['apricot', 'banana', 'cherry', 'date']
+
+for fruit in basket:
+    print(fruit)
+    if fruit == 'elderberry':
+        print('Yay, this basket has elderberry! 🤤')
+        break
+else:
+    print('Aww no elderberry. 😞')
+
+
+# %%
+counter = 0
+while counter < 10:
+    print('The counter is now', counter)
+    counter = counter + 1
+else:
+    print('Counter reached 10 without a break statement!')
 
 # %% [markdown]
 # ### Skipping to the next iteration
