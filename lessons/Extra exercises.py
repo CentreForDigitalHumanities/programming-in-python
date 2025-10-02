@@ -9,13 +9,231 @@
 #       jupytext_version: 1.16.4
 #   kernelspec:
 #     display_name: Python 3
+#     language: python
 #     name: python3
 # ---
 
 # %% [markdown]
-# # 7a - Functions (extra exercises)
+# Here are some additional exercises, organised by module.
+
+# %% [markdown]
+# # Module 2: Values and expressions
 #
-# This notebook contains extra exercises to help you get more familiar with writing python code, and especially making functions. It contains no new theory.
+# 1. Create one variable each for every following type (replace None with an example):
+#  - Integer (`int`)
+#  - Floating point (`float`)
+#  - Boolean (`bool`)
+#  - String (`str`)
+
+# %%
+example_int = None
+example_float = None
+example_bool = None
+example_string = None
+
+# %% [markdown]
+# Did you know that you can check the type of a variable in Python? If you are ever unsure of the type of a variable, use the `type()` function to check, e.g.:
+
+# %%
+print(type(1))
+print(type(1.0))
+print(type(False))
+print(type('one'))
+
+# %% [markdown]
+# 2. Now try and check the types of the examples you just declared using the method above:
+
+# %%
+## Space for exercise
+
+# %% [markdown]
+# Python is a 'dynamically typed' language, which means that the type of a variable can vary based on its context. A variable's type is determined by the value it holds. For example, if you assign an integer value to a variable, its type will be `int`. If you later assign a string value to the same variable, its type will change to `str`.
+# 
+# It is also possible to 'coerce' (i.e. explicitly convert) a variable from one type to another, by using `float()`, `int()`, `str()` or the like. For example, you can coerce an integer to a float like this.
+
+# %%
+example_integer = 2  # Declare an integer variable.
+example_integer = "hello" # Now it is a string.
+example_integer = 3 # Now it is an integer again.
+
+print(example_integer, type(example_integer)) # Print the integer and its type.
+
+coerced_float = float(example_integer) # Coerce the integer to a float.
+print(coerced_float, type(coerced_float))
+
+# %% [markdown]
+# You can coerce these types manually, but sometimes Python does it automatically, for example when you try and execute operations on a variable that requires a certain type. For instance, if you try to add the integer and float above, the result of that operation will be a float. Python automatically coerces the integer to a float to complete the addition.
+#
+# 3. For this exercise, try to perform some operations on these variables below. Which types can be automatically added together? And what type is the result of their operation? What happens when you try a different operation, such as subtraction?
+
+# %%
+ex_int = 1
+ex_float = 2.0
+ex_string = 'three'
+ex_bool = True
+
+ex_result = ex_int + ex_float  # example operation
+print(ex_result, type(ex_result))
+
+# %% [markdown]
+# ## Logical Operators
+# Python allows the use of several logical operators, so to get you in the mindset of a computer, see if you can determine whether an expression is going to return `True` or `False`. After you have given your answer, run the code in the cell to see if you were correct!
+
+# %%
+# Declaration of the variables used in the exercise
+n1 = 1
+n2 = 2
+n3 = 3.4
+n4 = 4.5
+s1 = 'Hello'
+s2 = 'World'
+s3 = 'Hallo'
+s4 = 'Wereld'
+l1 = [n1, n2, n3, n4]
+l2 = [s1, s2, s3, s4]
+
+# %%
+#Example 1
+n1 == n2
+
+# %% [markdown]
+# True or False?
+
+# %%
+#Example 2
+n1 + n2 == 3
+
+# %%
+#Example 3
+n1 + n3 != 3.4
+
+# %% [markdown]
+# True or False?
+
+# %%
+#Example 4
+s1 + s2 == "Hello World"
+
+# %% [markdown]
+# True or False?
+
+# %%
+#Example 5
+s3 == "hallo"
+
+# %% [markdown]
+# True or False?
+
+# %%
+#Example 6
+len(l1) == len(l2)
+
+# %% [markdown]
+# True or False?
+
+# %%
+#Example 7
+len(s3) == len(s1)
+
+# %% [markdown]
+# # Module 3: Conditionals
+
+# %% [markdown]
+# 1. **Age Category Classifier**: Write a conditional statement that 
+# categorises people by age:
+# - If age is less than 13: print "Child"
+# - If age is between 13 and 17 (inclusive): print "Teenager"  
+# - If age is between 18 and 64 (inclusive): print "Adult"
+# - If age is 65 or older: print "Senior"
+
+# %%
+age = 25  # Try changing this value to test different cases.
+
+## Your code here
+
+# %% [markdown]
+# 2. **Grade Calculator**: Write a conditional statement that updates the 
+# variable `letter_grade` and prints a comment based on a numerical score.
+#
+# For the letter grade, use the following scale:
+# - For a score between 90-100, the grade should be "A".
+# - For a score between 80-89, the grade should be "B".
+# - For a score between 70-79, the grade should be "C".
+# - For a score between 60-69, the grade should be "D".
+# - For a score below 60, the grade should be "F".
+#
+# If the grade is D or better, print "PASSED". Otherwise, print "FAILED".
+
+# %%
+score = 85  # Try different scores to test your logic.
+
+letter_grade = None
+
+## Your code here
+
+# %% [markdown]
+# 3. **Weather Decision Maker**: Write a program that suggests activities based on weather and temperature:
+# - If it's sunny:
+#   - Temperature above 25°C: "Go to the beach!"
+#   - Temperature 15-25°C: "Perfect for a picnic!"
+#   - Temperature below 15°C: "Take a sunny walk!"
+# - If it's rainy:
+#   - Temperature above 20°C: "Warm rain - maybe garden work?"
+#   - Temperature below 20°C: "Stay inside with a book!"
+# - If it's snowy:
+#   - Always suggest: "Build a snowman or go skiing!"
+# - For any other weather: "No forecast today."
+
+# %%
+weather = "sunny"  # Try: "sunny", "rainy", "snowy", or "cloudy"
+temperature = 22   # Try different temperatures
+
+# %% [markdown]
+# # Module 4: Data structures
+
+# Let's make some lists! 
+# 1. Start by declaring an empty list (`empty_list = []`).
+
+# %%
+my_list = None
+
+# %% [markdown]
+# You can check the length of the list with the `len()` function:
+
+# %%
+print(len(my_list))
+
+# %% [markdown]
+# 2. Now, add some elements to your list. Then check the length of the list again!
+
+# %%
+## Space for exercise
+
+# %% [markdown]
+# # Module 6: Loops
+
+# %% [markdown]
+# 1. Here is another list. Use a 'for' loop to print each element in the list.
+
+# %%
+prime_numbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
+
+# %% [markdown]
+# 2. Instead of simply printing the elements, see if you can print the result of an operation with each element (for example, print the element + 1). Alternatively, see if you can print the type of each element in the list.
+
+# %%
+## Space for exercise
+
+# %% [markdown]
+# 3. Now, try to sum all elements in the list. Use the variable `total` to store the sum, and print it at the end.
+
+# %%
+total = 0
+
+# %% [markdown]
+# # Module 7: Functions
+#
+# Here are more exercises to help you get more familiar with writing Python code, and especially making functions. It contains no new theory.
 #
 # There are a lot of exercises, and they can be very similar. Don't feel like you have to do everything: if the exercises start to feel repetitive, you're ready to move on to the next section.
 
@@ -314,8 +532,8 @@ def is_prime(number):
 # %% [markdown]
 # 3.3: Write a function to calculate the area of a circle based on the diameter.
 #
-# - The _area_ is equal the _radius_ of the circle, squared, multiplied by pi. In a formula: $A = r^2 \times \pi$. 
-# - The radius of a circle is half its diameter.
+# - The _area_ is equal to the _radius_ of the circle, squared, multiplied by pi. In a formula: $A = r^2 \times \pi$.
+# - The radius of a circle is equal to half its diameter.
 # - You can assume that pi is equal to 3.14
 
 # %%
@@ -338,16 +556,19 @@ def is_prime(number):
 # %% [markdown]
 # ## 4. Don't repeat yourself
 #
-# An important use for functions is to avoid unnecessary repetition in code. When you write two pieces of very similar code, it's often convenient to make a single function.
+# An important use for functions is to avoid unnecessary repetition in code.
+# When you write two pieces of very similar code, it's often convenient to make
+# a single function instead, and call that function in both places.
 #
 # Each of the code blocks below contains two things:
-# - A section of code that has some repetition
-# - Some assert statements that check if the code works as intended.
+# - a section of code that has some repetition
+# - some assert statements that check if the code works as intended
 #
 # For each block:
-# - Try to understand what the code does, and identify the repetition.
-# - At the top of the code block, add a definition for a function (or several), that can handle the shared functionality.
-# - Use your functions(s) in the code, and check that everything still works.
+# - try to understand what the code does, and identify the repetition;
+# - at the top of the code block, add a definition for a function (or several), that can handle the shared functionality;
+# - use your function(s) in the code, and check that everything still works.
+
 
 # %%
 small_pizza_price = 9.00
@@ -476,4 +697,3 @@ assert sun_followed_by_rain == 1
 assert sun_preceded_by_sun == 4
 assert sun_preceded_by_cloudy == 5
 assert sun_preceded_by_rain == 1
-
