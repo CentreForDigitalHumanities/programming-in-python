@@ -149,7 +149,7 @@ while counter < 10:
 
 
 # %% [markdown]
-# You can also use `else` (which we also saw in Module 3 about conditionals) in combinations with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. If the loop if exited with a `break`, the `else` block will be skipped.
+# You can also use `else` (which we also saw in Module 3 about conditionals) in combination with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. The `else` block is skipped if the loop is exited with a `break` statement.
 
 # %%
 basket = ['apricot', 'banana', 'cherry', 'date']
