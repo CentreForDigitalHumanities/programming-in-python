@@ -326,4 +326,4 @@ print(connect((welcome(name), goodbye(name))))
 # %% [markdown]
 # ## Next module
 #
-# [10 - Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)
+# [10 - Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20Dictionaries.ipynb)

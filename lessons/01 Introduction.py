@@ -210,4 +210,4 @@ print('apricot', 'banana')
 # %% [markdown]
 # ## Next module
 #
-# [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb)
+# [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20Values%20and%20expressions.ipynb)

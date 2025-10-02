@@ -363,4 +363,4 @@ sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the',
 # %% [markdown]
 # ## Next module
 #
-# [11 - Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20working%20with%20files.ipynb)
+# [11 - Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20Working%20with%20files.ipynb)
