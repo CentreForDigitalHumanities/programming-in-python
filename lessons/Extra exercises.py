@@ -346,7 +346,7 @@ assert travel_time(car=55, bike=3, walk=0.3) == 0.95
 
 # check your function
 assert to_time(1.5) == (1, 30, 0)
-assert to_time(3.6532) == (3, 39, 55)
+assert to_time(3.6532) == (3, 39, 11)
 assert to_time(0) == (0, 0, 0)
 
 # %% [markdown]
