@@ -149,7 +149,7 @@ while counter < 10:
 
 
 # %% [markdown]
-# You can also use `else` (which we also saw in Module 3 about conditionals) in combination with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. The `else` block is skipped if the loop is exited with a `break` statement.
+# You can also use `else` (which we also saw in Module 3 about conditionals) in combination with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. The `else` block is skipped if the loop is exited with a `break` statement. You can remember this as "break, or else!".
 
 # %%
 basket = ['apricot', 'banana', 'cherry', 'date']
@@ -164,12 +164,21 @@ else:
 
 
 # %%
-counter = 0
-while counter < 10:
-    print('The counter is now', counter)
-    counter = counter + 1
+# The same example, but now with a while loop.
+basket = ['apricot', 'banana', 'elderberry', 'cherry', 'date']
+index = 0
+
+while index < len(basket):
+    fruit = basket[index]
+    print(fruit)
+    if fruit == 'elderberry':
+        print('Yay, this basket has elderberry! 🤤')
+        break
+    # Update index so we avoid an infinite loop if there is no elderberry in the list.
+    index = index + 1
 else:
-    print('Counter reached 10 without a break statement!')
+    print('Aww no elderberry. 😞')
+
 
 # %% [markdown]
 # ### Skipping to the next iteration

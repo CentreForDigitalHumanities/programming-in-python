@@ -171,11 +171,11 @@ elif 13 <= age <= 17:
     print("Teenager")
 elif 18 <= age <= 64:
     print("Adult")
-elif age >= 65:
+else:
     print("Senior")
 
 # %% [markdown]
-# 2. **Grade Calculator**: Write a conditional statement that updates a letter grade and prints a comment based on a numerical score.
+# 2. **Grade Calculator**: Write a conditional statement that updates a letter grade and prints a comment based on a numerical score between 0 and 100.
 #
 # For the letter grade, use the following scale:
 # - For a score between 90-100, `letter_grade` should be "A".
@@ -199,7 +199,7 @@ elif 70 <= score < 80:
     letter_grade = "C"
 elif 60 <= score < 70:
     letter_grade = "D"
-else:
+elif score < 60:
     letter_grade = "F"
 
 if letter_grade in ["A", "B", "C", "D"]:
@@ -344,17 +344,17 @@ assert check_wallet(["keys", "phone"]) == ["keys", "phone", "wallet"]
 assert check_wallet([]) == ["wallet"]
 
 # %% [markdown]
-# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10. (Hint: use the 'modulo' operator from Exercise 2.4 (Module 2).)
+# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10. (Hint: use the 'modulo' operator (%) from Exercise 2.4 (Module 2).)
 
 
 # %%
 def round_to_10(number):
-    # The modulo operator (%) gives the remainder of a division.
     remainder = number % 10
+    rounded_down = number - remainder
     if remainder < 5:
-        return number - remainder
-    else:
-        return number + (10 - remainder)
+        return rounded_down
+    # round up instead
+    return rounded_down + 10
 
 
 # check your function
@@ -425,36 +425,9 @@ assert clean_text("Hello, how are you?") == "Hello how are you"
 assert clean_text("Hooray! Hooray! Hooray!") == "Hooray Hooray Hooray"
 assert clean_text("Yummy!! 😋") == "Yummy "
 
-# %% [markdown]
-# 1.7: Write a function `travel_time` that estimates the travel time for a journey. It takes 3 named arguments:
-# - `car`: the distance traversed by car
-# - `bike`: the distance traversed by bike
-# - `walk`: the distance traversed on foot
-#
-# Each of these will be a number (distance in km), and the default value is `0`. Calculate the travel time, assuming that:
-#
-# - Cars have an average speed of 80 km/h
-# - Bikes have an average speed of 16 km/h
-# - Walking has an average speed of 4 km/h
-#
-# Your function should return the travel time in hours.
-
-
-# %%
-def travel_time(car=0, bike=0, walk=0):
-    car_time = car / 80
-    bike_time = bike / 16
-    walk_time = walk / 4
-    return car_time + bike_time + walk_time
-
-
-# check your function
-assert travel_time(car=10, walk=0.1) == 0.15
-assert travel_time(bike=10, walk=0.1) == 0.65
-assert travel_time(car=55, bike=3, walk=0.3) == 0.95
 
 # %% [markdown]
-# 1.8: Write a function `to_time` which takes a decimal number of hours (like the output of `travel time`) and converts it to hours, minutes, and seconds. For example, 1.5 hours is 1 hours, 30 minutes and 0 seconds.
+# 1.7: Write a function `to_time` which takes a decimal number of hours (like the output of `travel time`) and converts it to hours, minutes, and seconds. For example, 1.5 hours is 1 hours, 30 minutes and 0 seconds.
 #
 # The input should be a single `float` or `int`, and the output should be three numbers: hours, minutes, and seconds. The output should be given in whole numbers (`int`, not `float`).
 
@@ -468,18 +441,19 @@ def to_time(decimal_hours):
     full_minutes = int(total_minutes)
     fractional_minutes = total_minutes - full_minutes
 
-    full_seconds = fractional_minutes * 60
+    full_seconds = int(fractional_minutes * 60)
 
-    return (int(full_hours), int(full_minutes), int(full_seconds))
+    return (full_hours, full_minutes, full_seconds)
 
 
 # check your function
 assert to_time(1.5) == (1, 30, 0)
-assert to_time(3.6532) == (3, 39, 11)
+# Floats are not always exact, so we need to allow for a small margin of error here.
+assert to_time(3.6532) in ((3, 39, 11), (3, 39, 12))
 assert to_time(0) == (0, 0, 0)
 
 # %% [markdown]
-# 1.9: Write a function `mean` which takes one argument, a list of numbers, as input. It should return the mean value of the list (a single number).
+# 1.8: Write a function `mean` which takes one argument, a list of numbers, as input. It should return the mean value of the list (a single number).
 
 
 # %%
@@ -496,7 +470,7 @@ assert mean([3.2, 4.5, 0.0, 2.5]) == 2.55
 assert mean([0.0]) == 0.0
 
 # %% [markdown]
-# 1.10: Write a function `is_number` that checks if a string describes a number. It takes one argument (a string).
+# 1.9: Write a function `is_number` that checks if a string describes a number. It takes one argument (a string).
 #
 # It should return `True` if:
 # - Every character in the string is either a digit (0-9) or a decimal point `'.'`)
@@ -517,10 +491,22 @@ def is_number(string):
             return False
 
     # Make sure there is at most one decimal point.
-    if len(decimal_points) > 1:
-        return False
+    return len(decimal_points) <= 1
 
-    return True
+
+# Another solution:
+def is_number(string):
+    decimal_points = 0
+    for character in string:
+        if character in "0123456789":
+            continue
+        elif character == ".":
+            decimal_points = decimal_points + 1
+        else:
+            return False
+
+    # Make sure there is at most one decimal point.
+    return decimal_points <= 1
 
 
 # check your function.
@@ -580,38 +566,6 @@ def reverse(word):
 assert reverse("hello") == "olleh"
 assert reverse("WORLD") == "DLROW"
 assert reverse("") == ""
-
-
-# %%
-def exclude_short_words(words, min_length=5):
-    """
-    Filters all short words (shorter than min_length) out of a list
-
-    Input should be a list of words (strings). Returns a new list
-    with only the words longer than min_length.
-    """
-
-    long_words = []
-
-    for word in words:
-        if len(word) < 5:
-            long_words.append(word)
-
-    return long_words
-
-
-# write some checks!
-assert exclude_short_words(["apple", "banana", "pear", "fig"]) == ["apple", "banana"]
-assert exclude_short_words(["a", "ab", "abc", "abcd", "abcde"]) == ["abcde"]
-assert exclude_short_words(["alice", "bob", "chris", "daniel"], min_length=4) == [
-    "alice",
-    "chris",
-    "daniel",
-]
-
-# There are two bugs here:
-# - The function does not use the `min_length` argument. It always uses 5.
-# - The function uses `<` instead of `>=`, so it returns words that are too short.
 
 
 # %%
@@ -755,6 +709,17 @@ def is_leap_year(year):
 
 # Alternatively:
 def is_leap_year(year):
+    if year % 4:
+        return False
+    if year % 100:
+        return True
+    if year % 400:
+        return False
+    return True
+
+
+# Or without if statements:
+def is_leap_year(year):
     return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
 
@@ -793,11 +758,10 @@ assert calculate_circle_area(0) == 0.0
 # - Customers may have a coupon that gives them 10% off all the items in their basket.
 # - If the total of the order (including the coupon discount) is under € 20.00, customers need to pay € 2.00 shipping.
 #
-# Write a function that calculates the total of an order.
 
 
 # %%
-def calculate_order_total(prices, has_coupon=False):
+def calculate_order_total(prices, has_coupon):
     """
     Calculates the total price of an order, applying discounts and shipping costs as needed.
     """
@@ -809,6 +773,11 @@ def calculate_order_total(prices, has_coupon=False):
     return total
 
 
+# check your function
+assert calculate_order_total([5.00, 3.00], False) == 10.0
+assert calculate_order_total([15.00, 4.50, 30.50], False) == 50.0
+assert calculate_order_total([15.00, 4.50, 30.50], True) == 45.00
+
 # %% [markdown]
 # 3.5: Write a function that counts how often a string occurs within another string.
 
@@ -816,14 +785,13 @@ def calculate_order_total(prices, has_coupon=False):
 # %%
 def count_substring(main_string, substring):
     """
-    Counts how often `substring` occurs within `main_string`, without using .find() or .count()
+    Counts how often `substring` occurs within `main_string`.
     """
     count = 0
     substring_length = len(substring)
 
     # We create a sliding window of the length of the substring,
     # and move it over the main string, one character at a time.
-
     for index in range(len(main_string) - substring_length + 1):
         window = main_string[index : index + substring_length]
         if window == substring:
@@ -859,7 +827,7 @@ def calculate_price_per_slice(pizza_price, pizza_slices):
 
 
 def print_price_per_slice(size, price_per_slice):
-    print(f"The {size} pizza costs €", price_per_slice, "per slice")
+    print("The", size, "pizza costs €", price_per_slice, "per slice")
 
 
 small_pizza_price = 9.00
@@ -990,7 +958,7 @@ def count_weather_transitions(weather_list, target_weather, direction="followed"
                 continue
 
             if next_weather == "sun":
-                sun_count += 1 # This is the same as sun_count = sun_count + 1.
+                sun_count += 1  # This is the same as sun_count = sun_count + 1.
             elif next_weather == "cloudy":
                 cloudy_count += 1
             else:
@@ -1007,9 +975,16 @@ def print_weather_results(weather_type, direction, sun, cloudy, rain):
     print("Rain:", rain, "times")
     print()
 
-rain_followed_by_sun, rain_followed_by_cloudy, rain_followed_by_rain = count_weather_transitions(weather_this_month, "rain", "followed")
-sun_followed_by_sun, sun_followed_by_cloudy, sun_followed_by_rain = count_weather_transitions(weather_this_month, "sun", "followed")
-sun_preceded_by_sun, sun_preceded_by_cloudy, sun_preceded_by_rain = count_weather_transitions(weather_this_month, "sun", "preceded")
+
+rain_followed_by_sun, rain_followed_by_cloudy, rain_followed_by_rain = (
+    count_weather_transitions(weather_this_month, "rain", "followed")
+)
+sun_followed_by_sun, sun_followed_by_cloudy, sun_followed_by_rain = (
+    count_weather_transitions(weather_this_month, "sun", "followed")
+)
+sun_preceded_by_sun, sun_preceded_by_cloudy, sun_preceded_by_rain = (
+    count_weather_transitions(weather_this_month, "sun", "preceded")
+)
 
 # Print a couple of results.
 print_weather_results("rain", "followed", rain_followed_by_sun, rain_followed_by_cloudy, rain_followed_by_rain)
@@ -1029,4 +1004,166 @@ assert sun_preceded_by_sun == 4
 assert sun_preceded_by_cloudy == 5
 assert sun_preceded_by_rain == 1
 
+
+# An alternative, more elaborate solution, with additional explanations:
+
+# mnemonics for indexing into (sun, cloudy, rain) triples  
+sun = 0  
+cloudy = 1  
+rain = 2  
+
+# you could also write one of these lines instead:  
+sun, cloudy, rain = 0, 1, 2  
+sun, cloudy, rain = range(3)  
+
+# Helper function to translate the weather name to the corresponding index  
+def name_to_index(weather_name):  
+    if weather_name == 'sun':  
+        return sun  
+    if weather_name == 'cloudy':  
+        return cloudy  
+    return rain  
+
+
+def count_weather_transitions(weather_list):  
+    '''  
+    Create a 3-by-3 table of weather transition counts.  
+
+    The table is a list of lists of transition counts. The position in the outer  
+    list represents the weather type on the first day and the position in the  
+    inner list represents the weather type on the following day. The count  
+    represents how often that type of transition occurred. The order of weather  
+    types is sun, cloudy, rain.  
+
+    For example, if the first (sun) count of the second (cloudy) sublist  
+    contains the number 5, that means there have been 5 transitions where a  
+    cloudy day was followed by a sunny day.  
+    '''  
+
+    # The table that we will fill, initially all zeros.  
+    transitions = [  
+        [0, 0, 0],  # first day was sunny row  
+        [0, 0, 0],  # first day was cloudy row  
+        [0, 0, 0],  # first day was rainy row  
+      #  |  |  |  
+      #  |  |  ^ next day was rainy column  
+      #  |  |  
+      #  |  ^ next day was cloudy column  
+      #  |  
+      #  ^ next day was sunny column  
+    ]  
+
+    # Make sure we don't run into IndexError  
+    if len(weather_list) < 2:  
+        return transitions  
+
+    # Fill the table by looping over the month once  
+    previous_weather_name = weather_list[0]  
+    previous_weather_index = name_to_index(previous_weather_name)  
+    for next_weather_name in weather_list[1:]:  
+        next_weather_index = name_to_index(next_weather_name)  
+        transitions[previous_weather_index][next_weather_index] += 1  
+        previous_weather_index = next_weather_index  
+
+    # Done, now we can return the counts  
+    return transitions  
+
+
+# Helper functions for reading following or preceding tallies for a weather type  
+def preceding_weather_counts(transitions, weather_index):  
+    return (  
+        transitions[sun][weather_index],  
+        transitions[cloudy][weather_index],  
+        transitions[rain][weather_index],  
+    )  
+
+def following_weather_counts(transitions, weather_index):  
+    return transitions[weather_index]  
+
+
+def print_weather_results(weather_name, direction, transitions):  
+    '''Print weather transition results.'''  
+    weather_index = name_to_index(weather_name)  
+    if direction == 'followed':  
+        tally = following_weather_counts(transitions, weather_index)  
+    else:  
+        tally = preceding_weather_counts(transitions, weather_index)  
+    print(f'Days with {weather_name} were {direction} by:')  
+    print('Sun:', tally[sun], 'times')  
+    print('Clouds:', tally[cloudy], 'times')  
+    print('Rain:', tally[rain], 'times')  
+    print()  
+
+
+transitions = count_weather_transitions(weather_this_month)  
+
+# Print a couple of results.  
+print_weather_results('rain', 'followed', transitions)  
+print_weather_results('sun', 'followed', transitions)  
+print_weather_results('sun', 'preceded', transitions)
+
+# %% [markdown]
+# ## Module 12: Functions, bis
+#
+# 1. Add a couple of assertion statements to the function (which has a default argument) below. Find out if the function works as intended and fix any bugs you find.
+#
+
 # %%
+def exclude_short_words(words, min_length=5):
+    """
+    Filters all short words (shorter than min_length) out of a list
+
+    Input should be a list of words (strings). Returns a new list
+    with only the words longer than min_length.
+    """
+
+    long_words = []
+
+    for word in words:
+        if len(word) < 5:
+            long_words.append(word)
+
+    return long_words
+
+
+# write some checks!
+assert exclude_short_words(["apple", "banana", "pear", "fig"]) == ["apple", "banana"]
+assert exclude_short_words(["a", "ab", "abc", "abcd", "abcde"]) == ["abcde"]
+assert exclude_short_words(["alice", "bob", "chris", "daniel"], min_length=4) == [
+    "alice",
+    "chris",
+    "daniel",
+]
+
+# There are two bugs here:
+# - The function does not use the `min_length` argument. It always uses 5.
+# - The function uses `<` instead of `>=`, so it returns words that are too short.
+
+
+# %% [markdown]
+# 2: Write a function `travel_time` that estimates the travel time for a journey. It takes 3 named arguments:
+# - `car`: the distance traversed by car
+# - `bike`: the distance traversed by bike
+# - `walk`: the distance traversed on foot
+#
+# Each of these will be a number (distance in km), and the default value is `0`. Calculate the travel time, assuming that:
+#
+# - Cars have an average speed of 80 km/h
+# - Bikes have an average speed of 16 km/h
+# - Walking has an average speed of 4 km/h
+#
+# Your function should return the travel time in hours.
+
+
+# %%
+def travel_time(car=0, bike=0, walk=0):
+    car_time = car / 80
+    bike_time = bike / 16
+    walk_time = walk / 4
+    return car_time + bike_time + walk_time
+
+
+# check your function
+assert travel_time(car=10, walk=0.1) == 0.15
+assert travel_time(bike=10, walk=0.1) == 0.65
+assert travel_time(car=55, bike=3, walk=0.3) == 0.95

@@ -153,7 +153,7 @@ age = 25  # Try changing this value to test different cases.
 
 # %% [markdown]
 # 2. **Grade Calculator**: Write a conditional statement that updates the 
-# variable `letter_grade` and prints a comment based on a numerical score.
+# variable `letter_grade` and prints a comment based on a numerical score between 0 and 100.
 #
 # For the letter grade, use the following scale:
 # - For a score between 90-100, the grade should be "A".
@@ -267,7 +267,7 @@ assert check_wallet(['keys', 'phone']) == ['keys', 'phone', 'wallet']
 assert check_wallet([]) == ['wallet']
 
 # %% [markdown]
-# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10.
+# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10. (Hint: use the 'modulo' operator (%) from Exercise 2.4 (Module 2).)
 
 # %%
 # your code here...
@@ -314,30 +314,9 @@ assert clean_text('Hello, how are you?') == 'Hello how are you'
 assert clean_text('Hooray! Hooray! Hooray!') == 'Hooray Hooray Hooray'
 assert clean_text('Yummy!! 😋') == 'Yummy '
 
-# %% [markdown]
-# 1.7: Write a function `travel_time` that estimates the travel time for a journey. It takes 3 named arguments:
-# - `car`: the distance traversed by car
-# - `bike`: the distance traversed by bike
-# - `walk`: the distance traversed on foot
-#
-# Each of these will be a number (distance in km), and the default value is `0`. Calculate the travel time, assuming that:
-#
-# - Cars have an average speed of 80 km/h
-# - Bikes have an average speed of 16 km/h
-# - Walking has an average speed of 4 km/h
-#
-# Your function should return the travel time in hours.
-
-# %%
-# your code here...
-
-# check your function
-assert travel_time(car=10, walk=0.1) == 0.15
-assert travel_time(bike=10, walk=0.1) == 0.65
-assert travel_time(car=55, bike=3, walk=0.3) == 0.95
 
 # %% [markdown]
-# 1.8: Write a function `to_time` which takes a decimal number of hours (like the output of `travel time`) and converts it to hours, minutes, and seconds. For example, 1.5 hours is 1 hours, 30 minutes and 0 seconds.
+# 1.7: Write a function `to_time` which takes a decimal number of hours (like the output of `travel time`) and converts it to hours, minutes, and seconds. For example, 1.5 hours is 1 hours, 30 minutes and 0 seconds.
 #
 # The input should be a single `float` or `int`, and the output should be three numbers: hours, minutes, and seconds. The output should be given in whole numbers (`int`, not `float`).
 
@@ -346,11 +325,12 @@ assert travel_time(car=55, bike=3, walk=0.3) == 0.95
 
 # check your function
 assert to_time(1.5) == (1, 30, 0)
-assert to_time(3.6532) == (3, 39, 11)
+# Floats are not always exact, so we need to allow for a small margin of error here.
+assert to_time(3.6532) in ((3, 39, 11), (3, 39, 12))
 assert to_time(0) == (0, 0, 0)
 
 # %% [markdown]
-# 1.9: Write a function `mean` which takes one argument, a list of numbers, as input. It should return the mean value of the list (a single number).
+# 1.8: Write a function `mean` which takes one argument, a list of numbers, as input. It should return the mean value of the list (a single number).
 
 # %%
 # your code here...
@@ -361,7 +341,7 @@ assert mean([3.2, 4.5, 0.0, 2.5]) == 2.55
 assert mean([0.0]) == 0.0
 
 # %% [markdown]
-# 1.10: Write a function `is_number` that checks if a string describes a number. It takes one argument (a string).
+# 1.9: Write a function `is_number` that checks if a string describes a number. It takes one argument (a string).
 #
 # It should return `True` if:
 # - Every character in the string is either a digit (0-9) or a decimal point `'.'`)
@@ -419,27 +399,6 @@ def reverse(word):
     
     return new_word
 
-# write some checks!
-
-
-# %%
-def exclude_short_words(words, min_length=5):
-    '''
-    Filters all short words (shorter than min_length) out of a list
-
-    Input should be a list of words (strings). Returns a new list
-    with only the words longer than min_length.
-    '''
-
-    long_words = []
-
-    for word in words:
-        if len(word) < 5:
-            long_words.append(word)
-    
-    return long_words
-
-# write some checks!
 
 
 # %%
@@ -697,3 +656,52 @@ assert sun_followed_by_rain == 1
 assert sun_preceded_by_sun == 4
 assert sun_preceded_by_cloudy == 5
 assert sun_preceded_by_rain == 1
+
+
+# %% [markdown]
+# ## Module 12: Functions, bis
+#
+# 1. Add a couple of assertion statements to the function (which has a default argument) below. Find out if the function works as intended and fix any bugs you find.
+#
+
+# %%
+def exclude_short_words(words, min_length=5):
+    '''
+    Filters all short words (shorter than min_length) out of a list
+
+    Input should be a list of words (strings). Returns a new list
+    with only the words longer than min_length.
+    '''
+
+    long_words = []
+
+    for word in words:
+        if len(word) < 5:
+            long_words.append(word)
+    
+    return long_words
+
+# write some checks!
+
+
+# %% [markdown]
+# 2: Write a function `travel_time` that estimates the travel time for a journey. It takes 3 named arguments:
+# - `car`: the distance traversed by car
+# - `bike`: the distance traversed by bike
+# - `walk`: the distance traversed on foot
+#
+# Each of these will be a number (distance in km), and the default value should be `0`. Calculate the travel time, assuming that:
+#
+# - Cars have an average speed of 80 km/h
+# - Bikes have an average speed of 16 km/h
+# - Walking has an average speed of 4 km/h
+#
+# Your function should return the travel time in hours.
+
+# %%
+# your code here...
+
+# check your function
+assert travel_time(car=10, walk=0.1) == 0.15
+assert travel_time(bike=10, walk=0.1) == 0.65
+assert travel_time(car=55, bike=3, walk=0.3) == 0.95
