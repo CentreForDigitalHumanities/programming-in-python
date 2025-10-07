@@ -267,7 +267,7 @@ assert check_wallet(['keys', 'phone']) == ['keys', 'phone', 'wallet']
 assert check_wallet([]) == ['wallet']
 
 # %% [markdown]
-# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10. (Hint: use the 'modulo' operator (%) from Exercise 2.4 (Module 2).)
+# 1.3: Write a function `round_to_10` which takes a number as its argument and returns a new number: the input rounded to the nearest multiple of 10. (Hint: use the 'modulo' operator (%) from [Exercise 2.4 (Module 2)](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20Values%20and%20expressions.ipynb#scrollTo=13bf4e73).)
 
 # %%
 # your code here...
@@ -325,7 +325,7 @@ assert clean_text('Yummy!! 😋') == 'Yummy '
 
 # check your function
 assert to_time(1.5) == (1, 30, 0)
-# Floats are not always exact, so we need to allow for a small margin of error here.
+# Floats are not exact, so we need to allow for a small margin of error here.
 assert to_time(3.6532) in ((3, 39, 11), (3, 39, 12))
 assert to_time(0) == (0, 0, 0)
 
