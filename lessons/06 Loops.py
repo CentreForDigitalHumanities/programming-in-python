@@ -125,15 +125,13 @@ while True:
 #
 
 # %%
-basket = ['apricot', 'banana', 'cherry', 'date']
+basket = ['apricot', 'banana', 'elderberry', 'cherry', 'date']
 
 for fruit in basket:
     print(fruit)
     if fruit == 'elderberry':
         print('Yay, this basket has elderberry! 🤤')
         break
-else:
-    print('Aww no elderberry. 😞')
 
 # %% [markdown]
 # Using `break` can be useful in combination with `while` to avoid infinite loops:
