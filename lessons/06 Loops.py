@@ -138,7 +138,7 @@ for fruit in basket:
 
 # %%
 counter = 0
-while counter < 10:
+while True:
     print('The counter is now', counter)
     counter = counter + 1
     if counter >= 5:
