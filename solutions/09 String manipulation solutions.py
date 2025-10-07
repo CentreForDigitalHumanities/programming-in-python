@@ -246,7 +246,7 @@ assert 'matilda'.endswith('lda')
 assert '   matilda '.strip() == 'matilda'
 assert '..matilda?'.strip('.,') == 'matilda?'
 
-# string.lstrip() and string.rstrip() work like string.split()
+# string.lstrip() and string.rstrip() work like string.strip()
 # but only for l(eft) and r(ight) part of the string
 assert '  matilda  '.rstrip() == '  matilda'
 assert '  matilda  '.lstrip() == 'matilda  '
