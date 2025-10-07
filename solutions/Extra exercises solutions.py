@@ -1005,7 +1005,7 @@ assert sun_preceded_by_cloudy == 5
 assert sun_preceded_by_rain == 1
 
 
-# An alternative, more elaborate solution, with additional explanations:
+# An alternative, even less repetitive solution, with additional explanations:
 
 # mnemonics for indexing into (sun, cloudy, rain) triples  
 sun = 0  
