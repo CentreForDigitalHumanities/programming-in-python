@@ -58,9 +58,9 @@ print('in' in 'The Catcher in the Rye')
 #
 # Note that these functions are used differently from `print()` and `len()`: 
 # they are attached to the object they are applied to with a dot (`.`). These
-# are called *methods*, a special kind of function that 'belongs' to a certain
-# type (or 'class') of object. Strings have their own methods (like `lower()` 
-# and `upper()`), lists have their own methods (like `append()`) and so on.
+# are called *methods*, special functions that 'belong' to a certain type (or 
+# 'class') of object. Strings have their own methods (like `lower()` and 
+# `upper()`), lists have their own methods (like `append()`) and so on.
 
 # %%
 print('Matilda'.upper())
