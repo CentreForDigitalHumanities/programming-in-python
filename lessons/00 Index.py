@@ -54,7 +54,7 @@
 # 5. [Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20Assertions%20solutions.ipynb)
 # 6. [Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/06%20Loops%20Solutions.ipynb)
 # 7. [Functions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/07%20Functions%20solutions.ipynb)
-# 8. Debugging has no solutions notebook.
+# 8. [Debugging](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/08%20Debugging%20solutions.ipynb)
 # 9. [String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/09%20String%20manipulation%20solutions.ipynb)
 # 10. [Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20Dictionaries%20solutions.ipynb)
 # 11. [Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/11%20Working%20with%20files%20solutions.ipynb)
