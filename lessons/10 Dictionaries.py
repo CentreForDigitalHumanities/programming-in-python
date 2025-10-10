@@ -28,14 +28,14 @@
 # %% [markdown]
 # ## What are dictionaries?
 #
-# We have already seen two types of data structure, the _list_ and the _tuple_. Lists and tuples store values in a specific _order_, and we can retrieve values by their position in the list.
+# We have already seen two types of data structure, the _list_ and the _tuple_. Lists and tuples store values in a specific _order_, and we can retrieve values by their index, or position.
 
 # %%
 fruits = ['apple', 'banana', 'orange']
 vegetables = ('carrot', 'broccoli', 'spinach')
 
 assert fruits is not ['banana', 'apple', 'orange'] # order matters!
-assert vegetables is not ('carrot', 'spinach', 'broccoli')
+assert vegetables is not ('carrot', 'spinach', 'broccoli') # order matters!
 
 print(fruits[1])
 print(vegetables[1])
