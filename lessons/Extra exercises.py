@@ -48,7 +48,7 @@ print(type('one'))
 
 # %% [markdown]
 # Python is a 'dynamically typed' language, which means that the type of a variable can vary based on its context. A variable's type is determined by the value it holds. For example, if you assign an integer value to a variable, its type will be `int`. If you later assign a string value to the same variable, its type will change to `str`.
-# 
+#
 # It is also possible to 'coerce' (i.e. explicitly convert) a variable from one type to another, by using `float()`, `int()`, `str()` or the like. For example, you can coerce an integer to a float like this.
 
 # %%
@@ -190,7 +190,7 @@ temperature = 22   # Try different temperatures
 
 # %% [markdown]
 # # Module 4: Data structures
-
+#
 # Let's make some lists! 
 # 1. Start by declaring an empty list (`empty_list = []`).
 

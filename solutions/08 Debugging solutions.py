@@ -31,7 +31,7 @@
 # To help you solve this (solution below):
 # - Use `import pdb; pdb.set_trace()` to set a breakpoint in the function.
 # - Use `n` to go to the next line.
-
+#
 # ### Ask yourself
 # - Where does the programme start looping forever?
 # - What are the values of 'items', 'index', 'here' and 'right' at each

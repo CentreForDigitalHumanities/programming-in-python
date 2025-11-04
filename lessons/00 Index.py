@@ -15,7 +15,7 @@
 # %% [markdown]
 # # CDH course "Programming in Python"
 #
-# **September/October 2025 edition**
+# **November 2025 edition**
 #
 # https://tinyurl.com/cdh-python-course
 #
