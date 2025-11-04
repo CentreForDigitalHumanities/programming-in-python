@@ -600,4 +600,4 @@ word = 'archaïsch'
 # %% [markdown]
 # ## Next module
 #
-# [3. Conditionals](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20conditionals.ipynb)
+# [3. Conditionals](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20Conditionals.ipynb)

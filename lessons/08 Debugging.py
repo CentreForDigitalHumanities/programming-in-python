@@ -267,4 +267,4 @@ assert shuffled == alphabetical
 # %% [markdown]
 # ## Next module
 #
-# [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20string%20manipulation.ipynb)
+# [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20String%20manipulation.ipynb)

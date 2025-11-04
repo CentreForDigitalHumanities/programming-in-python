@@ -13,11 +13,11 @@
 # ---
 
 # %% [markdown]
-# # Module 4: Datastructures
+# # Module 4: Data structures
 #
 # ### Exercise solutions
 #
-# [Module 4](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20datastructures.ipynb)
+# [Module 4](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20Data%20structures.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
@@ -189,4 +189,4 @@ else:
 # %% [markdown]
 # ## Next module
 #
-# [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20assertions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20assertions%20solutions.ipynb)
+# [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20Assertions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/05%20Assertions%20solutions.ipynb)

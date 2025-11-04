@@ -21,7 +21,7 @@
 #
 # [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [4. Datastructures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20datastructures.ipynb)
+# Previous module: [4. Data structures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/04%20Data%20structures.ipynb)
 #
 # ### This module
 #
@@ -30,7 +30,7 @@
 # %% [markdown]
 # ## `assert`
 #
-# With an assertion, you tell Python that you want something to be `True`. This is an easy way to insert sanity checks in your code.
+# With an assertion, you tell Python that you want something to be `True`. This is an easy way to insert sanity checks in your code, i.e. to test whether your program is working as you expect it to.
 
 # %%
 assert 2 < 3
@@ -75,7 +75,7 @@ assert 0
 
 # %% [markdown]
 # ## Exercise 5.2: Bonus - Test-driven development
-# [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is a proccess where you **first** write some test conditions, and then write the code that should satisfy these conditions.
+# [Test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) is a process where you **first** write some test conditions, and then write the code that should satisfy these conditions.
 # Implement the following programs in these steps:
 # 1. Create multiple test conditions using `assert`
 # 2. Run the cell, the tests should fail (output `AssertionError`)

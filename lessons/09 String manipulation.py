@@ -19,7 +19,7 @@
 #
 # [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
 #
-# Previous module: [8. Debugging](hthttps://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)
+# Previous module: [8. Debugging](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/08%20debugging.ipynb)
 #
 # ### This module
 #
@@ -55,6 +55,12 @@ print('in' in 'The Catcher in the Rye')
 # Convert a string to lowercase or uppercase:
 #
 # `string.lower()` and `string.upper()`
+#
+# Note that these functions are used differently from `print()` and `len()`: 
+# they are attached to the object they are applied to with a dot (`.`). These
+# are called *methods*, special functions that 'belong' to a certain type (or 
+# 'class') of object. Strings have their own methods (like `lower()` and 
+# `upper()`), lists have their own methods (like `append()`) and so on.
 
 # %%
 print('Matilda'.upper())
@@ -326,4 +332,4 @@ print(connect((welcome(name), goodbye(name))))
 # %% [markdown]
 # ## Next module
 #
-# [10 - Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)
+# [10 - Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20Dictionaries.ipynb)

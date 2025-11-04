@@ -254,4 +254,4 @@ write_table_to_csv(new_data, 'sample_data/california_housing_test_expanded.csv')
 # %% [markdown]
 # ## Next module
 #
-# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20functions%2C%20bis.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/12%20Functions%2C%20bis.ipynb)
+# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20Functions%2C%20bis.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/12%20Functions%2C%20bis%20solutions.ipynb)

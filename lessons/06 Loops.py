@@ -121,7 +121,33 @@ while True:
 
 # %% [markdown]
 # ### Breaking out of a loop
-# You can break out of a loop by using the `break` statement, like shown here:
+# You can break out of a loop by using the `break` statement. If Python encounters a `break` statement, it immediately exits the loop, and continues with the code after the loop. It will stop iterating even if the loop condition is still `True` (in case of a `while` loop) or there are still items left in the iterable (in case of a `for` loop).
+#
+
+# %%
+basket = ['apricot', 'banana', 'elderberry', 'cherry', 'date']
+
+for fruit in basket:
+    print(fruit)
+    if fruit == 'elderberry':
+        print('Yay, this basket has elderberry! 🤤')
+        break
+
+# %% [markdown]
+# Using `break` can be useful in combination with `while` to avoid infinite loops:
+
+# %%
+counter = 0
+while True:
+    print('The counter is now', counter)
+    counter = counter + 1
+    if counter >= 5:
+        print('Counter reached 5, stopping the loop.')
+        break
+
+
+# %% [markdown]
+# You can also use `else` (which we also saw in Module 3 about conditionals) in combination with `for` and `while` loops. With `for` and `while`, the `else` block will be executed if the loop finishes "naturally", i.e. without encountering a `break` statement. The `else` block is skipped if the loop is exited with a `break` statement. You can remember this as "break, or else!".
 
 # %%
 basket = ['apricot', 'banana', 'cherry', 'date']
@@ -134,8 +160,23 @@ for fruit in basket:
 else:
     print('Aww no elderberry. 😞')
 
-# %% [markdown]
-# `break`/`else` can be used both with `for` and `while` loops. The `else` is not required though, you can have an `if` statement without it, in which case nothing will happen if the `if` statement returns `False`.
+
+# %%
+# The same example, but now with a while loop.
+basket = ['apricot', 'banana', 'elderberry', 'cherry', 'date']
+index = 0
+
+while index < len(basket):
+    fruit = basket[index]
+    print(fruit)
+    if fruit == 'elderberry':
+        print('Yay, this basket has elderberry! 🤤')
+        break
+    # Update index so we avoid an infinite loop if there is no elderberry in the list.
+    index = index + 1
+else:
+    print('Aww no elderberry. 😞')
+
 
 # %% [markdown]
 # ### Skipping to the next iteration

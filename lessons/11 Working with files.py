@@ -211,4 +211,4 @@ print(data[10]['name'])
 # %% [markdown]
 # ## Next module
 #
-# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20functions%2C%20bis.ipynb)
+# [12 - Functions, bis](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/12%20Functions%2C%20bis.ipynb)

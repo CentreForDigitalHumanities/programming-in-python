@@ -246,7 +246,7 @@ assert 'matilda'.endswith('lda')
 assert '   matilda '.strip() == 'matilda'
 assert '..matilda?'.strip('.,') == 'matilda?'
 
-# string.lstrip() and string.rstrip() work like string.split()
+# string.lstrip() and string.rstrip() work like string.strip()
 # but only for l(eft) and r(ight) part of the string
 assert '  matilda  '.rstrip() == '  matilda'
 assert '  matilda  '.lstrip() == 'matilda  '
@@ -364,4 +364,4 @@ print(connect((welcome(name), goodbye(name))))
 # %% [markdown]
 # ## Next module
 #
-# [10. Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20-%20Dictionaries%20solutions.ipynb)
+# [10. Dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20Dictionaries.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/10%20Dictionaries%20solutions.ipynb)

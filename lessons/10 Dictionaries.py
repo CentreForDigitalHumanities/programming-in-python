@@ -28,14 +28,17 @@
 # %% [markdown]
 # ## What are dictionaries?
 #
-# We have already seen one type of data structure, the _list_. Lists store values in a specific _order_, and we can retrieve values by their position in the list.
+# We have already seen two types of data structure, the _list_ and the _tuple_. Lists and tuples store values in a specific _order_, and we can retrieve values by their index, or position.
 
 # %%
 fruits = ['apple', 'banana', 'orange']
+vegetables = ('carrot', 'broccoli', 'spinach')
 
 assert fruits is not ['banana', 'apple', 'orange'] # order matters!
+assert vegetables is not ('carrot', 'spinach', 'broccoli') # order matters!
 
 print(fruits[1])
+print(vegetables[1])
 
 # %% [markdown]
 # What if we want to store some extra information about each type of fruit? That is where dictionaries come in handy. Here I save the colour of each fruit.
@@ -49,14 +52,14 @@ fruit_colors = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange'}
 # Dictionaries need not contain strings. The values of a dictionary can be anything you want. The keys are a bit more restricted: strings, numbers, and tuples are fine, but complex data structures like lists and other dictionaries are not.
 
 # %%
-students_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
+teachers_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
 
-years_per_student = {'Jelte': [2021, 2022], 'Julian': [2021, 2022], 'Berit': 2022}
+years_per_teacher = {'Jelte': [2021, 2022], 'Julian': [2021, 2022], 'Berit': 2022}
 
 # long dictionaries can be written on multiple lines, to keep it readable
 dictionaries_by_topic = {
     'fruit': fruit_colors,
-    'python course': [students_by_year, years_per_student]
+    'python course': [teachers_by_year, years_per_teacher]
 }
 
 # %%
@@ -84,7 +87,7 @@ fruit_colors_2 = {'banana': 'yellow',  'apple': 'red', 'orange': 'orange'}
 assert fruit_colors == fruit_colors_2
 
 # %% [markdown]
-# You can make emtpy dictionaries too.
+# You can make empty dictionaries too.
 
 # %%
 empty = {} # a dictionary with no keys / values
@@ -98,10 +101,10 @@ new_dict = dict() # constructor function
 
 # %%
 fruit_colors = {'apple': 'red', 'banana': 'yellow', 'orange': 'orange'}
-students_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
+teachers_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
 
 print(fruit_colors['apple'])
-print(students_by_year[2021])
+print(teachers_by_year[2021])
 
 # %% [markdown]
 # ### Assiging / reassigning
@@ -128,11 +131,11 @@ print(fruit_colors)
 # - this happens *in-place*, the function doesn't return anything
 
 # %%
-students_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
-more_students = {2023: ['Sheean', 'Mees', 'Luka'], 2024: ['Hopefully a lot']}
+teachers_by_year = {2021: ['Julian', 'Jelte'], 2022: ['Julian', 'Jelte', 'Berit']}
+more_teachers = {2023: ['Sheean', 'Mees', 'Luka'], 2024: ['We will see!']}
 
-print(students_by_year.update(more_students))
-print(students_by_year)
+print(teachers_by_year.update(more_teachers))
+print(teachers_by_year)
 
 # %% [markdown]
 # ### Deleting
@@ -363,4 +366,4 @@ sent0 = ['If', 'you', 'really', 'want', 'to', 'hear', 'about', 'it,', 'the',
 # %% [markdown]
 # ## Next module
 #
-# [11 - Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20working%20with%20files.ipynb)
+# [11 - Working with files](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/11%20Working%20with%20files.ipynb)
