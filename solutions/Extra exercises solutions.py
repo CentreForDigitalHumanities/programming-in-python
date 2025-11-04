@@ -243,7 +243,7 @@ else:
 
 # %% [markdown]
 # # Module 4: Data structures
-
+#
 # Let's make some lists!
 # 1. Start by declaring an empty list (`empty_list = []`).
 
