@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.16.6
 #   kernelspec:
 #     display_name: Python 3
 #     name: python3
@@ -127,7 +127,7 @@ assert split_text == expected
 
 # %% [markdown]
 # ### The data
-# In the `class materials` section of the [Teams channel](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Fteams.microsoft.com%2Fl%2Fteam%2F19%253a7fUy9HLO6LExOYQiz81CKmKv3wN7FI7cXyOgyPSz6Xo1%2540thread.tacv2%2Fconversations%3FgroupId%3D5d0856b8-3287-4585-8d42-6b65e5eee6e6%26tenantId%3Dd72758a0-a446-4e0f-a0aa-4bf95a4a10e7) you will find three `.txt`files:
+# On [GitHub](https://github.com/CentreForDigitalHumanities/programming-in-python/tree/main/example_data) you will find three `.txt`files:
 #
 #
 # - `catcher_chapter1.txt`, containing the first chapter of The Catcher in the Rye by J.D. Salinger
