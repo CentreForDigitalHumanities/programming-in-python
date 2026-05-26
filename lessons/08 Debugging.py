@@ -93,7 +93,6 @@ def echo(word):
     return tail_off
 
 my_echo = echo('Mees')
-print(my_echo)
 assert my_echo == 'Mees, Mees...'
 
 # %%
