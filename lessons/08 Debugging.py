@@ -6,7 +6,7 @@
 #       extension: .py
 #       format_name: percent
 #       format_version: '1.3'
-#       jupytext_version: 1.16.4
+#       jupytext_version: 1.16.6
 #   kernelspec:
 #     display_name: Python 3
 #     name: python3
@@ -93,7 +93,6 @@ def echo(word):
     return tail_off
 
 my_echo = echo('Mees')
-print(my_echo)
 assert my_echo == 'Mees, Mees...'
 
 # %%
