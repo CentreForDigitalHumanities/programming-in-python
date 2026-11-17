@@ -139,14 +139,14 @@ if not (letter == 'a' or letter == 'b'):
 # - `and`, `or`, `not` are operators, just like `+` and `==`. You can use them outside conditionals.
 
 # %%
-height = 185
-weight = 52
+# Students pass if they attend at least 8 classes 
+# and score at least 60 points on the final exam.
 
-tall = height > 180
-light = weight < 65
+score = 85
+attendance = 9
 
-skinny = tall and light
-print(skinny)
+passed = score >= 60 and attendance >= 8
+print(passed)
 
 # %% [markdown]
 # ## Exercise 3.1: if/elif/else
