@@ -17,11 +17,11 @@
 #
 # ### Exercise solutions
 #
-# [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20assertions.ipynb)
+# [5. Assertions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/05%20Assertions.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20Index.ipynb)
 #
 # Previous module: [4. Data structures](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/04%20Data%20structures.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/04%20Data%20structures%20solutions.ipynb)
 
@@ -111,4 +111,4 @@ assert students[0] < students[1] < students[2], 'The students must be sorted'
 # %% [markdown]
 # ## Next module
 #
-# [6. Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/06%20Loops.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/06%20Loops%20Solutions.ipynb)
+# [6. Loops](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/06%20Loops.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/06%20Loops%20solutions.ipynb)

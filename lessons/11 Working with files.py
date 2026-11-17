@@ -17,9 +17,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20Index.ipynb)
 #
-# Previous module: [10. dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20-%20Dictionaries.ipynb)
+# Previous module: [10. dictionaries](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/10%20Dictionaries.ipynb)
 #
 # ### This module
 #

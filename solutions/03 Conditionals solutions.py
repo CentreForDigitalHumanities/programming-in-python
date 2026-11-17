@@ -17,13 +17,13 @@
 #
 # ### Exercise solutions
 #
-# [Module 3](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20conditionals.ipynb)
+# [Module 3](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/03%20Conditionals.ipynb)
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20Index.ipynb)
 #
-# Previous module: [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20values%20and%20expressions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/02%20values%20and%20expressions%20solutions.ipynb)
+# Previous module: [2. Values and expressions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/02%20Values%20and%20expressions.ipynb) - [solutions](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/solutions/02%20Values%20and%20expressions%20solutions.ipynb)
 
 # %% [markdown]
 # ## Exercise 3.1: if/elif/else

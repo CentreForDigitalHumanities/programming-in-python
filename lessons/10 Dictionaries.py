@@ -17,9 +17,9 @@
 #
 # ### CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20Index.ipynb)
 #
-# Previous module: [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20string%20manipulation.ipynb)
+# Previous module: [9. String manipulation](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/09%20String%20manipulation.ipynb)
 #
 # ### This module
 #

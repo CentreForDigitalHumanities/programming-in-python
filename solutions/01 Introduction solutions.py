@@ -17,11 +17,11 @@
 #
 # ## Exercise solutions
 #
-# [Module 1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/01%20introduction.ipynb)
+# [Module 1](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/01%20Introduction.ipynb)
 #
 # ## CDH course "Programming in Python"
 #
-# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20index.ipynb)
+# [index](https://colab.research.google.com/github/CentreForDigitalHumanities/programming-in-python/blob/main/lessons/00%20Index.ipynb)
 
 # %% [markdown]
 # ## Exercise 1.1: Try it out
